@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer-area">
       <div className="footer-right">
         <div className="footer-logo">
-          <span>정육각</span>
+          <span className="foooter-name">정육각</span>
           <img
             className="footer-image"
             src="/images/Footer/gogi.png"
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="footer-call">
           1800-0658 <br />
         </div>
-        <span>
+        <span className="foooter-infor">
           평일:08:30 - 17:30 <br />
           점심:12:30 - 13:30 <br />
           (토,일 및 공휴일 휴무)
