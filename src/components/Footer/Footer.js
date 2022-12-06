@@ -3,24 +3,24 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <div className="footer-area">
+    <div className="footer">
       <div className="footer-right">
         <div className="footer-logo">
-          <span className="foooter-name">정육각</span>
+          <span className="footer-name">정육각</span>
           <img
             className="footer-image"
             src="/images/Footer/gogi.png"
             alt="pig"
           ></img>
         </div>
-        {FOOTER_DATA.map(element => {
+        {FOOTER_DATA.map(meatMeat => {
           return (
-            <div className="footer-text" key={element.id}>
-              {element.company}
-              <br /> 대표이사 : {element.name} | 주소 :{element.address}
+            <div className="footer-text" key={meatMeat.id}>
+              {meatMeat.company}
+              <br /> 대표이사 : {meatMeat.name} | 주소 :{meatMeat.address}
               <br />
-              사업자등록번호 : {element.buisness} <br /> 통신판매업신고번호 :
-              {element.number} <br /> 개인정보관리책임자 : {element.charge}
+              사업자등록번호 : {meatMeat.buisness} <br /> 통신판매업신고번호 :
+              {meatMeat.number} <br /> 개인정보관리책임자 : {meatMeat.charge}
             </div>
           );
         })}
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="footer-call">
           1800-0658 <br />
         </div>
-        <span className="foooter-infor">
+        <span className="footer-infor">
           평일:08:30 - 17:30 <br />
           점심:12:30 - 13:30 <br />
           (토,일 및 공휴일 휴무)
@@ -49,10 +49,10 @@ const FOOTER_DATA = [
   {
     id: 1,
     company: '(주)정육각',
-    name: '김재연',
-    address: '경기도 김포시 고촌읍 아리육로 57번길 126',
-    buisness: '224 - 87 - 00271',
-    number: '2021-경기김포-0668',
-    charge: '박준태',
+    name: 'ooo',
+    address: '서울특별시 강남구 테헤란로 427 위워크',
+    buisness: '111 - 111 - 1111',
+    number: '2021-0668',
+    charge: 'ooo',
   },
 ];

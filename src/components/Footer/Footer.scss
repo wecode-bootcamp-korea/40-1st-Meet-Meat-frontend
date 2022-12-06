@@ -1,13 +1,10 @@
-.footer-area {
+.footer {
   display: flex;
   justify-content: space-around;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 1;
+  height: 60px;
+  position: relative;
+  transform: translateY(0%);
   border-top: 1px solid rgb(200, 200, 200);
-  height: 150px;
 
   .footer-right {
     padding-top: 20px;
@@ -48,6 +45,7 @@
     }
 
     .footer-infor {
+      color: gray;
       font-weight: lighter;
       font-size: 12px;
     }
