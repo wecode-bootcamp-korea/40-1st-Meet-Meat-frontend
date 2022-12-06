@@ -76,6 +76,14 @@
     background-color: rgb(244, 244, 244);
     width: 400px;
     height: 350px;
+    .productImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-top: 20px;
+      width: 250px;
+    }
   }
   .productInformation {
     display: flex;

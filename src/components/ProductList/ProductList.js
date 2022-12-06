@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const BestProductList = ({}) => {
+const ProductList = ({}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const BestProductList = ({}) => {
   return products.map(product => {
     return (
       <li>
-        <div className="BestProductItem">
+        <div className="ProductItem">
           <img src={product.meatImage} alt="meat" className="productImage" />
         </div>
         <div className="productInformation">
@@ -25,4 +25,4 @@ const BestProductList = ({}) => {
   });
 };
 
-export default BestProductList;
+export default ProductList;

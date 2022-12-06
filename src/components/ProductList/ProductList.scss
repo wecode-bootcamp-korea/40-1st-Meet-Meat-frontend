@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+.ProductListLayout {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 400px 400px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px 50px 100px 50px;
+  font-size: 32px;
+  .ProductItem {
+    margin-top: 40px;
+    background-color: rgb(244, 244, 244);
+    width: 400px;
+    height: 350px;
+    .productImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-top: 20px;
+      width: 250px;
+    }
+  }
+  .productInformation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: left;
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+    .productPriceInformation {
+      font-weight: 400;
+      font-size: 16px;
+
+      color: gray;
+    }
+  }
+}
