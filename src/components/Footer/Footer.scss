@@ -1,0 +1,55 @@
+.footer-area {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  border-top: 1px solid rgb(200, 200, 200);
+  height: 150px;
+
+  .footer-right {
+    padding-top: 20px;
+    height: 100px;
+
+    .footer-logo {
+      position: relative;
+      left: -5px;
+      padding-left: 5px;
+
+      span {
+        position: relative;
+        top: 3px;
+        padding-left: 5px;
+      }
+
+      .footer-image {
+        float: left;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .footer-text {
+      padding-top: 10px;
+      font-size: 12px;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      line-height: 17px;
+    }
+  }
+  .footer-left {
+    text-align: end;
+    padding-top: 20px;
+
+    .footer-call {
+      font-size: 30px;
+    }
+
+    span {
+      font-weight: lighter;
+      font-size: 12px;
+    }
+  }
+}
