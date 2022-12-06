@@ -8,7 +8,7 @@ const Nav = () => {
         <div className="navMain">
           <img
             className="navMeatImage"
-            src="https://cdn-icons-png.flaticon.com/512/1826/1826259.png"
+            src="./images/Nav/MeatIcon.png"
             alt="메인 고기 아이콘
             "
           />
@@ -35,12 +35,12 @@ const Nav = () => {
           <div className="navSideIcon">
             <img
               className="navRightCartIcon"
-              src="https://cdn-icons-png.flaticon.com/512/7756/7756009.png"
+              src="./images/Nav/BasketWhite.png"
               alt="카트이미지"
             />
             <img
               className="navRightSideIcon"
-              src="https://cdn-icons-png.flaticon.com/512/5135/5135168.png"
+              src="./images/Nav/MenuBarWhite.png"
               alt="더보기 아이콘"
             />
           </div>

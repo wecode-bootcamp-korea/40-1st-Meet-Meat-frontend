@@ -1,82 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-
-* {
-  box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
 header {
   position: fixed;
   top: 0px;
   width: 100%;
   height: 96px;
-  background-color: antiquewhite;
+  background-color: black;
   color: white;
-}
 
-.navContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 1184px;
-  height: 72px;
-  margin: auto;
-  margin-top: 10px;
-}
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 1184px;
+    height: 72px;
+    margin: auto;
+    margin-top: 10px;
 
-.navMain {
-  display: flex;
-  align-items: center;
-}
+    .navMain {
+      display: flex;
+      align-items: center;
 
-.navMeatImage {
-  height: 60px;
-}
+      .navMeatImage {
+        height: 60px;
+      }
 
-.navMainName {
-  padding-left: 5px;
-  font-size: 26px;
-}
+      .navMainName {
+        padding-left: 10px;
+        font-size: 30px;
+      }
 
-.navMainMenu {
-  display: flex;
-  font-size: 18px;
-}
+      .navMainMenu {
+        display: flex;
+        margin-left: 22px;
+        font-size: 18px;
+      }
 
-.navMainMenu {
-  margin-left: 15px;
-}
+      .navMainMenuList {
+        padding: 10px;
+      }
+    }
+    .navRight {
+      display: flex;
+      align-items: center;
 
-.navMainMenuList {
-  padding: 10px;
-}
+      .navRightSubMenu {
+        display: flex;
+      }
 
-.navRight {
-  display: flex;
-  align-items: center;
-}
+      .navRightSubMenuList {
+        display: flex;
+      }
 
-.navRightSubMenu {
-  display: flex;
-}
+      .navRightSubList {
+        margin-left: 15px;
+        font-size: 14px;
+      }
 
-.navRightSubMenuList {
-  display: flex;
-}
+      .navRightSubMenuSplit {
+        padding-left: 15px;
+        font-size: 14px;
+      }
 
-.navRightSubList {
-  margin-left: 15px;
-}
+      .navRightCartIcon {
+        width: 30px;
+        margin-left: 35px;
+      }
 
-.navRightSubMenuSplit {
-  padding-left: 15px;
-}
-
-.navRightCartIcon {
-  width: 40px;
-  margin-left: 30px;
-}
-
-.navRightSideIcon {
-  width: 35px;
-  margin-left: 15px;
+      .navRightSideIcon {
+        width: 33px;
+        margin-left: 20px;
+      }
+    }
+  }
 }
