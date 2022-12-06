@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import BestProductList from './BestProductList';
 
-const BestProduct = ({}) => {
-  return (
-    <>
-      <div className="BestProductTitle">정육각 베스트 상품</div>
-      <div className="BestProduct">
-        <ul className="BestProductList">
-          <BestProductList />
-        </ul>
-      </div>
-    </>
-  );
+const BestProductList = ({}) => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/meatInfoList.json', { method: 'GET' })
+      .then(response => response.json())
+      .then(result => {
+        setProducts(result.meatList);
+      });
+  });
+  return products.map(product => {
+    return (
+      <li>
+        <div className="BestProductItem">
+          <img src={product.meatImage} alt="meat" className="productImage" />
+        </div>
+        <div className="productInformation">
+          {product.meatName}
+          <span className="productPriceInformation">{product.meatPrice}</span>
+        </div>
+      </li>
+    );
+  });
 };
 
-export default BestProduct;
+export default BestProductList;
