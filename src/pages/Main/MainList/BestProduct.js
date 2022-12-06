@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BestProductList from './BestProductList';
+
 const BestProduct = ({}) => {
   return (
     <>
