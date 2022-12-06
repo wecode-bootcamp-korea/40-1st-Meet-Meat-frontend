@@ -4,12 +4,42 @@ import '../SignUp/SignUp.scss';
 const SignUp = () => {
   return (
     <div>
-      <p>회원가입</p>
-      <p>이메일로 가입하기</p>
-      <button>정육각 회원가입 하기</button>
-      <p>
-        정육각 회원이신가요? <a href="www.naver.com">로그인하기</a>
-      </p>
+      <div>
+        <p className="signUpTitle">회원가입</p>
+      </div>
+      <div className="signUpContainer">
+        <p className="">가입정보입력</p>
+        <div className="signUpInputBoxContainer">
+          <tr className="signUpInputBox">
+            <th>아이디(이메일주소)</th>
+            <td>
+              <input className="signUpInput" type="text" />
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호</th>
+            <td>
+              <input className="signUpInput" type="password" />
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호 확인</th>
+            <td>
+              <input className="signUpInput" type="password" />
+            </td>
+          </tr>
+          <tr>
+            <th>이름</th>
+            <td>
+              <input className="signUpInput" type="text" />
+            </td>
+          </tr>
+        </div>
+        <div>
+          <button className="BackBtn">이전으로</button>
+          <button className="signUpBtn">가입하기</button>
+        </div>
+      </div>
     </div>
   );
 };

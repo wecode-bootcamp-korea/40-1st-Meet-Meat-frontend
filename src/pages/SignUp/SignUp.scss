@@ -4,3 +4,60 @@
   box-sizing: border-box;
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+.signUpTitle {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.signUpContainer {
+  width: 780px;
+  margin: auto;
+}
+
+.signUpInputBoxContainer {
+  width: 780px;
+  margin-top: 16px;
+  margin-bottom: 34px;
+}
+
+table,
+td,
+th {
+  margin: auto;
+  border: 1px solid #e1dedf;
+}
+
+table,
+th {
+  padding: 20px;
+  background-color: #f7f7f7;
+  font-size: 13px;
+  text-align: left;
+}
+
+.signUpInput {
+  width: 480px;
+  height: 40px;
+  margin: 15px 40px 15px 20px;
+  border: 1px solid #e1dedf;
+}
+
+.BackBtn,
+.signUpBtn {
+  width: 360px;
+  height: 60px;
+  margin: auto;
+  border: none;
+  color: white;
+}
+
+.BackBtn {
+  background-color: #888888;
+}
+
+.signUpBtn {
+  background-color: black;
+}
