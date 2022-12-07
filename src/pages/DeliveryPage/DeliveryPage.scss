@@ -13,13 +13,15 @@
     height: 470px;
     background-color: $background;
     width: 100%;
-    .main {
+
+    .main-title {
       font-size: 64px;
       line-height: 64px;
       letter-spacing: -2.5px;
       color: #010101;
     }
-    .main2 {
+
+    .main-subtitle {
       margin-top: 14px;
       font-size: 18px;
       line-height: 24px;
@@ -36,7 +38,7 @@
     letter-spacing: -1.2px;
     text-align: center;
   }
-  .delivery-main2 {
+  .advertisement {
     margin-top: 48px;
     height: 400px;
     width: 100%;
@@ -58,12 +60,12 @@
           border-radius: 100%;
         }
 
-        .content-write {
+        .content-title {
           font-weight: bold;
           padding: 15px;
         }
 
-        .content-write2 {
+        .content-subtitle {
           margin-top: 11px;
           font-size: 16px;
           line-height: 26px;
@@ -76,7 +78,7 @@
   .delivery-check {
     background-color: $background;
 
-    .delivery-check2 {
+    .delivery-check-content {
       text-align: center;
       padding-top: 100px;
       padding-bottom: 100px;
@@ -144,7 +146,7 @@
     .advertisement-right {
       padding-top: 100px;
 
-      .advertisement-write {
+      .advertisement-title {
         display: flex;
         font-size: 22px;
         line-height: 28px;
@@ -156,7 +158,7 @@
         }
       }
 
-      .advertisement-write2 {
+      .advertisement-subtitle {
         padding-top: 20px;
         font-size: 14px;
         line-height: 22px;
@@ -171,7 +173,7 @@
     .advertisement-left {
       padding-top: 100px;
 
-      .advertisement-write {
+      .advertisement-title {
         display: flex;
         font-size: 22px;
         line-height: 28px;
@@ -184,7 +186,7 @@
           width: 50px;
         }
       }
-      .advertisement-write2 {
+      .advertisement-subtitle {
         padding-top: 20px;
         font-size: 14px;
         line-height: 22px;
