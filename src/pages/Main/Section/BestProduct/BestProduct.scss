@@ -13,11 +13,13 @@
   align-items: center;
   margin: 50px 50px 100px 50px;
   font-size: 32px;
+
   .bestProductItem {
     margin-top: 40px;
     background-color: rgb(244, 244, 244);
     width: 400px;
     height: 350px;
+
     .productImage {
       display: flex;
       justify-content: center;
@@ -32,6 +34,7 @@
     text-align: left;
     font-weight: bold;
     font-size: 18px;
+
     .productPriceInformation {
       font-size: 16px;
       color: gray;

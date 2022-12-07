@@ -3,7 +3,7 @@ import './Delivery.scss';
 
 const Delivery = () => {
   return (
-    <div className="deliveryLayout">
+    <div className="delivery">
       <div className="phraseLayout">
         <h1 className="deliveryWord">초신선 배송</h1>
         <div className="deliveryPhrase">
