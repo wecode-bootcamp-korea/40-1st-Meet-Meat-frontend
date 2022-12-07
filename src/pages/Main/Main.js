@@ -1,7 +1,7 @@
 import React from 'react';
-import Promotion from './MainList/Promotion';
-import BestProduct from './MainList/BestProduct';
-import Delivery from './MainList/Delivery';
+import Promotion from './Section/Promotion/Promotion';
+import BestProduct from './Section/BestProduct/BestProduct';
+import Delivery from './Section/Delivery/Delivery';
 import './Main.scss';
 
 const Main = () => {

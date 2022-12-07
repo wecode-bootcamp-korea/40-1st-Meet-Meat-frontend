@@ -4,12 +4,17 @@ const BestProductList = ({}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/data/meatInfoList.json', { method: 'GET' })
+    fetch('./data/meatInfoList.json', {
+      headers: {
+        Accept: 'application/json',
+      },
+      method: 'GET',
+    })
       .then(response => response.json())
       .then(result => {
         setProducts(result.meatList);
       });
-  });
+  }, []);
   return products.map(product => {
     return (
       <li>
@@ -18,7 +23,7 @@ const BestProductList = ({}) => {
         </div>
         <div className="productInformation">
           {product.meatName}
-          <span className="productPriceInformation">{product.meatPrice}</span>
+          <div className="productPriceInformation">{product.meatPrice}</div>
         </div>
       </li>
     );

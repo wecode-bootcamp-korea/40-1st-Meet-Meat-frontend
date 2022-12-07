@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import BestProductList from './BestProductList';
+import './BestProduct.scss';
 
-const BestProduct = ({}) => {
+const BestProduct = () => {
   return (
     <>
       <div className="BestProductTitle">정육각 베스트 상품</div>

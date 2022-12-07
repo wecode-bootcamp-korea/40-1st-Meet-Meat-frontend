@@ -1,0 +1,40 @@
+.BestProductTitle {
+  margin: 100px auto 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.BestProductList {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 400px 400px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px 100px 50px;
+  font-size: 32px;
+  .BestProductItem {
+    margin-top: 40px;
+    background-color: rgb(244, 244, 244);
+    width: 400px;
+    height: 350px;
+    .productImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-top: 20px;
+      width: 250px;
+    }
+  }
+  .productInformation {
+    margin-top: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    .productPriceInformation {
+      font-size: 16px;
+      color: gray;
+    }
+  }
+}
