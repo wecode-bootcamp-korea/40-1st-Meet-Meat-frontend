@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import ProductCard from './ProductCard/ProductCard';
 
-const BestProductList = ({}) => {
+const BestProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -15,18 +16,9 @@ const BestProductList = ({}) => {
         setProducts(result.meatList);
       });
   }, []);
-  return products.map(product => {
-    return (
-      <li>
-        <div className="BestProductItem">
-          <img src={product.meatImage} alt="meat" className="productImage" />
-        </div>
-        <div className="productInformation">
-          {product.meatName}
-          <div className="productPriceInformation">{product.meatPrice}</div>
-        </div>
-      </li>
-    );
+
+  return products.map(meatList => {
+    return <ProductCard key={meatList.meatId} meatList={meatList} />;
   });
 };
 
