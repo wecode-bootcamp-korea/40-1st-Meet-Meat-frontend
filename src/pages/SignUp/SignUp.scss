@@ -5,56 +5,63 @@
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.signUpTitle {
-  margin-top: 80px;
-  margin-bottom: 30px;
-  font-size: 32px;
+.signUpInputContainer {
+  width: 780px;
+  margin: auto;
+}
+
+.signUpInputContainerBox {
+  width: 780px;
+  margin: 30px auto 40px auto;
+}
+
+.signUpTitleName {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 34px;
   text-align: center;
 }
 
-.signUpContainer {
-  width: 780px;
-  margin: auto;
+.signUpInputBox,
+.signUpInputLastBox {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e1dedf;
+  border-right: 1px solid #e1dedf;
+  border-left: 1px solid #e1dedf;
 }
 
-.signUpInputBoxContainer {
-  width: 780px;
-  margin-top: 16px;
-  margin-bottom: 34px;
+.signUpInputLastBox {
+  border-bottom: 1px solid #e1dedf;
 }
 
-table,
-td,
-th {
-  margin: auto;
-  border: 1px solid #e1dedf;
-}
-
-table,
-th {
-  padding: 20px;
+.signUpInputName {
+  width: 150px;
+  padding: 30px 0px 30px 20px;
+  border-right: 1px solid #e1dedf;
   background-color: #f7f7f7;
   font-size: 13px;
   text-align: left;
 }
 
-.signUpInput {
+.signUpInputText {
   width: 480px;
   height: 40px;
-  margin: 15px 40px 15px 20px;
+  margin-left: 25px;
   border: 1px solid #e1dedf;
+  outline: none;
 }
 
-.BackBtn,
+.signUpBackBtn,
 .signUpBtn {
-  width: 360px;
+  width: 390px;
   height: 60px;
-  margin: auto;
   border: none;
   color: white;
+  font-weight: bold;
 }
 
-.BackBtn {
+.signUpBackBtn {
   background-color: #888888;
 }
 
