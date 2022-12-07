@@ -22,6 +22,11 @@ const SignUp = () => {
             <p className="signUpInputName">비밀번호 확인</p>
             <input className="signUpInputText" type="password" />
           </div>
+          <div className="signUpInputBox">
+            <p className="signUpInputName">주소</p>
+            <input className="signUpInputText" type="text" />
+          </div>
+
           <div className="signUpInputLastBox">
             <p className="signUpInputName">이름</p>
             <input className="signUpInputText" type="text" />
