@@ -4,7 +4,7 @@ const ProductCard = ({ meatList }) => {
   const { meatName, meatImage, meatPrice } = meatList;
   return (
     <li>
-      <div className="BestProductItem">
+      <div className="bestProductItem">
         <img src={meatImage} alt="meat" className="productImage" />
       </div>
       <div className="productInformation">
