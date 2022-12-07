@@ -1,1 +1,15 @@
-$red1: rgba(255, 0, 0);
+$red1: red;
+
+$black: black;
+
+$white: white;
+
+@mixin fontLighter {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+@mixin fontBold {
+  font-size: 50px;
+  font-weight: bold;
+}
