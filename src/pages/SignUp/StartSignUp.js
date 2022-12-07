@@ -10,10 +10,8 @@ const StartSignUp = () => {
         <button className="startSignupButton">정육각 회원가입 하기</button>
         <div>
           <span className="startSignUpLoginButton">
-            정육각 회원이신가요?{' '}
-            <a className="startSignUpLoginButtonTag" href="www.naver.com">
-              로그인 하기
-            </a>
+            정육각 회원이신가요?
+            <a className="startSignUpLoginButtonTag">로그인 하기</a>
           </span>
         </div>
       </div>
