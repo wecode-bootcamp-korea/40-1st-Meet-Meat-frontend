@@ -8,9 +8,8 @@ const Nav = () => {
         <div className="navMain">
           <img
             className="navMeatImage"
-            src="./images/Nav/MeatIcon.png"
-            alt="메인 고기 아이콘
-            "
+            src="/images/Nav/MeatIcon.png"
+            alt="메인고기아이콘"
           />
           <p className="navMainName">고기각</p>
           <ul className="navMainMenu">
@@ -35,12 +34,12 @@ const Nav = () => {
           <div className="navSideIcon">
             <img
               className="navRightCartIcon"
-              src="./images/Nav/BasketWhite.png"
+              src="/images/Nav/BasketWhite.png"
               alt="카트이미지"
             />
             <img
               className="navRightSideIcon"
-              src="./images/Nav/MenuBarWhite.png"
+              src="/images/Nav/MenuBarWhite.png"
               alt="더보기 아이콘"
             />
           </div>
