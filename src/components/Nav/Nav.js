@@ -3,7 +3,7 @@ import './Nav.scss';
 
 const Nav = () => {
   return (
-    <header>
+    <div className="header">
       <div className="navContainer">
         <div className="navMain">
           <img
@@ -46,7 +46,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
