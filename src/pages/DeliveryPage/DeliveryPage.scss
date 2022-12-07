@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 470px;
-    background-color: $delivery-background;
+    background-color: $background;
     width: 100%;
     .main {
       font-size: 64px;
@@ -73,7 +73,7 @@
     }
   }
   .delivery-check {
-    background-color: $delivery-background;
+    background-color: $background;
 
     .delivery-check2 {
       text-align: center;
@@ -138,7 +138,7 @@
     margin-bottom: -150px;
     height: 296px;
     width: 100%;
-    background-color: $delivery-background;
+    background-color: $background;
 
     .advertisement-right {
       padding-top: 100px;
