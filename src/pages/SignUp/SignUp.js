@@ -3,7 +3,7 @@ import './SignUp.scss';
 
 const SignUp = () => {
   return (
-    <div>
+    <div className="signUp">
       <div>
         <p className="signUpTitleName">회원가입</p>
       </div>
