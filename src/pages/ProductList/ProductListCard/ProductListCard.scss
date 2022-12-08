@@ -1,0 +1,15 @@
+.productListItem {
+  margin-top: 50px;
+  background-color: rgb(244, 244, 244);
+  width: 400px;
+  height: 350px;
+
+  .productListImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+    width: 250px;
+  }
+}

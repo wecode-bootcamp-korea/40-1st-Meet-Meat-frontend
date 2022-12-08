@@ -1,4 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-.productListPhrase {
-  font-size: 40px;
+.productList {
+  font-size: 18px;
+  .productListBanner {
+    height: 450px;
+    background-color: gray;
+
+    .productListPhrase {
+      display: flex;
+      padding: 150px;
+      align-items: center;
+      width: 900px;
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  .productListTab {
+    display: flex;
+    justify-content: center;
+
+    .productCategory {
+      text-align: center;
+      margin: 50px 20px 0px 10px;
+      padding-top: 14px;
+      width: 250px;
+      height: 50px;
+      background-color: rgb(244, 244, 244);
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .productCategory:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  // .productSelectBox {
+  //   margin-top: 50px;
+  //   .selectBox {
+  //     margin-left: auto;
+  //     padding: 5px 10px;
+  //     width: 200px;
+  //     font-size: 16px;
+  //     text-align-last: center;
+  //   }
+  // }
+
+  // .productSelectBox {
+  //   display: flex;
+  //   margin-right: auto;
+  // }
+
+  .selectCategory {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .allProducts {
+      font-weight: bold;
+    }
+  }
+  .productListDataSquare {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px;
+    grid-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+
+    .productListItem {
+      margin-top: 40px;
+      background-color: rgb(244, 244, 244);
+      width: 400px;
+      height: 350px;
+
+      .productListImage {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding-top: 20px;
+        width: 250px;
+      }
+    }
+    .productListInformation {
+      margin-top: 10px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 18px;
+
+      .productListPriceInformation {
+        font-size: 16px;
+        color: gray;
+      }
+    }
+  }
 }
