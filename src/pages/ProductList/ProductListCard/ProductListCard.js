@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProductListCard.scss';
 
 const ProductListCard = ({ meatList }) => {
   const { meatName, meatImage, meatPrice } = meatList;
@@ -6,6 +7,9 @@ const ProductListCard = ({ meatList }) => {
     <li className="productListItem">
       <div className="productListItem">
         <img src={meatImage} alt={meatName} className="productListImage" />
+        <div>
+          <img src="./images/cartImage/blackCart.png" className="cartImg" />
+        </div>
       </div>
       <div className="productListInformation">
         {meatName}

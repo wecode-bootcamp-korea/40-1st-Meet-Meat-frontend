@@ -38,26 +38,28 @@ const ProductList = () => {
           </li>
         </ul>
       </div>
-      <div className="selectCategory">
-        <div className="allProducts">총 100건</div>
-        <ul className="selectProductCategory">
-          <li className="productCategoryList">추천순</li>
-          <span className="categoryLine">|</span>
-          <li className="productCategoryList">신상품순</li>
-          <span className="categoryLine">|</span>
-          <li className="productCategoryList">낮은 가격순</li>
-          <span className="categoryLine">|</span>
-          <li className="productCategoryList">높은 가격순</li>
-        </ul>
-      </div>
-      <div className="productListData">
-        <ul className="productListDataSquare">
-          {products.map(meatList => {
-            return (
-              <ProductListCard key={meatList.meatId} meatList={meatList} />
-            );
-          })}
-        </ul>
+      <div>
+        <div className="selectCategory">
+          <div className="allProducts">총 100건</div>
+          <ul className="selectProductCategory">
+            <li className="productCategoryList">추천순</li>
+            <span className="categoryLine">|</span>
+            <li className="productCategoryList">신상품순</li>
+            <span className="categoryLine">|</span>
+            <li className="productCategoryList">낮은 가격순</li>
+            <span className="categoryLine">|</span>
+            <li className="productCategoryList">높은 가격순</li>
+          </ul>
+        </div>
+        <div className="productListData">
+          <ul className="productListDataSquare">
+            {products.map(meatList => {
+              return (
+                <ProductListCard key={meatList.meatId} meatList={meatList} />
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
