@@ -36,22 +36,6 @@
     }
   }
 
-  // .productSelectBox {
-  //   margin-top: 50px;
-  //   .selectBox {
-  //     margin-left: auto;
-  //     padding: 5px 10px;
-  //     width: 200px;
-  //     font-size: 16px;
-  //     text-align-last: center;
-  //   }
-  // }
-
-  // .productSelectBox {
-  //   display: flex;
-  //   margin-right: auto;
-  // }
-
   .selectCategory {
     display: flex;
     flex-direction: row;
@@ -59,6 +43,19 @@
 
     .allProducts {
       font-weight: bold;
+    }
+
+    .selectProductCategory {
+      position: relative;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+
+      .productCategoryList {
+        justify-content: flex-end;
+        margin-left: 8px;
+        color: rgb(150, 150, 150);
+      }
     }
   }
   .productListDataSquare {

@@ -38,23 +38,15 @@ const ProductList = () => {
           </li>
         </ul>
       </div>
-      {/* <div className="productSelectBox">
-        <select className="selectBox">
-          <option value="popularity"> 인기순 </option>
-          <option value="newest"> 최신순 </option>
-          <option value="consume"> 가격순 </option>
-        </select>
-      </div> */}
-      {/* <div className="selectCategory">
-        <span className="allProducts">총 100건</span>
+      <div className="selectCategory">
+        <div className="allProducts">총 100건</div>
         <ul className="selectProductCategory">
-          <li>추천순</li>
-          <li>신상품순</li>
-          <li>판매량 순</li>
-          <li>낮은 가격순</li>
-          <li>높은 가격순</li>
+          <li className="productCategoryList">추천순</li>
+          <li className="productCategoryList">신상품순</li>
+          <li className="productCategoryList">낮은 가격순</li>
+          <li className="productCategoryList">높은 가격순</li>
         </ul>
-      </div> */}
+      </div>
       <div className="productListData">
         <ul className="productListDataSquare">
           {products.map(meatList => {
