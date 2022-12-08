@@ -17,6 +17,7 @@
   .productListTab {
     display: flex;
     justify-content: center;
+    width: 1500px;
 
     .productCategory {
       text-align: center;
@@ -39,9 +40,13 @@
   .selectCategory {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 1300px;
 
     .allProducts {
+      margin-left: 200px;
+      width: 500px;
       font-weight: bold;
     }
 
@@ -54,42 +59,55 @@
       .productCategoryList {
         justify-content: flex-end;
         margin-left: 8px;
-        color: rgb(150, 150, 150);
+        color: rgb(140, 140, 140);
+      }
+
+      .productCategoryList:hover {
+        color: black;
+        cursor: pointer;
+      }
+
+      .categoryLine {
+        color: rgb(140, 140, 140);
+        margin-left: 10px;
       }
     }
   }
-  .productListDataSquare {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px;
-    grid-gap: 50px;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
+  .productListData {
+    margin-bottom: 100px;
+    .productListDataSquare {
+      display: grid;
+      grid-template-columns: 400px 400px 400px;
+      grid-template-rows: 400px 400px;
+      grid-gap: 50px;
+      justify-content: center;
+      align-items: center;
+      width: 1600px;
+      font-size: 32px;
 
-    .productListItem {
-      margin-top: 40px;
-      background-color: rgb(244, 244, 244);
-      width: 400px;
-      height: 350px;
+      .productListItem {
+        background-color: rgb(244, 244, 244);
+        width: 400px;
+        height: 350px;
 
-      .productListImage {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        padding-top: 20px;
-        width: 250px;
+        .productListImage {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+          padding-top: 20px;
+          width: 250px;
+        }
       }
-    }
-    .productListInformation {
-      margin-top: 10px;
-      text-align: left;
-      font-weight: bold;
-      font-size: 18px;
+      .productListInformation {
+        margin-top: 10px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 18px;
 
-      .productListPriceInformation {
-        font-size: 16px;
-        color: gray;
+        .productListPriceInformation {
+          font-size: 16px;
+          color: gray;
+        }
       }
     }
   }
