@@ -1,0 +1,198 @@
+@import '../../styles/variables.scss';
+
+.delivery-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 150px;
+
+  .delivery-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 470px;
+    background-color: #f4f4f4;
+    width: 100%;
+
+    .main-title {
+      font-size: 64px;
+      line-height: 64px;
+      letter-spacing: -2.5px;
+      color: #010101;
+    }
+
+    .main-subtitle {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 24px;
+      color: #333333;
+    }
+    .fast-logo {
+      margin: 100px;
+      width: 400px;
+    }
+  }
+  .delivery-why {
+    padding-top: 96px;
+    font-size: 36px;
+    letter-spacing: -1.2px;
+    text-align: center;
+  }
+  .advertisement {
+    margin-top: 48px;
+    height: 400px;
+    width: 100%;
+
+    .delivery-content {
+      display: flex;
+      justify-content: space-around;
+
+      .content-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 200px;
+
+        .delivery-image {
+          width: 150px;
+          height: 150px;
+          border-radius: 100%;
+        }
+
+        .content-title {
+          font-weight: bold;
+          padding: 15px;
+        }
+
+        .content-subtitle {
+          margin-top: 11px;
+          font-size: 16px;
+          line-height: 26px;
+          text-align: center;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+  .delivery-check {
+    background-color: #f4f4f4;
+
+    .delivery-check-content {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      font-size: 36px;
+      line-height: 46px;
+      letter-spacing: -1.2px;
+    }
+
+    .delivery-search {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+
+      .delivery-input {
+        width: 478px;
+        height: 56px;
+        margin-bottom: 20px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+      }
+
+      .delivery-button {
+        background-color: black;
+        height: 58px;
+
+        .search-logo {
+          width: 50px;
+          height: 50px;
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+  .delivery-service {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 819px;
+
+    .delivery-select {
+      display: flex;
+      margin-top: 100px;
+
+      img {
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+      }
+
+      li {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 25px;
+      }
+    }
+  }
+  .delivery-advertisement {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -150px;
+    height: 296px;
+    width: 100%;
+    background-color: #f4f4f4;
+
+    .advertisement-right {
+      padding-top: 100px;
+
+      .advertisement-title {
+        display: flex;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+
+        .sale {
+          margin-left: 10px;
+          width: 50px;
+        }
+      }
+
+      .advertisement-subtitle {
+        padding-top: 20px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #666666;
+        margin-top: -7px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .advertisement-left {
+      padding-top: 100px;
+
+      .advertisement-title {
+        display: flex;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.2px;
+
+        .coupon {
+          position: relative;
+          left: 10px;
+          margin-right: 10px;
+          width: 50px;
+        }
+      }
+      .advertisement-subtitle {
+        padding-top: 20px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #666666;
+        margin-top: -7px;
+      }
+    }
+  }
+}
