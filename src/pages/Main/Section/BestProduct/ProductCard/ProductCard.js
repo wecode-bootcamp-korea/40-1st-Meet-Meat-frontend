@@ -1,4 +1,5 @@
 import React from 'react';
+import './ProductCard.scss';
 
 const ProductCard = ({ meatList }) => {
   const { meatName, meatImage, meatPrice } = meatList;
