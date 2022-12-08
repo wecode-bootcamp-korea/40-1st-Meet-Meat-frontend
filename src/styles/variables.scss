@@ -1,4 +1,15 @@
 $red1: red;
-$background: #f4f4f4;
+
 $black: black;
+
 $white: white;
+
+@mixin fontLighter {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+@mixin fontBold {
+  font-size: 50px;
+  font-weight: bold;
+}
