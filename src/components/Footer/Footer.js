@@ -11,7 +11,7 @@ const Footer = () => {
             className="footer-image"
             src="/images/Footer/gogi.png"
             alt="pig"
-          ></img>
+          />
         </div>
         {FOOTER_DATA.map(meatMeat => {
           return (
