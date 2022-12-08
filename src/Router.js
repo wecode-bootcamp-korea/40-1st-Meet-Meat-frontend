@@ -10,6 +10,7 @@ import SignUp from './pages/SignUp/SignUp';
 import DeliveryPage from './pages/DeliveryPage/DeliveryPage';
 import BasketPage from './pages/BasketPage/BasketPage';
 import Footer from '../src/components/Footer/Footer';
+import OrderPage from './pages/OrderPage/OrderPage';
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/delivery-page" element={<DeliveryPage />} />
         <Route path="/basket-page" element={<BasketPage />} />
+        <Route path="/order-page" element={<OrderPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
