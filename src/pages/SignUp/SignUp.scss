@@ -1,0 +1,64 @@
+.signUp {
+  .signUpTitleName {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .signUpInputContainer {
+    width: 780px;
+    margin: auto;
+
+    .signUpInputContainerBox {
+      width: 780px;
+      margin: 30px auto 40px auto;
+
+      .signUpInputBox,
+      .signUpInputLastBox {
+        display: flex;
+        align-items: center;
+        border: 1px solid #e1dedf;
+        border-bottom: none;
+
+        .signUpInputName {
+          width: 150px;
+          padding: 30px 20px 30px 25px;
+          border-right: 1px solid #e1dedf;
+          background-color: #f7f7f7;
+          font-size: 13px;
+          text-align: left;
+        }
+
+        .signUpInputText {
+          width: 480px;
+          height: 40px;
+          margin-left: 25px;
+          border: 1px solid #e1dedf;
+          outline: none;
+        }
+      }
+
+      .signUpInputLastBox {
+        border-bottom: 1px solid #e1dedf;
+      }
+    }
+
+    .signUpBackBtn,
+    .signUpBtn {
+      width: 390px;
+      height: 60px;
+      border: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .signUpBackBtn {
+      background-color: #888888;
+    }
+
+    .signUpBtn {
+      background-color: black;
+    }
+  }
+}
