@@ -25,7 +25,6 @@ const BestProduct = () => {
           {products.map(meatList => {
             return <ProductCard key={meatList.meatId} meatList={meatList} />;
           })}
-          ;
         </ul>
       </div>
     </>
