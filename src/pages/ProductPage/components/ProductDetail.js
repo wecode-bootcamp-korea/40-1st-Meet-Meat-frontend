@@ -1,8 +1,8 @@
 import React from 'react';
-import Check from '../../assets/ProductPage/check.png';
-import './ProductPage2.scss';
+import Check from '../../../assets/ProductPage/check.png';
+import './ProductDetail.scss';
 
-const ProductPage2 = props => {
+const ProductDetail = props => {
   return (
     <div className="product-page2">
       <h1 className="product-topic">왜 정육각인가요?</h1>
@@ -31,7 +31,7 @@ const ProductPage2 = props => {
       <div className="product-certification">
         <p className="certification-check">인증 정보를 확인하세요.</p>
         <div className="certification-flex">
-          <img className="certification-image" src={Check} alt="check"></img>
+          <img className="certification-image" src={Check} alt="check" />
           <div className="certification-box">
             <p className="haccp">HACCP</p>
             <div className="certification-write">
@@ -46,4 +46,4 @@ const ProductPage2 = props => {
   );
 };
 
-export default ProductPage2;
+export default ProductDetail;

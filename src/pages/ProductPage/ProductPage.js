@@ -1,13 +1,13 @@
 import React from 'react';
+import Option from './components/Option';
+import ProductDetail from './components/ProductDetail';
 import './ProductPage.scss';
-import ProductPage1 from '../../components/ProductPage/ProductPage1';
-import ProductPage2 from '../../components/ProductPage/ProductPage2';
 
 const ProductPage = () => {
   return (
     <div class="product-page">
-      <ProductPage1 />
-      <ProductPage2 />
+      <Option />
+      <ProductDetail />
     </div>
   );
 };

@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
-import White from '../../assets/ProductPage/white.png';
-import './productPage1.scss';
+import White from '../../../assets/ProductPage/white.png';
+import './Option.scss';
 
-const ProductPage1 = props => {
+const Option = props => {
   const [number, setNumber] = useState(1);
   const plus = () => {
-    setNumber(number + 1);
+    setNumber(number => number + 1);
   };
   const minus = () => {
-    setNumber(number - 1);
-    number < 2 && setNumber(1);
+    if (number < 2) {
+      setNumber(1);
+      return;
+    }
+    setNumber(number => number - 1);
   };
 
   return (
     <div className="product-page1">
-      <img className="product-image" src={White}></img>
+      <img className="product-image" src={White} alt="배경이미지" />
       <div className="product-infor">
         <div className="product-name">초신선 돼지 삼겹살 구이용</div>
         <div className="product-write">100g당 0000원</div>
@@ -52,7 +55,7 @@ const ProductPage1 = props => {
   );
 };
 
-export default ProductPage1;
+export default Option;
 
 const MEET_OPTION = [
   { id: 1, option: '얇게(11mm)' },
