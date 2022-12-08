@@ -23,7 +23,7 @@ const DeliveryPage = () => {
         </div>
         <img className="fast-logo" src={Fast} alt="fast" />
       </div>
-      <h1 className="delivery-why">왜 정육각 초신선배송인가요?</h1>
+      <span className="delivery-why">왜 정육각 초신선배송인가요?</span>
       <div className="advertisement">
         <div className="delivery-content">
           <div className="content-box">
@@ -53,10 +53,10 @@ const DeliveryPage = () => {
         </div>
       </div>
       <div className="delivery-check">
-        <h1 className="delivery-check-content">
+        <div className="delivery-check-content">
           우리집에 어떤 초신선배송이 오는지 <br />
           지금 확인하세요
-        </h1>
+        </div>
         <div className="delivery-search">
           <input
             className="delivery-input"
@@ -70,33 +70,39 @@ const DeliveryPage = () => {
       </div>
       <div className="delivery-service">
         <ul className="delivery-select">
-          <img src={Today} alt="today" />
-          <li>당일배송</li>
-          <img src={Dinner} alt="dinner" />
-          <li>새벽배송</li>
-          <img src={Delivery} alt="delivery" />
-          <li>택배배송</li>
+          <li>
+            <img src={Today} alt="today" />
+            당일배송
+          </li>
+          <li>
+            <img src={Dinner} alt="dinner" />
+            새벽배송
+          </li>
+          <li>
+            <img src={Delivery} alt="delivery" />
+            택배배송
+          </li>
         </ul>
       </div>
       <div className="delivery-advertisement">
         <div className="advertisement-right">
-          <h1 className="advertisement-title">
+          <span className="advertisement-title">
             신선할인으로 더 담을수록,
             <br />더 적어지는 배송비
             <img className="sale" src={Sale} alt="할인" />
-          </h1>
+          </span>
           <p className="advertisement-subtitle">
             삼겹살, 돈까스, 오징어 등 뭐든지 2개만 담아도 배송비
             <br /> 배송비 할인! <span>5개 담으면 배송비 무료!</span>
           </p>
         </div>
         <div className="advertisement-left">
-          <h1 className="advertisement-title">
+          <span className="advertisement-title">
             정육각 초신선배송,
             <br />
             부담없이 이용하려면?
             <img className="coupon" src={Coupon} alt="쿠폰" />
-          </h1>
+          </span>
           <p className="advertisement-subtitle">한번 배송비로 4회 무료배송!</p>
         </div>
       </div>
