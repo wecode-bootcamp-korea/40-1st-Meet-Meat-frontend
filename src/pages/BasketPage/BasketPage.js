@@ -20,7 +20,7 @@ const BasketPage = () => {
         </div>
         <div className="basket-payment">
           <div className="payment-title">
-            <h1 className="payment-name">총 상품 금액</h1>
+            <div className="payment-name">총 상품 금액</div>
             <span className="payment-money">0원</span>
           </div>
           <div className="payment-expectation">
