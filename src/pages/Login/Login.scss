@@ -1,0 +1,55 @@
+@import '../../../src/styles/variables.scss';
+
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-logo {
+    position: relative;
+    top: -90px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .login-form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .email-login {
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+
+    .id-box,
+    .password-box {
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .login-button {
+      background-color: $blackColor;
+      color: $whiteColor;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+    }
+  }
+  .sign-up-link {
+    margin: 26px;
+
+    a {
+      text-decoration: none;
+      color: $blackColor;
+
+      .siginup-link {
+        color: $red1;
+      }
+    }
+  }
+}

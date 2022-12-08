@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 import ProductList from './pages/ProductList/ProductList';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
@@ -8,10 +9,12 @@ import ProductPage from './pages/ProductPage/ProductPage';
 import SignUp from './pages/SignUp/SignUp';
 import DeliveryPage from './pages/DeliveryPage/DeliveryPage';
 import BasketPage from './pages/BasketPage/BasketPage';
+import Footer from '../src/components/Footer/Footer';
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/login" element={<Login />} />
@@ -22,6 +25,7 @@ const Router = () => {
         <Route path="/delivery-page" element={<DeliveryPage />} />
         <Route path="/basket-page" element={<BasketPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

@@ -1,0 +1,138 @@
+.myPage {
+  margin-top: 100px;
+}
+
+.myPageContainer {
+  margin: auto;
+  width: 980px;
+}
+.myPageUserInfoDataImage {
+  width: 120px;
+}
+.myPageUserInfoSplit {
+  margin: 20px auto 20px auto;
+  border: 1px solid black;
+}
+
+.myPageUserInfoContainer {
+  margin: 80px auto 70px auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.myPageUserInfoBottomListCheck {
+  color: #cbcbcb;
+}
+
+.myPageUserInfoContainerBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myPageContainerTitle {
+  font-size: 32px;
+  text-align: center;
+}
+
+.myPageUserInfoBottomList {
+  text-align: center;
+}
+
+.myPageUserInfoBottomListTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.myPageOrderSplit {
+  border: 0.5px solid black;
+  margin: 60px auto 30px auto;
+}
+
+.myPageUserInfoData {
+  text-align: right;
+  margin-left: 35px;
+  width: 100%;
+}
+
+.myPageUserInfoDataTopBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myPageUserInfoDataTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myPageUserInfoDataTopUserName {
+  margin-right: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.myPageUserInfoDataTopLogOutBtn {
+  background-color: #ffffff;
+  border: none;
+  text-decoration: underline;
+  color: #cbcbcb;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.myPageUserInfoDataTopQuestionBtn {
+  width: 120px;
+  height: 45px;
+  margin-left: 30px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.myPageUserInfoBottom {
+  display: flex;
+}
+
+.myPageUserInfoBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myPageOrderTabContainer {
+  text-align: center;
+}
+
+.myPageOrderGoShoppingBtn {
+  width: 260px;
+  height: 70px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+
+.myPageOrderNone {
+  // margin-top: 60px;
+}
+
+.myPageOrderNoneTitle {
+  font-size: 38px;
+  color: #dbdbdb;
+  margin: 60px auto 60px auto;
+  display: block;
+}
+
+.myPageTab {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.myPageOrderSplit2 {
+  margin: 80px auto 150px auto;
+
+  border-bottom: 1px solid #e1dedf;
+}

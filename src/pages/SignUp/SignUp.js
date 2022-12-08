@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import './SignUp.scss';
 
 const SignUp = () => {
@@ -40,5 +41,11 @@ const SignUp = () => {
     </div>
   );
 };
+=======
+
+function SignUp() {
+  return <h1>dkdk</h1>;
+}
+>>>>>>> master
 
 export default SignUp;
