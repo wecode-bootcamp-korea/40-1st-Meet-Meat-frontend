@@ -1,5 +1,4 @@
 import React from 'react';
-import CartModal from './CartModal/CartModal';
 import './ProductListCard.scss';
 
 const ProductListCard = ({ meatList }) => {
@@ -8,7 +7,7 @@ const ProductListCard = ({ meatList }) => {
     <li className="productListItem">
       <div className="productListItem">
         <img src={meatImage} alt={meatName} className="productListImage" />
-        <CartModal />
+        <img src="./images/cartImage/blackCart.png" className="cartImg" />
       </div>
       <div className="productListInformation">
         {meatName}
