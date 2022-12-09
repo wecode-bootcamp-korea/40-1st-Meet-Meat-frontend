@@ -6,12 +6,12 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-right">
         <div className="footer-logo">
-          <span className="footer-name">정육각</span>
+          <span className="footer-name">고기잇</span>
           <img
             className="footer-image"
             src="/images/Footer/gogi.png"
             alt="pig"
-          ></img>
+          />
         </div>
         {FOOTER_DATA.map(meatMeat => {
           return (
@@ -48,7 +48,7 @@ export default Footer;
 const FOOTER_DATA = [
   {
     id: 1,
-    company: '(주)정육각',
+    company: '(주)고기잇',
     name: 'ooo',
     address: '서울특별시 강남구 테헤란로 427 위워크',
     buisness: '111 - 111 - 1111',
