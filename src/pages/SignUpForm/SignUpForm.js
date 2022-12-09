@@ -1,7 +1,7 @@
 import React from 'react';
-import './SignUp.scss';
+import './SignUpForm.scss';
 
-const SignUp = () => {
+const SignUpForm = () => {
   return (
     <div className="signUp">
       <div>
@@ -41,4 +41,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpForm;
