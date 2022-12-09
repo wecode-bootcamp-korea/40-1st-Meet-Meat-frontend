@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddressPage from './AddressPage/AddressPage';
+import Modal from '../../../src/components/Modal/Modal';
 import Plus from '../../assets/OrderPage/plus.png';
 import Sign from '../../assets/OrderPage/sign.png';
 import './OrderPage.scss';
@@ -40,7 +40,7 @@ const OrderPage = () => {
             <button className="address-button" onClick={buttonClick}>
               주소선택
             </button>
-            {openAddress && <AddressPage setOpenAddress={setOpenAddress} />}
+            {openAddress && <Modal setOpenAddress={setOpenAddress} />}
           </div>
         </div>
         <table className="order-information">
@@ -72,7 +72,9 @@ const OrderPage = () => {
             <p className="order-product-price">0원</p>
           </div>
           <div className="product-list">
-            <p className="order-product-name">초신선 닭볶음탕</p>
+            <p className="order-product-name">
+              [첫구매 무료] 초신선 돼지 삼겹살 구이용
+            </p>
             <p className="order-product-gram">950g기준</p>
             <p className="order-product-count">0팩</p>
             <p className="order-product-price">0원</p>

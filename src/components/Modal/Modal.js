@@ -1,5 +1,5 @@
 import React from 'react';
-import './Address.scss';
+import './Modal.scss';
 
 const AddressPage = ({ setOpenAddress }) => {
   const close = () => {
