@@ -3,13 +3,16 @@
   height: 96px;
   background-color: black;
   color: white;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
 
   .navContainer {
     display: flex;
     justify-content: space-between;
     width: 1184px;
     height: 72px;
-    margin: 0px auto 10px auto;
+    margin: auto;
     height: 96px;
 
     .navMain {
