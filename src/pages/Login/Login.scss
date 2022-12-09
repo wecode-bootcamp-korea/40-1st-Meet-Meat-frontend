@@ -33,8 +33,8 @@
     }
 
     .login-button {
-      background-color: $blackColor;
-      color: $whiteColor;
+      background-color: $black;
+      color: $white;
       border: none;
       border-radius: 5px;
       height: 40px;
@@ -45,7 +45,7 @@
 
     a {
       text-decoration: none;
-      color: $blackColor;
+      color: $black;
 
       .siginup-link {
         color: $red1;

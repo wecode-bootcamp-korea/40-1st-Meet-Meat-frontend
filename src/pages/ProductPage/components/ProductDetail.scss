@@ -1,0 +1,93 @@
+.product-page2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px;
+  width: 100%;
+  .product-topic {
+    font-size: 70px;
+    font-weight: bold;
+  }
+  .product-subtitle {
+    padding: 10px;
+    .product-subtitle2 {
+      color: red;
+    }
+  }
+  .product-image {
+    width: 70%;
+    height: 300px;
+    background-color: black;
+  }
+  .product-date {
+    width: 100%;
+    .product-date-check {
+      padding-bottom: 15px;
+      text-align: center;
+      padding-top: 200px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .product-date-area {
+      width: 100%;
+      background-color: black;
+      height: 100px;
+    }
+    .product-comment {
+      padding-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .product-diffrent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .product-diffrent-why {
+      text-align: center;
+      color: red;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .product-diffrent-image {
+      width: 40%;
+      height: 200px;
+      background-color: black;
+      margin: 20px;
+    }
+  }
+  .product-certification {
+    padding-top: 300px;
+
+    .certification-check {
+      text-align: center;
+      font-size: 30px;
+      color: black;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+    .certification-flex {
+      display: flex;
+      padding-top: 5px;
+      .certification-image {
+        width: 200px;
+      }
+      .certification-box {
+        padding-top: 40px;
+        .haccp {
+          font-size: 40px;
+          font-weight: bold;
+          padding-bottom: 25px;
+        }
+        .certification-write {
+          font-size: 15px;
+          line-height: 35px;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}

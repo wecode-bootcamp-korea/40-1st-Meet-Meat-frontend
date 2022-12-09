@@ -1,0 +1,23 @@
+.delivery {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+
+  .phraseLayout {
+    .deliveryWord {
+      margin-top: 70px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .deliveryPhrase {
+      margin-top: 30px;
+    }
+  }
+
+  .deliveryIcon {
+    width: 100px;
+    margin-left: 60px;
+  }
+}

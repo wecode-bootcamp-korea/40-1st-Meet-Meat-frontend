@@ -1,0 +1,45 @@
+@import '../../../src/styles/variables.scss';
+
+.startSignUpMain {
+  text-align: center;
+  margin: 180px auto 180px auto;
+
+  .startSignUpTitleName {
+    margin-top: 100px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .startSignUpTitleName {
+    margin-top: 100px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .startSignupButton {
+    width: 328px;
+    height: 48px;
+    border: 1px solid #e92d44;
+    border-radius: 3px;
+    background-color: $white;
+    color: #e92d44;
+    font-size: 16px;
+  }
+
+  .startSignUpEmail {
+    margin: 50px auto 40px auto;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .startSignUpLoginButton {
+    display: block;
+    margin-top: 60px;
+    font-size: 16px;
+
+    .startSignUpLoginButtonTag {
+      color: #e92d44;
+      text-decoration: none;
+    }
+  }
+}
