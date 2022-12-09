@@ -4,18 +4,20 @@ import './BasketPage.scss';
 const BasketPage = () => {
   return (
     <div className="basket-page">
-      <h1 className="basket-name">장바구니</h1>
+      <div className="basket-name">장바구니</div>
       <div className="basket-flex">
         <div className="basket">
           <div className="basket-table">
-            <span className="basket-infor">상품정보</span>
-            <span className="basket-num">수량</span>
-            <span className="basket-price">가격</span>
+            <div className="basket-info">상품정보</div>
+            <div className="basket-num">수량</div>
+            <div className="basket-price">가격</div>
           </div>
           <div className="basket-item">
-            <div className="item-name">fsdfsd</div>
-            <div className="item-num">dfsafsadf</div>
-            <div className="item-price">dsafsa</div>
+            <div className="basket-info">
+              [첫구매 무료] 초신선 돼지 삼겹살 구이용
+            </div>
+            <div className="basket-num">0</div>
+            <div className="basket-price">0</div>
           </div>
         </div>
         <div className="basket-payment">

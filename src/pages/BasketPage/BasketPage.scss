@@ -24,41 +24,48 @@
         border-left: none;
         border-right: none;
 
-        .basket-infor {
+        .basket-info {
+          text-align: center;
+          width: 500px;
           padding: 20px;
         }
 
         .basket-num {
-          position: relative;
-          left: 60px;
+          width: 100px;
           padding: 20px;
+          text-align: center;
         }
 
         .basket-price {
-          position: relative;
-          left: 60px;
+          width: 100px;
           padding: 20px;
+          text-align: center;
         }
       }
-
       .basket-item {
         display: flex;
-        justify-content: center;
         justify-content: space-around;
-        padding-top: 20px;
+        padding-top: 40px;
         width: 860px;
         padding-bottom: 50px;
         border-bottom: 1px solid gray;
 
-        .item-name {
-          padding: 30px;
+        .basket-info {
+          width: 500px;
+          padding: 20px;
+          text-align: center;
         }
 
-        .item-num,
-        .item-price {
-          padding: 30px;
-          position: relative;
-          left: 60px;
+        .basket-num {
+          width: 100px;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .basket-price {
+          width: 100px;
+          padding: 20px;
+          text-align: center;
         }
       }
     }
