@@ -1,3 +1,5 @@
+@import '../../../src/styles/variables.scss';
+
 .signUp {
   margin: 160px auto 180px auto;
 
@@ -51,7 +53,7 @@
       width: 390px;
       height: 60px;
       border: none;
-      color: white;
+      color: $white;
       font-weight: bold;
     }
 
@@ -60,7 +62,7 @@
     }
 
     .signUpBtn {
-      background-color: black;
+      background-color: $black;
     }
   }
 }
