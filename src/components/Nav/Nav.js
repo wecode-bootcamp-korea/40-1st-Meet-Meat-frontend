@@ -11,7 +11,7 @@ const Nav = () => {
             src="/images/Nav/MeatIcon.png"
             alt="메인고기아이콘"
           />
-          <p className="navMainName">고기각</p>
+          <p className="navMainName">고기잇</p>
           <ul className="navMainMenu">
             <li className="navMainMenuList">쇼핑하기</li>
             <li className="navMainMenuList">배송안내</li>
