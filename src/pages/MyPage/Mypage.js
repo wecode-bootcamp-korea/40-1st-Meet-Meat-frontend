@@ -72,7 +72,7 @@ const Mypage = () => {
             </button>
           </div>
         </div>
-        <div className="orderSplit2" />
+        <div className="orderBottomSplit" />
       </div>
     </div>
   );
