@@ -1,0 +1,36 @@
+.selectCategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+
+  .allProducts {
+    margin-right: 750px;
+    font-weight: bold;
+  }
+
+  .selectProductCategory {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+    .productCategoryList {
+      justify-content: flex-end;
+      margin-left: 8px;
+      white-space: nowrap;
+      color: rgb(140, 140, 140);
+    }
+
+    .productCategoryList:hover {
+      color: black;
+      cursor: pointer;
+    }
+
+    .categoryLine {
+      color: rgb(140, 140, 140);
+      margin-left: 10px;
+    }
+  }
+}

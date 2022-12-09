@@ -12,14 +12,23 @@
     padding-top: 20px;
     width: 250px;
   }
+
   .cartImg {
     margin-left: 300px;
     margin-top: -100px;
     margin-bottom: 30px;
-    padding: 0px;
-    border-shadow: 5px 5px 5px 0px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 2px gray;
     border-radius: 50%;
     width: 70px;
     background-color: white;
   }
+}
+
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: blue;
+  text-align: left;
+  z-index: 3;
 }
