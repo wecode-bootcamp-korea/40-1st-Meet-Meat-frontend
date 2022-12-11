@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SignUp.scss';
 
 const SignUp = () => {
@@ -7,13 +8,15 @@ const SignUp = () => {
       <div className="startSignUpTitleName">회원가입</div>
       <div>
         <p className="startSignUpEmail">이메일로 가입하기</p>
-        <button className="startSignupButton">정육각 회원가입 하기</button>
+        <Link to="/sign-up-form">
+          <button className="startSignupButton">정육각 회원가입 하기</button>
+        </Link>
         <div>
           <span className="startSignUpLoginButton">
             정육각 회원이신가요?
-            <a className="startSignUpLoginButtonTag" href="www.naver.com">
+            <Link to="/login" className="startSignUpLoginButtonTag">
               로그인 하기
-            </a>
+            </Link>
           </span>
         </div>
       </div>
