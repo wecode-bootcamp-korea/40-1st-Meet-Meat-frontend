@@ -10,6 +10,7 @@ import SignUpForm from './pages/SignUpForm/SignUpForm';
 import DeliveryPage from './pages/DeliveryPage/DeliveryPage';
 import BasketPage from './pages/BasketPage/BasketPage';
 import Footer from '../src/components/Footer/Footer';
+import Review from './pages/ReviewPage/Review';
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/sign-up-form" element={<SignUpForm />} />
         <Route path="/delivery-page" element={<DeliveryPage />} />
         <Route path="/basket-page" element={<BasketPage />} />
+        <Route path="/review-page" element={<Review />} />
       </Routes>
       <Footer />
     </BrowserRouter>
