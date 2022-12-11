@@ -1,0 +1,27 @@
+.bestProductItem {
+  margin-top: 40px;
+  background-color: rgb(244, 244, 244);
+  width: 400px;
+  height: 350px;
+
+  .productImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+    width: 250px;
+  }
+}
+
+.productInformation {
+  margin-top: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
+
+  .productPriceInformation {
+    font-size: 16px;
+    color: gray;
+  }
+}

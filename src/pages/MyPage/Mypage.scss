@@ -1,0 +1,140 @@
+@import '../../../src/styles/variables.scss';
+
+.myPage {
+  margin: 160px auto 180px auto;
+
+  .myPageContainer {
+    margin: auto;
+    width: 980px;
+
+    .containerTitle {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .userInfoContainer {
+      margin: 80px auto 70px auto;
+      display: flex;
+      justify-content: space-between;
+
+      .userInfoContainerImage {
+        width: 120px;
+        object-fit: contain;
+      }
+
+      .userInfoData {
+        text-align: right;
+        margin-left: 35px;
+        width: 100%;
+
+        .userInfoDataTop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .userInfoDataTopBtn {
+            display: flex;
+            justify-content: space-between;
+
+            .userInfoDataTopUserName {
+              margin-right: 40px;
+              font-size: 25px;
+              font-weight: bold;
+            }
+
+            .userInfoDataTopLogOutBtn {
+              background-color: $white;
+              border: none;
+              text-decoration: underline;
+              color: #cbcbcb;
+              font-weight: bold;
+              font-size: 16px;
+            }
+          }
+
+          .userInfoDataTopQuestionBtn {
+            width: 120px;
+            height: 45px;
+            margin-left: 30px;
+            border: none;
+            color: $white;
+            background-color: $black;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .userInfoSplit {
+          margin: 20px auto 20px auto;
+          border: 1px solid $black;
+        }
+
+        .userInfoBottom {
+          display: flex;
+          justify-content: space-between;
+
+          .userInfoBottomList {
+            text-align: center;
+
+            .userInfoBottomListTitle {
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+
+            .userInfoBottomListCheck {
+              color: #cbcbcb;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .orderTabContainer {
+      text-align: center;
+
+      .myPageTab {
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid $black;
+      }
+
+      .orderSplit {
+        border: 0.5px solid $black;
+        margin: 60px auto 30px auto;
+      }
+
+      .orderNone {
+        .orderNoneTitle {
+          font-size: 38px;
+          color: #dbdbdb;
+          margin: 60px auto 60px auto;
+          display: block;
+        }
+      }
+      .orderGoShoppingBtn {
+        width: 260px;
+        height: 70px;
+        color: $white;
+        background-color: $black;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        position: relative;
+        text-align: left;
+        padding-left: 30px;
+      }
+
+      .orderGoShoppingBtnImage {
+        width: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
+
+    .orderBottomSplit {
+      margin: 80px auto 150px auto;
+      border-bottom: 1px solid #e1dedf;
+    }
+  }
+}

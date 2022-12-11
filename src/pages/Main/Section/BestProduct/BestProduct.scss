@@ -1,0 +1,16 @@
+.bestProductTitle {
+  margin: 100px auto 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.bestProductList {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 400px 400px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px 100px 50px;
+  font-size: 32px;
+}
