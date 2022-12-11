@@ -28,11 +28,13 @@
       margin-top: 5px;
       margin-left: 180px;
       filter: invert(100%);
+      cursor: pointer;
     }
     .hambuger-close {
       border: none;
       background-color: white;
       font-size: 25px;
+      cursor: pointer;
     }
   }
   .main-title {
@@ -59,10 +61,12 @@
 
         .menu-icon {
           width: 50px;
+          cursor: pointer;
         }
 
         .menu-title {
           text-align: center;
+          cursor: pointer;
         }
       }
     }
@@ -73,5 +77,6 @@
     font-size: 25px;
     font-weight: bold;
     line-height: 50px;
+    cursor: pointer;
   }
 }
