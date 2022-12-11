@@ -1,0 +1,77 @@
+.Hambuger {
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+  right: 0px;
+  width: 24%;
+  height: 100vh;
+  padding: 20px;
+  border: 1px none gray;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%);
+  color: black;
+
+  .hambuger-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+
+    .hambuger-menu {
+      margin-top: 5px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .basket {
+      width: 10%;
+      height: 10%;
+      margin-top: 5px;
+      margin-left: 180px;
+      filter: invert(100%);
+    }
+    .hambuger-close {
+      border: none;
+      background-color: white;
+      font-size: 25px;
+    }
+  }
+  .main-title {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  .hambuger-main {
+    width: 100%;
+    height: 230px;
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+
+    .hambuger-categoris {
+      display: grid;
+      grid-template-columns: 100px 100px;
+      margin-left: -20px;
+      :hover {
+        border-radius: 10px;
+        background-color: gray;
+      }
+
+      .hambuger-items {
+        margin: 20px;
+
+        .menu-icon {
+          width: 50px;
+        }
+
+        .menu-title {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .hambuger-bottom {
+    margin: 15px;
+    padding-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+}
