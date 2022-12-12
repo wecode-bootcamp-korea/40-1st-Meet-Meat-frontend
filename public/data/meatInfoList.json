@@ -1,44 +1,53 @@
 {
-  "productList": {
-    "productId": 1,
-    "productSort": "pork",
-    "productContent": [
-      {
-        "meatId": 1,
-        "meatName": "초신선 돼지 삼겹살 구이용",
-        "meatImage": "./images/ProductDetail/porkRib.png",
-        "meatPrice": "기준가 21,300원/600g"
-      },
-      {
-        "meatId": 2,
-        "meatName": "초신선 닭볶음탕",
-        "meatImage": "./images/ProductDetail/porkRib.png",
-        "meatPrice": "기준가 6,000원/600g"
-      },
-      {
-        "meatId": 3,
-        "meatName": "초신선 등심 돈까스",
-        "meatImage": "./images/ProductDetail/porkRib.png",
-        "meatPrice": "기준가 21,300원/600g"
-      },
-      {
-        "meatId": 4,
-        "meatName": "초신선 무항생제 유정란",
-        "meatImage": "./images/ProductDetail/porkRib.png",
-        "meatPrice": "기준가 21,300원/600g"
-      },
-      {
-        "meatId": 5,
-        "meatName": "초신선 무항생제 우유",
-        "meatImage": "./images/ProductDetail/porkRib.png",
-        "meatPrice": "기준가 21,300원/600g"
-      },
-      {
-        "meatId": 6,
-        "meatName": "초신선 한우 우둔 다짐육",
-        "meatImage": "./images/ProductDetail/porkRib.png",
-        "meatPrice": " 기준가 21,300원/600g"
-      }
-    ]
-  }
+  "meatList": [
+    {
+      "meatId": 1,
+      "meatName": "초신선 돼지 삼겹살 구이용",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 2,
+      "meatName": "초신선 닭볶음탕",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 6,000원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 3,
+      "meatName": "초신선 등심 돈까스",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 4,
+      "meatName": "초신선 무항생제 유정란",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 5,
+      "meatName": "초신선 무항생제 우유",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 6,
+      "meatName": "초신선 한우 우둔 다짐육",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 21,300원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 7,
+      "meatName": "초신선 한우 우둔 다짐육",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 21,300원/600g",
+      "meatSort": "돼지"
+    }
+  ]
 }

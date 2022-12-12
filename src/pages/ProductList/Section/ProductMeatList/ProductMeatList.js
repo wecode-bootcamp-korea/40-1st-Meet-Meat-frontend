@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProductListCard from './ProductListCard/ProductListCard';
 
-const ProductMeatList = () => {
-  const [products, setProducts] = useState([]);
+const ProductMeatList = ({ data }) => {
+  // const [count, setCount] = useState(1);
+  // const [priceAmount, setPriceAmount] = useState(1);
+  const navigate = useNavigate();
+  const goToDetails = event => {
+    navigate(`/product-page/${event.target.id}`);
+  };
 
-  useEffect(() => {
-    fetch('/data/meatInfoList.json', {
-      headers: {
-        'Content-type': 'application/json',
-      },
-      method: 'GET',
-    })
-      .then(response => response.json())
-      .then(result => {
-        setProducts(result.meatList);
-      });
-  }, []);
   return (
     <div className="productListData">
       <ul className="productListDataSquare">
-        {products.map(meatList => {
-          return <ProductListCard key={meatList.meatId} meatList={meatList} />;
+        {data.map(meat => {
+          return (
+            <ProductListCard
+              key={meat.meatId}
+              meat={meat}
+              onClick={goToDetails}
+            />
+          );
         })}
       </ul>
     </div>

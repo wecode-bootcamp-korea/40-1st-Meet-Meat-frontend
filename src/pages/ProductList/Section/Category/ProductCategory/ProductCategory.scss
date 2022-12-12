@@ -13,6 +13,17 @@
     font-size: 22px;
   }
 
+  .productCategoryActive {
+    text-align: center;
+    margin: 50px 20px 0px 10px;
+    padding-top: 14px;
+    width: 230px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
   .productCategory:hover {
     background-color: black;
     color: white;
