@@ -1,31 +1,31 @@
 @import '../../../src/styles/variables.scss';
 
-.signUp {
+.signUpForm {
   margin: 160px auto 180px auto;
 
-  .signUpTitleName {
+  .signUpFormTitleName {
     margin-top: 100px;
     margin-bottom: 20px;
     font-size: 34px;
     text-align: center;
   }
 
-  .signUpInputContainer {
+  .signUpFormInputContainer {
     width: 780px;
     margin: auto;
 
-    .signUpInputContainerBox {
+    .signUpFormInputContainerBox {
       width: 780px;
       margin: 30px auto 40px auto;
 
-      .signUpInputBox,
-      .signUpInputLastBox {
+      .signUpFormInputBox,
+      .signUpFormInputLastBox {
         display: flex;
         align-items: center;
         border: 1px solid #e1dedf;
         border-bottom: none;
 
-        .signUpInputName {
+        .signUpFormInputName {
           width: 150px;
           padding: 30px 16px 30px 18px;
           border-right: 1px solid #e1dedf;
@@ -34,7 +34,7 @@
           text-align: left;
         }
 
-        .signUpInputText {
+        .signUpFormInputText {
           width: 480px;
           height: 40px;
           margin-left: 25px;
@@ -43,13 +43,13 @@
         }
       }
 
-      .signUpInputLastBox {
+      .signUpFormInputLastBox {
         border-bottom: 1px solid #e1dedf;
       }
     }
 
-    .signUpBackBtn,
-    .signUpBtn {
+    .signUpFormBackBtn,
+    .signUpFormBtn {
       width: 390px;
       height: 60px;
       border: none;
@@ -57,11 +57,12 @@
       font-weight: bold;
     }
 
-    .signUpBackBtn {
+    .signUpFormBackBtn {
       background-color: #888888;
+      cursor: pointer;
     }
 
-    .signUpBtn {
+    .signUpFormBtn {
       background-color: $black;
     }
   }

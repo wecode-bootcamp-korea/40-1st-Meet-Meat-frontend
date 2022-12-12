@@ -1,22 +1,22 @@
 @import '../../../src/styles/variables.scss';
 
-.startSignUpMain {
+.signUpMain {
   text-align: center;
   margin: 180px auto 180px auto;
 
-  .startSignUpTitleName {
+  .signUpTitleName {
     margin-top: 100px;
     font-size: 24px;
     font-weight: bold;
   }
 
-  .startSignUpTitleName {
+  .signUpTitleName {
     margin-top: 100px;
     font-size: 24px;
     font-weight: bold;
   }
 
-  .startSignupButton {
+  .signupButton {
     width: 328px;
     height: 48px;
     border: 1px solid #e92d44;
@@ -27,18 +27,18 @@
     cursor: pointer;
   }
 
-  .startSignUpEmail {
+  .signUpEmail {
     margin: 50px auto 40px auto;
     font-size: 18px;
     font-weight: bold;
   }
 
-  .startSignUpLoginButton {
+  .signUpLoginButton {
     display: block;
     margin-top: 60px;
     font-size: 16px;
 
-    .startSignUpLoginButtonTag {
+    .signUpLoginButtonTag {
       color: #e92d44;
       text-decoration: none;
     }
