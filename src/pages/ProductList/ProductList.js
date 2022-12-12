@@ -7,10 +7,10 @@ import './ProductList.scss';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  const [categoryId, setCategoryId] = useState(1);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [categoryId, setCategoryId] = useState(1);
 
-  const handleTab = pageId => {
+  const changeCategory = pageId => {
     searchParams.set('categories', pageId);
     setSearchParams(searchParams);
     setCategoryId(pageId);
@@ -35,9 +35,9 @@ const ProductList = () => {
     <div className="productList">
       <Banner />
       <ProductCategory
-        changeCategory={handleTab}
         categoryId={categoryId}
-        handleTab={handleTab}
+        changeCategory={changeCategory}
+        data={products}
       />
       <ProductMeatList data={products} />
     </div>

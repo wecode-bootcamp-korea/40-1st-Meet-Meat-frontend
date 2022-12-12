@@ -4,7 +4,6 @@ import './FilterCategory.scss';
 const FilterCategory = () => {
   return (
     <div className="selectCategory">
-      <div className="allProducts">총 100건</div>
       <ul className="selectProductCategory">
         <li className="productCategoryList">추천순</li>
         <span className="categoryLine">|</span>

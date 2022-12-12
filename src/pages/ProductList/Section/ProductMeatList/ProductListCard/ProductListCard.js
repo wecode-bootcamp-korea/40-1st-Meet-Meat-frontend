@@ -4,18 +4,13 @@ import { Link } from 'react-router-dom';
 import './ProductListCard.scss';
 
 const ProductListCard = ({ meat }) => {
-  const { goToDetails, meatId, meatName, meatImage, meatPrice } = meat;
+  const { meatId, meatName, meatImage, meatPrice } = meat;
 
   return (
     <li className="productListItem">
       <Link to={`/product-page/${meatId}`}>
         <div className="productListItem">
-          <img
-            src={meatImage}
-            alt={meatName}
-            className="productListImage"
-            onClick={goToDetails}
-          />
+          <img src={meatImage} alt={meatName} className="productListImage" />
           <div className="cartIconWrapper">
             <img
               src="./images/cartImage/blackCart.png"

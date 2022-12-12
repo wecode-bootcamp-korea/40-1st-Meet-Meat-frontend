@@ -1,8 +1,8 @@
 import React from 'react';
-import FilterCategory from './FilterCategory/FilterCategory';
+import FilterCategory from '../FilterCategory/FilterCategory';
 import './ProductCategory.scss';
 
-const ProductCategory = ({ categoryId, handleTab }) => {
+const ProductCategory = ({ categoryId, changeCategory, products }) => {
   const PRODUCTS_SORTS = [
     { id: 1, text: '전체', name: 'all' },
     { id: 2, text: '돼지', name: 'pork' },
@@ -14,22 +14,22 @@ const ProductCategory = ({ categoryId, handleTab }) => {
   return (
     <>
       <ul className="productListTab">
-        {PRODUCTS_SORTS.map(tab => {
+        {PRODUCTS_SORTS.map(sort => {
           return (
             <li
               className={`productCategory ${
-                tab.id === categoryId && 'productCategoryActive'
+                sort.id === categoryId && 'productCategoryActive'
               }`}
               onClick={() => {
-                handleTab(tab.id);
+                changeCategory(sort.id);
               }}
             >
-              <div>{tab.text}</div>
+              <div>{sort.text}</div>
             </li>
           );
         })}
       </ul>
-      <FilterCategory />
+      <FilterCategory data={products} />
     </>
   );
 };
