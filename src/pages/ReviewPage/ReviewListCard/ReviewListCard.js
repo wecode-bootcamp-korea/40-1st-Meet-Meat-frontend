@@ -4,7 +4,7 @@ import './ReviewListCard.scss';
 const ReviewListCard = ({ reviewList }) => {
   const { userName, Date, reviewContent } = reviewList;
   return (
-    <li className="detailReviewList">
+    <li className="reviewListCard">
       <div className="reviewInfo">
         <div className="reviewContentBox">
           <p className="reviewDetail">{reviewContent}</p>

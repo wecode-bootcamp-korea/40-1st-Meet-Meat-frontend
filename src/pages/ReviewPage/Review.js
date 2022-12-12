@@ -29,7 +29,6 @@ const Review = () => {
             <ReviewListCard key={reviewList.reviewId} reviewList={reviewList} />
           );
         })}
-        {/* 컴포넌트 화 된 li를 불러들어오는 것 */}
       </ul>
     </div>
   );

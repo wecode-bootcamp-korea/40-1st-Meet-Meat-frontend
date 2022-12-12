@@ -1,138 +1,140 @@
+@import '../../../src/styles/variables.scss';
+
 .myPage {
   margin: 160px auto 180px auto;
-}
 
-.myPageContainer {
-  margin: auto;
-  width: 980px;
-}
-.myPageUserInfoDataImage {
-  width: 120px;
-}
-.myPageUserInfoSplit {
-  margin: 20px auto 20px auto;
-  border: 1px solid black;
-}
+  .myPageContainer {
+    margin: auto;
+    width: 980px;
 
-.myPageUserInfoContainer {
-  margin: 80px auto 70px auto;
-  display: flex;
-  justify-content: flex-start;
-}
+    .containerTitle {
+      font-size: 32px;
+      text-align: center;
+    }
 
-.myPageUserInfoBottomListCheck {
-  color: #cbcbcb;
-}
+    .userInfoContainer {
+      margin: 80px auto 70px auto;
+      display: flex;
+      justify-content: space-between;
 
-.myPageUserInfoContainerBox {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+      .userInfoContainerImage {
+        width: 120px;
+        object-fit: contain;
+      }
 
-.myPageContainerTitle {
-  font-size: 32px;
-  text-align: center;
-}
+      .userInfoData {
+        text-align: right;
+        margin-left: 35px;
+        width: 100%;
 
-.myPageUserInfoBottomList {
-  text-align: center;
-}
+        .userInfoDataTop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
-.myPageUserInfoBottomListTitle {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+          .userInfoDataTopBtn {
+            display: flex;
+            justify-content: space-between;
 
-.myPageOrderSplit {
-  border: 0.5px solid black;
-  margin: 60px auto 30px auto;
-}
+            .userInfoDataTopUserName {
+              margin-right: 40px;
+              font-size: 25px;
+              font-weight: bold;
+            }
 
-.myPageUserInfoData {
-  text-align: right;
-  margin-left: 35px;
-  width: 100%;
-}
+            .userInfoDataTopLogOutBtn {
+              background-color: $white;
+              border: none;
+              text-decoration: underline;
+              color: #cbcbcb;
+              font-weight: bold;
+              font-size: 16px;
+            }
+          }
 
-.myPageUserInfoDataTopBtn {
-  display: flex;
-  justify-content: space-between;
-}
+          .userInfoDataTopQuestionBtn {
+            width: 120px;
+            height: 45px;
+            margin-left: 30px;
+            border: none;
+            color: $white;
+            background-color: $black;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .userInfoSplit {
+          margin: 20px auto 20px auto;
+          border: 1px solid $black;
+        }
 
-.myPageUserInfoDataTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.myPageUserInfoDataTopUserName {
-  margin-right: 40px;
-  font-size: 25px;
-  font-weight: bold;
-}
+        .userInfoBottom {
+          display: flex;
+          justify-content: space-between;
 
-.myPageUserInfoDataTopLogOutBtn {
-  background-color: #ffffff;
-  border: none;
-  text-decoration: underline;
-  color: #cbcbcb;
-  font-weight: bold;
-  font-size: 16px;
-}
+          .userInfoBottomList {
+            text-align: center;
 
-.myPageUserInfoDataTopQuestionBtn {
-  width: 120px;
-  height: 45px;
-  margin-left: 30px;
-  border: none;
-  color: white;
-  background-color: black;
-  font-size: 14px;
-  font-weight: bold;
-}
+            .userInfoBottomListTitle {
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
 
-.myPageUserInfoBottom {
-  display: flex;
-}
+            .userInfoBottomListCheck {
+              color: #cbcbcb;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
 
-.myPageUserInfoBottom {
-  display: flex;
-  justify-content: space-between;
-}
+    .orderTabContainer {
+      text-align: center;
 
-.myPageOrderTabContainer {
-  text-align: center;
-}
+      .myPageTab {
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid $black;
+      }
 
-.myPageOrderGoShoppingBtn {
-  width: 260px;
-  height: 70px;
-  color: white;
-  background-color: black;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-}
+      .orderSplit {
+        border: 0.5px solid $black;
+        margin: 60px auto 30px auto;
+      }
 
-.myPageOrderNone {
-  // margin-top: 60px;
-}
+      .orderNone {
+        .orderNoneTitle {
+          font-size: 38px;
+          color: #dbdbdb;
+          margin: 60px auto 60px auto;
+          display: block;
+        }
+      }
+      .orderGoShoppingBtn {
+        width: 260px;
+        height: 70px;
+        color: $white;
+        background-color: $black;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        position: relative;
+        text-align: left;
+        padding-left: 30px;
+      }
 
-.myPageOrderNoneTitle {
-  font-size: 38px;
-  color: #dbdbdb;
-  margin: 60px auto 60px auto;
-  display: block;
-}
+      .orderGoShoppingBtnImage {
+        width: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
 
-.myPageTab {
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom: 1px solid black;
-}
-
-.myPageOrderSplit2 {
-  margin: 80px auto 150px auto;
-
-  border-bottom: 1px solid #e1dedf;
+    .orderBottomSplit {
+      margin: 80px auto 150px auto;
+      border-bottom: 1px solid #e1dedf;
+    }
+  }
 }
