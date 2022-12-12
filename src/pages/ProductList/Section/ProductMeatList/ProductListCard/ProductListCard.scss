@@ -35,12 +35,16 @@
       cursor: pointer;
     }
   }
-}
+  .productListInformation {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.modal {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: blue;
-  text-align: left;
-  z-index: 3;
+  .modal {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: blue;
+    text-align: left;
+    z-index: 3;
+  }
 }
