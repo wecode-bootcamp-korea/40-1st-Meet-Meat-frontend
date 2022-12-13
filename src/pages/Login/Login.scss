@@ -38,6 +38,15 @@
       border: none;
       border-radius: 5px;
       height: 40px;
+      cursor: pointer;
+    }
+
+    .login-button-no {
+      background-color: gray;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
     }
   }
   .sign-up-link {
