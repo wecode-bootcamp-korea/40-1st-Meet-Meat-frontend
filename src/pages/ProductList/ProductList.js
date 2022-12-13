@@ -17,11 +17,9 @@ const ProductList = () => {
   };
 
   useEffect(() => {
-    //fetch(`http://10.58.52.125:3000/products/${categoryId}`)
     fetch(`data/meatInfoList.json`, {
       headers: {
         'Content-type': 'application/json',
-        Accept: 'application/json',
       },
       method: 'GET',
     })

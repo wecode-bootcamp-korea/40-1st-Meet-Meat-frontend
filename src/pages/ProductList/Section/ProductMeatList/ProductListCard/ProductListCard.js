@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import './ProductListCard.scss';
 
 const ProductListCard = ({ meat }) => {
   const { meatId, meatName, meatImage, meatPrice } = meat;
 
   return (
-    <li className="productListItem">
+    <li className="productListCard">
       <Link to={`/product-page/${meatId}`}>
         <div className="productListItem">
           <img src={meatImage} alt={meatName} className="productListImage" />
