@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import White from '../../../assets/ProductPage/white.png';
+import Thickness from './Thickness.js/Thickness';
+
 import './Option.scss';
 
-const Option = props => {
+const Option = ({ data }) => {
   const [number, setNumber] = useState(1);
   const plus = () => {
     setNumber(number => number + 1);
@@ -17,22 +18,16 @@ const Option = props => {
 
   return (
     <div className="product-page1">
-      <img className="product-image" src={White} alt="배경이미지" />
+      <img className="product-image" src={data.img} alt="고기사진" />
       <div className="product-infor">
-        <div className="product-name">초신선 돼지 삼겹살 구이용</div>
-        <div className="product-write">100g당 0000원</div>
-        <div className="product-price">기준가 00,000원(000g)</div>
+        <div className="product-name">{data.name}</div>
+        <div className="product-write">100g 당 3,550원</div>
+        <div className="product-price">
+          기준가 {data.price}원({data.weight}g)
+        </div>
         <div className="product-option">
           옵션
-          <select className="menu-trigger">
-            {MEET_OPTION.map(option => {
-              return (
-                <option className="option" key={option.id}>
-                  {option.option}
-                </option>
-              );
-            })}
-          </select>
+          <Thickness thickness={data.thick} />
         </div>
         <div className="product-result">
           <div className="product-number">
@@ -56,9 +51,3 @@ const Option = props => {
 };
 
 export default Option;
-
-const MEET_OPTION = [
-  { id: 1, option: '얇게(11mm)' },
-  { id: 2, option: '보통(16mm)' },
-  { id: 3, option: '두껍게(24mm)' },
-];
