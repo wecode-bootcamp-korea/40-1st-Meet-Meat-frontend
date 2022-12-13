@@ -2,7 +2,7 @@ import React from 'react';
 import './ReviewListCard.scss';
 
 const ReviewListCard = ({ reviewList }) => {
-  const { userName, Date, reviewContent } = reviewList;
+  const { userName, date, reviewContent } = reviewList;
   return (
     <li className="reviewListCard">
       <div className="reviewInfo">
@@ -13,7 +13,7 @@ const ReviewListCard = ({ reviewList }) => {
           <div className="reviewCustomerName">
             <p>{userName}</p>
           </div>
-          <p>{Date}</p>
+          <p>{date}</p>
         </div>
       </div>
     </li>
