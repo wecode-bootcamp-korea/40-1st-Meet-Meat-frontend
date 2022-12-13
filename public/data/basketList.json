@@ -4,8 +4,9 @@
       "id": 100,
       "name": "초신선 한우 등심",
       "thickness": "보통",
-      "price": "21,300",
+      "price": 21300,
       "total_quantity": 2,
+      "total_price": 42600,
       "weight": 600,
       "products_id": 8,
       "image": "/images/ProductDetail/gotPork.png"
@@ -14,8 +15,9 @@
       "id": 200,
       "name": "초신선 닭다리살",
       "thickness": "얇음",
-      "price": "21,500",
-      "total_quantity": 1,
+      "price": 6000,
+      "total_quantity": 4,
+      "total_price": 24000,
       "weight": 600,
       "products_id": 7,
       "image": "/images/ProductDetail/gotPork.png"
@@ -24,8 +26,9 @@
       "id": 300,
       "name": "초신선 돼지 삼겹살 구이용",
       "thickness": "보통",
-      "price": "21,300",
+      "price": 11300,
       "total_quantity": 1,
+      "total_price": 11300,
       "weight": 600,
       "products_id": 1,
       "image": "/images/ProductDetail/gotPork.png"

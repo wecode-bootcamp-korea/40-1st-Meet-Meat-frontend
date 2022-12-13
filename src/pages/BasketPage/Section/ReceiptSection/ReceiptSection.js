@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ReceiptSection.scss';
 
-const ReceiptSection = () => {
+const ReceiptSection = ({ checkedProduct }) => {
+  const navigate = useNavigate();
+  const moveOrderPage = () => navigate('/order-page');
+  const moveProductList = () => navigate('/product-list');
+  // const moveOrderPage = () => {
+  //   navigate('/order-page', { state: { basketid: checkedProduct } });
+  // };
+
   return (
     <div className="receiptSection">
       <div className="payment-title">
@@ -13,8 +21,12 @@ const ReceiptSection = () => {
         <div className="expectation-money">0000원</div>
       </div>
       <div className="payment-button">
-        <button className="basket-order">전체상품 주문하기</button>
-        <button className="basket-out">쇼핑계속하기</button>
+        <button className="basket-order" onClick={moveOrderPage}>
+          전체상품 주문하기
+        </button>
+        <button className="basket-out" onClick={moveProductList}>
+          쇼핑계속하기
+        </button>
       </div>
     </div>
   );

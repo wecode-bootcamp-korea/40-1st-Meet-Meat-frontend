@@ -53,7 +53,9 @@
       margin-top: 10px;
       background-color: red;
     }
-
+    button:hover {
+      cursor: pointer;
+    }
     .basket-out {
       display: block;
       width: 80%;

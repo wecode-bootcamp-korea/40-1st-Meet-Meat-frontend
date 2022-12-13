@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BasketListCard from './BasketListCard/BasketListCard';
+import ReceiptSection from '../ReceiptSection/ReceiptSection';
 import './BasketList.scss';
 
 const BasketList = () => {
@@ -10,17 +11,14 @@ const BasketList = () => {
 
   console.log('장바구니에 넣은 상품:', basketProduct);
   console.log('선택한 상품:', checkedProduct);
-
-  const moveOrderPage = () => {
-    navigate('/order-page', { state: { basketid: checkedProduct } });
-  };
+  console.log(basketProduct.price);
 
   const totalPrice =
     parseInt(basketProduct.price) * parseInt(basketProduct.total_quantity);
-  console.log(basketProduct.price);
-  const isAllChecked =
-    checkedProduct.length !== 0 &&
-    basketProduct.length === checkedProduct.length;
+
+  // const isAllChecked =
+  //   checkedProduct.length !== 0 &&
+  //   basketProduct.length === checkedProduct.length;
 
   const handleSingleCheck = id => {
     if (checkedProduct.includes(id)) {
@@ -30,13 +28,13 @@ const BasketList = () => {
     }
   };
 
-  const handleAllCheck = () => {
-    if (isAllChecked) {
-      setCheckedProduct([]);
-    } else {
-      setCheckedProduct(basketProduct.map(({ id }) => id));
-    }
-  };
+  // const handleAllCheck = () => {
+  //   if (isAllChecked) {
+  //     setCheckedProduct([]);
+  //   } else {
+  //     setCheckedProduct(basketProduct.map(({ id }) => id));
+  //   }
+  // };
 
   const onChangeProps = (id, key, value) => {
     setBasketProduct(prevItem => {
@@ -185,10 +183,8 @@ const BasketList = () => {
               onChangeProps={onChangeProps}
               checkedItem={checkedProduct}
               handleSingleCheck={() => handleSingleCheck(data.id)}
-              // deleteProduct={deleteProduct}
               setCartItem={setBasketProduct}
               totalPrice={totalPrice}
-              // patchAmount={patchAmount}
             />
           );
         })}

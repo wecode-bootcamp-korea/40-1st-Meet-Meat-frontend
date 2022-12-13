@@ -1,16 +1,10 @@
 import React from 'react';
 import './BasketListCard.scss';
 
-const BasketListCard = ({
-  productInfo,
-  onChangeProps,
-  checkedItem,
-  handleSingleCheck,
-  patchAmount,
-  totalPrice,
-}) => {
-  const { id, name, products_id, total_quantity, price, image } = productInfo;
-
+const BasketListCard = ({ productInfo, checkedItem, handleSingleCheck }) => {
+  const { id, name, total_quantity, total_price, price, image } = productInfo;
+  const sumPrice = { price } * { total_quantity };
+  console.log(sumPrice);
   // const plusQuantity = () => {
   //   onChangeProps(products_id, 'quantity', total_quantity + 1);
   //   patchAmount(products_id, total_quantity + 1);
@@ -56,9 +50,7 @@ const BasketListCard = ({
             <i className="fa-solid fa-plus" />+
           </button> */}
         </div>
-        <p className="price">
-          {parseInt(parseInt({ price }) * parseInt({ total_quantity }))}원
-        </p>
+        <p className="price">{total_price} 원</p>
       </li>
     </div>
   );
