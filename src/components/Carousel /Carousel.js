@@ -7,27 +7,27 @@ import Right from '../../assets/Carosel/right.png';
 import './Carousel.scss';
 
 const Carousel = props => {
-  const TotalSlide = 2;
-  const [slide, setSlide] = useState(0);
+  const TOTAL_SLIDE = 2;
+  const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef();
 
-  const Next = () => {
-    if (slide >= TotalSlide) {
-      setSlide(0);
+  const nextSlide = () => {
+    if (currentSlide >= TOTAL_SLIDE) {
+      setCurrentSlide(0);
     } else {
-      setSlide(slide + 1);
+      setCurrentSlide(currentSlide + 1);
     }
   };
-  const Back = () => {
-    if (slide === 0) {
-      setSlide(TotalSlide);
+  const prevSlide = () => {
+    if (currentSlide === 0) {
+      setCurrentSlide(TOTAL_SLIDE);
     } else {
-      setSlide(slide - 1);
+      setCurrentSlide(currentSlide - 1);
     }
   };
   useEffect(() => {
-    slideRef.current.style.transform = `translateX(-${slide}00%)`;
-  }, [slide]);
+    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
+  }, [currentSlide]);
   return (
     <div className="carousel">
       <div className="carousel-img" ref={slideRef}>
@@ -35,8 +35,13 @@ const Carousel = props => {
         <img className="img" src={Carosel2} alt="고기2" />
         <img className="img" src={Carosel3} alt="고기3" />
       </div>
-      <img src={Left} className="button-left" onClick={Next} alt="왼쪽" />
-      <img src={Right} className="button-right" onClick={Back} alt="오른쪽" />
+      <img src={Left} className="button-left" onClick={nextSlide} alt="왼쪽" />
+      <img
+        src={Right}
+        className="button-right"
+        onClick={prevSlide}
+        alt="오른쪽"
+      />
     </div>
   );
 };
