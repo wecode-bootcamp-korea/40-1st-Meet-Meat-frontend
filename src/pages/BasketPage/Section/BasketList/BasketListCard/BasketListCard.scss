@@ -1,0 +1,86 @@
+.BasketListCard {
+  flex-direction: row;
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 30px;
+    border-bottom: 1px solid #eee;
+
+    img {
+      width: 109px;
+      margin: 0 5px 0 40px;
+    }
+
+    .product_info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 310px;
+      margin-left: 100px;
+
+      .name {
+        margin-right: 10px;
+        line-height: 22px;
+        font-size: 14px;
+
+        .option {
+          display: block;
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+
+      .standard {
+        line-height: 20px;
+        font-size: 13px;
+        color: #9b9b9b;
+      }
+    }
+
+    .amount_box {
+      display: flex;
+      margin-right: 110px;
+      border: 1px solid gray;
+
+      .box {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: #fff;
+        font-size: 14px;
+
+        i {
+          vertical-align: baseline;
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+    }
+
+    .price {
+      font-size: 18px;
+    }
+
+    .delete_btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 30px;
+      height: 30px;
+
+      text-align: center;
+      background: #fff;
+      border: 1px solid gray;
+
+      i {
+        font-size: 16px;
+        line-height: 28px;
+        color: #9b9b9b;
+      }
+    }
+  }
+}
