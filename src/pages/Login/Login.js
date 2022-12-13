@@ -28,7 +28,7 @@ const Login = () => {
 
           alert('환영합니다!');
           navigate('/main');
-        } else if (data.message === 'specified user does not exist') {
+        } else if (data.message === 'INVALID_INPUT_DATA') {
           alert('존재하지 않는 유저입니다.');
         }
       });
