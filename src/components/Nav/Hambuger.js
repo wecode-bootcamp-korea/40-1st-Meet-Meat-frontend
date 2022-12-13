@@ -1,15 +1,15 @@
 import { React, useEffect, useRef } from 'react';
 import './Hambuger.scss';
 
-const Hambuger = ({ setHambuger }) => {
+const Hambuger = ({ setIsClickHambuger }) => {
   const close = () => {
-    setHambuger(false);
+    setIsClickHambuger(false);
   };
 
   useEffect(() => {
     const handler = e => {
       if (modalRef && !modalRef.current.contains(e.target)) {
-        setHambuger(false);
+        setIsClickHambuger(false);
       }
     };
 
@@ -22,7 +22,7 @@ const Hambuger = ({ setHambuger }) => {
 
   const modalRef = useRef();
   return (
-    <div ref={modalRef} className="Hambuger">
+    <div ref={modalRef} className="hambuger">
       <div className="hambuger-top">
         <div className="hambuger-menu">메뉴</div>
         <img

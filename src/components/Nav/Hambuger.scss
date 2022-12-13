@@ -1,8 +1,8 @@
-.Hambuger {
+.hambuger {
   position: absolute;
   z-index: 5;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   width: 24%;
   height: 100vh;
   padding: 20px;
@@ -51,10 +51,6 @@
       display: grid;
       grid-template-columns: 100px 100px;
       margin-left: -20px;
-      :hover {
-        border-radius: 10px;
-        background-color: gray;
-      }
 
       .hambuger-items {
         margin: 20px;
@@ -67,6 +63,10 @@
         .menu-title {
           text-align: center;
           cursor: pointer;
+        }
+        &:hover {
+          border-radius: 10px;
+          background-color: gray;
         }
       }
     }

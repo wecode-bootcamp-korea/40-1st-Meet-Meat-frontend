@@ -1,13 +1,12 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Hambuger from './Hambuger';
 import './Nav.scss';
 
 const Nav = () => {
-  const [hambuger, setHambuger] = useState(false);
+  const [isClickHambuger, setIsClickHambuger] = useState(false);
 
-  const openNav = () => {
-    setHambuger(true);
+  const openHambugerBar = () => {
+    setIsClickHambuger(true);
   };
   return (
     <div className="header">
@@ -48,10 +47,10 @@ const Nav = () => {
               className="navRightSideIcon"
               src="/images/Nav/MenuBarWhite.png"
               alt="더보기 아이콘"
-              onClick={openNav}
+              onClick={openHambugerBar}
             />
-            {hambuger && (
-              <Hambuger hambuger={hambuger} setHambuger={setHambuger} />
+            {isClickHambuger && (
+              <Hambuger setIsClickHambuger={setIsClickHambuger} />
             )}
           </div>
         </div>
