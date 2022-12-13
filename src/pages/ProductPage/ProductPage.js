@@ -20,6 +20,7 @@ const ProductPage = () => {
         setProductDetail(data);
       });
   }, [id]);
+
   return (
     <div class="product-page">
       <Option data={productDetail} />

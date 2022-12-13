@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Check from '../../../assets/ProductPage/check.png';
 import './ProductDetail.scss';
 
 const ProductDetail = props => {
+  const [productInformation, setProductInformation] = useState([]);
+  useEffect(() => {
+    fetch(`data/productInformation1.json`, {
+      headers: {
+        'Content-type': 'application/json',
+      },
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(data => {
+        setProductInformation(data.productInformationList);
+      });
+  }, []);
+
   return (
     <div className="product-page2">
-      <h1 className="product-topic">왜 정육각인가요?</h1>
+      <h1 className="product-topic">왜 고기잇인가요?</h1>
       <p className="product-subtitle">
         <span className="product-subtitle2">
           잡은지 4일 이내의 초신선 삼겹살
         </span>
-        은 오직 정육각에서만 맛볼 수 있기 때문입니다.
+        은 오직 고기잇에서만 맛볼 수 있기 때문입니다.
       </p>
-      <div className="product-image">aa</div>
+      <img className="product-image" src={productInformation.bannerImg} />
       <div className="product-date">
         <p className="product-date-check">
           내일 받으실 삼겹살의 도축일을 확인하세요.
@@ -20,13 +34,13 @@ const ProductDetail = props => {
         <div className="product-date-area"></div>
         <div className="product-comment">*당일배송 기준</div>
       </div>
-      <div className="product-diffrent">
-        <div className="product-diffrent-why">
+      <div className="product-different">
+        <div className="product-different-why">
           지금 주문하시고 초신선 돼지고기 맛의 차이를 직접 경험해보세요.
         </div>
-        <div className="product-diffrent-image"></div>
-        <div className="product-diffrent-image"></div>
-        <div className="product-diffrent-image"></div>
+        <img className="product-different-image" />
+        <img className="product-different-image" />
+        <img className="product-different-image" />
       </div>
       <div className="product-certification">
         <p className="certification-check">인증 정보를 확인하세요.</p>
