@@ -46,21 +46,27 @@
       }
     }
 
-    .signUpBackBtn,
+    .signUpButton {
+      .signUpBackBtn {
+        width: 390px;
+        height: 60px;
+        border: none;
+        background-color: #888888;
+        color: white;
+        font-weight: bold;
+      }
+    }
+
     .signUpBtn {
       width: 390px;
       height: 60px;
       border: none;
+      background-color: black;
       color: white;
       font-weight: bold;
     }
-
-    .signUpBackBtn {
-      background-color: #888888;
-    }
-
-    .signUpBtn {
-      background-color: black;
+    .signUpBtn:disabled {
+      background-color: gray;
     }
   }
 }
