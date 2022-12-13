@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "name": "초신선 닭다리살",
+  "price": 6300,
+  "weight": 500,
+  "img": "./images/ProductDetail/porkRib.png",
+  "option": [{ "id": 1, "value": "보통" }]
+}
