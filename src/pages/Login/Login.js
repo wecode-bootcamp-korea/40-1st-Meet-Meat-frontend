@@ -12,6 +12,28 @@ const Login = () => {
   const goMainOk = id.includes('@') && pw.length >= 8;
   const goMainBtn = goMainOk ? false : true;
 
+  const handleLogin = () => {
+    fetch('http://10.58.52.125:8000/users/signin', {
+      method: 'POST',
+      headers: { 'content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.access_token) {
+          localStorage.setItem('token', data.access_token);
+
+          alert('환영합니다!');
+          navigate('/main');
+        } else if (data.message === 'specified user does not exist') {
+          alert('존재하지 않는 유저입니다.');
+        }
+      });
+  };
+
   return (
     <div className="login">
       <div className="login-box">
@@ -36,28 +58,7 @@ const Login = () => {
             value={pw}
           />
           <button
-            onClick={e => {
-              e.preventDefault();
-              fetch('http://10.58.52.125:8000/users/signin', {
-                method: 'POST',
-                headers: { 'content-Type': 'application/json;charset=utf-8' },
-                body: JSON.stringify({
-                  email: id,
-                  password: pw,
-                }),
-              })
-                .then(res => res.json())
-                .then(data => {
-                  if (data.access_token) {
-                    localStorage.setItem('token', data.access_token);
-
-                    alert('환영합니다!');
-                    navigate('/main');
-                  } else if (data.message === 'specified user does not exist') {
-                    alert('존재하지 않는 유저입니다.');
-                  }
-                });
-            }}
+            onClick={handleLogin}
             className={goMainOk ? 'login-button' : 'login-button-no'}
             disabled={goMainBtn}
           >
