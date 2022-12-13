@@ -1,0 +1,69 @@
+.receiptSection {
+  position: relative;
+  top: -51px;
+  margin-top: 51px;
+  margin-left: 39px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid black;
+  width: 280px;
+  background-color: #f8f8f8;
+
+  .payment-title {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+
+    .payment-name,
+    .payment-money {
+      font-weight: bold;
+    }
+  }
+  .payment-expectation {
+    position: relative;
+    left: -28px;
+    text-align: end;
+
+    .expectation-name {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    .expectation-money {
+      margin-top: 2px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 24px;
+      color: #d0021b;
+    }
+  }
+  .payment-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .basket-order {
+      width: 80%;
+      height: 50px;
+      border: none;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 10px;
+      background-color: red;
+    }
+
+    .basket-out {
+      display: block;
+      width: 80%;
+      height: 50px;
+      border: none;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 10px;
+      background-color: gray;
+    }
+  }
+}
