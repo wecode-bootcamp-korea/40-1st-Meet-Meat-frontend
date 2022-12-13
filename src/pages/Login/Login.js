@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Login.scss';
 
@@ -9,10 +9,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const goMainOk = id.includes('@') && pw.length >= 8;
-  const goMainBtn = goMainOk ? false : true;
+  const isLoginValidatation = id.includes('@') && pw.length >= 8;
 
-  const handleLogin = () => {
+  const handleLogin = e => {
+    e.preventDefault();
     fetch('http://10.58.52.125:8000/users/signin', {
       method: 'POST',
       headers: { 'content-Type': 'application/json;charset=utf-8' },
@@ -30,6 +30,7 @@ const Login = () => {
           navigate('/main');
         } else if (data.message === 'INVALID_INPUT_DATA') {
           alert('존재하지 않는 유저입니다.');
+          navigate('/sign-up');
         }
       });
   };
@@ -59,8 +60,8 @@ const Login = () => {
           />
           <button
             onClick={handleLogin}
-            className={goMainOk ? 'login-button' : 'login-button-no'}
-            disabled={goMainBtn}
+            className={isLoginValidatation ? 'login-button' : 'login-button-no'}
+            disabled={!isLoginValidatation}
           >
             로그인
           </button>
