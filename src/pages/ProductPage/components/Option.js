@@ -1,19 +1,65 @@
 import React, { useState } from 'react';
-import Thickness from './Thickness.js/Thickness';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import './Option.scss';
 
 const Option = ({ data }) => {
   const [number, setNumber] = useState(1);
+  const navigate = useNavigate();
+
   const plus = () => {
     setNumber(number => number + 1);
   };
+
   const minus = () => {
     if (number < 2) {
       setNumber(1);
       return;
     }
     setNumber(number => number - 1);
+  };
+
+  const handleBtn = button => {
+    if (button === 'buy') {
+      fetch(`/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+        },
+      })
+        .then(response => {
+          if (response.ok === true) {
+            return response.json();
+          }
+          alert('결제 페이지로 이동합니다!');
+        })
+        .then(data => {
+          navigate('/order-page');
+          // if (data.message === 'success') {
+          //   navigate('/order-page');
+          // }
+        });
+    } else if (button === 'basket') {
+      fetch(`/`, {
+        method: `POST`,
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+        },
+      })
+        .then(response => {
+          if (response.ok === true) {
+            return response.json();
+          }
+          alert('장바구니 페이지로 이동합니다!');
+        })
+        .then(
+          data => {
+            navigate('/basket-page');
+          }
+          //   if (data.message === 'success') {
+          //     navigate('/basket-page'); }
+        );
+    }
   };
 
   return (
@@ -27,7 +73,15 @@ const Option = ({ data }) => {
         </div>
         <div className="product-option">
           옵션
-          <Thickness thickness={data.thick} />
+          {/* <select className="menu-trigger">
+            {MEET_OPTION.map(option => {
+              return (
+                <option className="option" key={option.id}>
+                  {option.option}
+                </option>
+              );
+            })}
+          </select> */}
         </div>
         <div className="product-result">
           <div className="product-number">
@@ -42,8 +96,15 @@ const Option = ({ data }) => {
           </div>
         </div>
         <div className="product-btn">
-          <button className="product-buy">바로구매</button>
-          <button className="product-basket">장바구니</button>
+          <button onClick={() => handleBtn('buy')} className="product-buy">
+            바로구매
+          </button>
+          <button
+            onClick={() => handleBtn('basket')}
+            className="product-basket"
+          >
+            장바구니
+          </button>
         </div>
       </div>
     </div>
