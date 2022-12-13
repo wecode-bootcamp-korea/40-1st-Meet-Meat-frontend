@@ -15,22 +15,19 @@ const SignUpForm = () => {
       }),
     })
       .then(response => response.json())
-      .then(result => console.log(result));
+      .then(result => result);
   };
 
   const [userInfo, setUserInfo] = useState({
     name: '',
     email: '',
     password: '',
+    checkPassword: '',
     address: '',
   });
-  const [checkPassword, setCheckPassword] = useState('');
   const handleLogin = e => {
     const { name, value } = e.target;
     setUserInfo({ ...userInfo, [name]: value });
-  };
-  const passwordCheck = e => {
-    setCheckPassword(e.target.value);
   };
 
   const isVaildEmail = userInfo.email.includes('@');
@@ -43,9 +40,7 @@ const SignUpForm = () => {
     isVaildPass &&
     isVaildAdress &&
     isVaildName &&
-    userInfo.password === checkPassword
-      ? false
-      : true;
+    userInfo.password === userInfo.checkPassword;
 
   return (
     <div className="signUp">
@@ -81,8 +76,8 @@ const SignUpForm = () => {
             <input
               className="signUpInputText"
               type="password"
-              onChange={passwordCheck}
-              value={checkPassword}
+              onChange={handleLogin}
+              name="checkPassword"
               placeholder="비밀번호 8자리 이상"
             />
           </div>
@@ -108,7 +103,7 @@ const SignUpForm = () => {
         </div>
         <div className="signUpButton">
           <button className="signUpBackBtn">이전으로</button>
-          <button className="signUpBtn" disabled={buttonAble} onClick={Submit}>
+          <button className="signUpBtn" disabled={!buttonAble} onClick={Submit}>
             가입하기
           </button>
         </div>

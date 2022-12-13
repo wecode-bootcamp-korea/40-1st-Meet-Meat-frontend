@@ -64,9 +64,9 @@
       background-color: black;
       color: white;
       font-weight: bold;
-    }
-    .signUpBtn:disabled {
-      background-color: gray;
+      &:disabled {
+        background-color: gray;
+      }
     }
   }
 }
