@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Option.scss';
 
@@ -21,27 +21,8 @@ const Option = ({ data }) => {
 
   const handleBtn = button => {
     if (button === 'buy') {
-      fetch(`/`, {
+      fetch(`/data/basketList.json/`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8',
-        },
-      })
-        .then(response => {
-          if (response.ok === true) {
-            return response.json();
-          }
-          alert('결제 페이지로 이동합니다!');
-        })
-        .then(data => {
-          navigate('/order-page');
-          // if (data.message === 'success') {
-          //   navigate('/order-page');
-          // }
-        });
-    } else if (button === 'basket') {
-      fetch(`/`, {
-        method: `POST`,
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
         },
@@ -52,13 +33,25 @@ const Option = ({ data }) => {
           }
           alert('장바구니 페이지로 이동합니다!');
         })
-        .then(
-          data => {
-            navigate('/basket-page');
+        .then(result => {
+          navigate(`/basket-page`);
+        });
+    } else if (button === 'basket') {
+      fetch(`/data/basketList.json/`, {
+        method: `POST`,
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+        },
+      })
+        .then(response => {
+          if (response.ok === true) {
+            return response.json();
           }
-          //   if (data.message === 'success') {
-          //     navigate('/basket-page'); }
-        );
+          alert('장바구니에 상품이 담겼습니다!');
+        })
+        .then(result => {
+          console.log(result);
+        });
     }
   };
 
@@ -73,15 +66,15 @@ const Option = ({ data }) => {
         </div>
         <div className="product-option">
           옵션
-          {/* <select className="menu-trigger">
-            {MEET_OPTION.map(option => {
+          <select className="menu-trigger">
+            {MEAT_OPTION.map(option => {
               return (
                 <option className="option" key={option.id}>
                   {option.option}
                 </option>
               );
             })}
-          </select> */}
+          </select>
         </div>
         <div className="product-result">
           <div className="product-number">
@@ -112,3 +105,9 @@ const Option = ({ data }) => {
 };
 
 export default Option;
+
+const MEAT_OPTION = [
+  { id: 1, option: '보통' },
+  { id: 2, option: '얇게' },
+  { id: 3, option: '두껍' },
+];
