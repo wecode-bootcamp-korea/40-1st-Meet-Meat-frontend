@@ -2,31 +2,31 @@
   "reviewList": [
     {
       "reviewID": 1,
-      "userName": "김*아",
+      "userName": "김윤아",
       "date": "2022-12-03",
       "reviewContent": "구매 할 때 마다 너무 맛있어서 매번 여기서 구매해서 먹고 있습니다!"
     },
     {
       "reviewID": 2,
-      "userName": "곽*경",
+      "userName": "곽민경",
       "date": "2022-12-09",
       "reviewContent": "기름이 좀 많네요..맛도 예전만큼 맛있지 않은 거 같아요..;"
     },
     {
       "reviewID": 3,
-      "userName": "김*기",
+      "userName": "김민기",
       "date": "2022-12-10",
       "reviewContent": "네....뭐....괜찮네요.."
     },
     {
       "reviewID": 4,
-      "userName": "정*헌",
+      "userName": "정재헌",
       "date": "2022-12-15",
       "reviewContent": "굉장히 건방진 맛! 맛있다는 뜻입니다"
     },
     {
       "reviewID": 5,
-      "userName": "전*진",
+      "userName": "전형진",
       "date": "2022-12-19",
       "reviewContent": "위워크에서 뛰어내리면서 먹어도 맛있어요"
     }

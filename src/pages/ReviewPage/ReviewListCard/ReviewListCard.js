@@ -3,6 +3,9 @@ import './ReviewListCard.scss';
 
 const ReviewListCard = ({ reviewList }) => {
   const { userName, date, reviewContent } = reviewList;
+
+  const maskingName = userName.replace(/(?<=.{1})./gi, '*');
+
   return (
     <li className="reviewListCard">
       <div className="reviewInfo">
@@ -11,7 +14,7 @@ const ReviewListCard = ({ reviewList }) => {
         </div>
         <div className="reviewCostomer">
           <div className="reviewCustomerName">
-            <p>{userName}</p>
+            <p>{maskingName}</p>
           </div>
           <p>{date}</p>
         </div>
