@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.reviewListCard {
+  margin: 25px auto;
+  width: 978px;
+  border: 1px solid #e0e0e0;
+
+  .reviewInfo {
+    margin: 25px 30px;
+
+    .reviewContentBox {
+      width: 920px;
+      height: 150px;
+      background-color: #f8f8f8;
+
+      .reviewDetail {
+        margin-left: 20px;
+        padding-top: 15px;
+      }
+    }
+
+    .reviewCostomer {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-top: 10px;
+
+      .reviewCustomerName {
+        display: flex;
+      }
+    }
+  }
+}

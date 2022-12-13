@@ -1,40 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SignUp.scss';
 
 const SignUp = () => {
   return (
-    <div className="signUp">
+    <div className="signUpMain">
+      <div className="signUpTitleName">회원가입</div>
       <div>
-        <p className="signUpTitleName">회원가입</p>
-      </div>
-      <div className="signUpInputContainer">
-        <p>가입정보 입력</p>
-        <div className="signUpInputContainerBox">
-          <div className="signUpInputBox">
-            <p className="signUpInputName">아이디(이메일 주소)</p>
-            <input className="signUpInputText" type="text" />
-          </div>
-          <div className="signUpInputBox">
-            <p className="signUpInputName">비밀번호</p>
-            <input className="signUpInputText" type="password" />
-          </div>
-          <div className="signUpInputBox">
-            <p className="signUpInputName">비밀번호 확인</p>
-            <input className="signUpInputText" type="password" />
-          </div>
-          <div className="signUpInputBox">
-            <p className="signUpInputName">주소</p>
-            <input className="signUpInputText" type="text" />
-          </div>
-
-          <div className="signUpInputLastBox">
-            <p className="signUpInputName">이름</p>
-            <input className="signUpInputText" type="text" />
-          </div>
-        </div>
-        <div className="signUpButton">
-          <button className="signUpBackBtn">이전으로</button>
-          <button className="signUpBtn">가입하기</button>
+        <p className="signUpEmail">이메일로 가입하기</p>
+        <Link to="/sign-up-form">
+          <button className="signupButton">정육각 회원가입 하기</button>
+        </Link>
+        <div>
+          <span className="signUpLoginButton">
+            정육각 회원이신가요?
+            <Link to="/login" className="signUpLoginButtonTag">
+              로그인 하기
+            </Link>
+          </span>
         </div>
       </div>
     </div>

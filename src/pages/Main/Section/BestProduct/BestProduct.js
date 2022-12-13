@@ -19,7 +19,7 @@ const BestProduct = () => {
   }, []);
   return (
     <>
-      <div className="bestProductTitle">정육각 베스트 상품</div>
+      <div className="bestProductTitle">고기잇 베스트 상품</div>
       <div className="bestProduct">
         <ul className="bestProductList">
           {products.map(meatList => {

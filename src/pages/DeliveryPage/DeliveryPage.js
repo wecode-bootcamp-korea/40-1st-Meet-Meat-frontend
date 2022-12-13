@@ -18,20 +18,19 @@ const DeliveryPage = () => {
         <div>
           <h1 className="main-title">초신선배송</h1>
           <span className="main-subtitle">
-            정육각의 초신선함을 식탁까지 온전하게
+            고기잇의 초신선함을 식탁까지 온전하게
           </span>
         </div>
         <img className="fast-logo" src={Fast} alt="fast" />
       </div>
-      <span className="delivery-why">왜 정육각 초신선배송인가요?</span>
+      <span className="delivery-why">왜 고기잇 초신선배송인가요?</span>
       <div className="advertisement">
         <div className="delivery-content">
           <div className="content-box">
             <img className="delivery-image" src={Truck} alt="delivery-image" />
             <span className="content-title">빠른 배송</span>
             <span className="content-subtitle">
-              아침에 낳은 달걀을 저녁에 받아보실 수 있도록 최대한 빠르게
-              배송합니다
+              아침에 주문해서 저녁에 받아보실 수 있도록 최대한 빠르게 배송합니다
             </span>
           </div>
           <div className="content-box">
@@ -92,13 +91,13 @@ const DeliveryPage = () => {
             <img className="sale" src={Sale} alt="할인" />
           </span>
           <p className="advertisement-subtitle">
-            삼겹살, 돈까스, 오징어 등 뭐든지 2개만 담아도 배송비
+            삼겹살, 소고기, 닭 등 뭐든지 2개만 담아도 배송비
             <br /> 배송비 할인! <span>5개 담으면 배송비 무료!</span>
           </p>
         </div>
         <div className="advertisement-left">
           <span className="advertisement-title">
-            정육각 초신선배송,
+            고기잇 초신선배송,
             <br />
             부담없이 이용하려면?
             <img className="coupon" src={Coupon} alt="쿠폰" />

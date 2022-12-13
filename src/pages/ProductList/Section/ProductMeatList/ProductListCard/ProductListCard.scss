@@ -1,0 +1,40 @@
+.productListCard {
+  margin-top: 50px;
+  background-color: rgb(244, 244, 244);
+  width: 400px;
+  height: 350px;
+
+  .productListImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+    width: 250px;
+  }
+  .cartIconWrapper {
+    height: 70px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .cartIcon {
+      margin: -100px 30px 50px 0;
+      padding: 10px;
+      box-shadow: 2px 2px 5px 2px gray;
+      border-radius: 50%;
+      width: 70px;
+      background-color: white;
+    }
+
+    .cartIcon:hover {
+      background-color: gray;
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

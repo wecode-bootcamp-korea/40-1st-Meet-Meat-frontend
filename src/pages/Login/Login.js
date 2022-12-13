@@ -12,11 +12,8 @@ const Login = () => {
           <input
             className="id-box"
             placeholder="아이디(이메일 주소)를 입력하세요"
-          ></input>
-          <input
-            className="password-box"
-            placeholder="비밀번호를 입력하세요"
-          ></input>
+          />
+          <input className="password-box" placeholder="비밀번호를 입력하세요" />
           <button className="login-button">로그인</button>
         </form>
         <div className="sign-up-link">

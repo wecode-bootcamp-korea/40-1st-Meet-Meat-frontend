@@ -1,0 +1,30 @@
+@import '../../../src/styles/variables.scss';
+
+.review {
+  margin: 170px auto 180px auto;
+  width: 100%;
+
+  .reviewUpLoad {
+    width: 978px;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    .reviewUpLoadComment {
+      padding-left: 10px;
+      width: 85%;
+      height: 40px;
+      outline: none;
+      border: none;
+    }
+
+    .reviewUpLoadCommentBtn {
+      width: 15%;
+      height: 35px;
+      border: none;
+      background-color: $white;
+      font-weight: bold;
+    }
+  }
+}
