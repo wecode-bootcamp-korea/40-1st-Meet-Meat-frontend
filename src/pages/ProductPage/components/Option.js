@@ -1,23 +1,10 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 import './Option.scss';
 
-const Option = ({ data }) => {
-  const [number, setNumber] = useState(1);
+const Option = ({ data, decreaseCount, increaseCount, productQuantity }) => {
   const navigate = useNavigate();
-
-  const plus = () => {
-    setNumber(number => number + 1);
-  };
-
-  const minus = () => {
-    if (number < 2) {
-      setNumber(1);
-      return;
-    }
-    setNumber(number => number - 1);
-  };
 
   const handleBtn = button => {
     if (button === 'buy') {
@@ -25,6 +12,8 @@ const Option = ({ data }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
+          Accept: 'application/json',
+          Authorization: localStorage.getItem('Token'),
         },
       })
         .then(response => {
@@ -49,9 +38,7 @@ const Option = ({ data }) => {
           }
           alert('장바구니에 상품이 담겼습니다!');
         })
-        .then(result => {
-          console.log(result);
-        });
+        .then(result => {});
     }
   };
 
@@ -79,21 +66,28 @@ const Option = ({ data }) => {
         <div className="product-result">
           <div className="product-number">
             수량
-            <button className="minus" onClick={minus}>
+            <button className="minus" onClick={decreaseCount}>
               -
             </button>
-            <div className="number">{number}</div>
-            <button className="plus" onClick={plus}>
+            <div className="number">{productQuantity}</div>
+            <button className="plus" onClick={increaseCount}>
               +
             </button>
           </div>
         </div>
         <div className="product-btn">
-          <button onClick={() => handleBtn('buy')} className="product-buy">
+          <button
+            onClick={() => {
+              handleBtn('buy');
+            }}
+            className="product-buy"
+          >
             바로구매
           </button>
           <button
-            onClick={() => handleBtn('basket')}
+            onClick={() => {
+              handleBtn('basket');
+            }}
             className="product-basket"
           >
             장바구니
