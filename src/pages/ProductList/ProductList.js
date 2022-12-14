@@ -32,6 +32,7 @@ const ProductList = () => {
   return (
     <div className="productList">
       <Banner />
+
       <ProductCategory
         categoryId={categoryId}
         changeCategory={changeCategory}

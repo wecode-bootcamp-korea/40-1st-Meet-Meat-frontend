@@ -17,7 +17,7 @@ const Login = () => {
           <button className="login-button">로그인</button>
         </form>
         <div className="sign-up-link">
-          <Link to="/signUp">
+          <Link to="/sign-up">
             정육각이 처음이신가요?
             <span className="signup-link"> 회원가입하기</span>
           </Link>

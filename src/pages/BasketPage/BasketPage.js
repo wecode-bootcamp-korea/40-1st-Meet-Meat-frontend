@@ -31,6 +31,7 @@ const BasketPage = () => {
           </div>
           <div className="payment-button">
             <button className="basket-order">전체상품 주문하기</button>
+
             <button className="basket-out">쇼핑계속하기</button>
           </div>
         </div>

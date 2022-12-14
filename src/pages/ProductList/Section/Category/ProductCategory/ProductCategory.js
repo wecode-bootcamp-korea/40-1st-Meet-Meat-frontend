@@ -15,7 +15,7 @@ const ProductCategory = ({ categoryId, changeCategory, products }) => {
                 sort.id === categoryId && 'productCategoryActive'
               }`}
               onClick={() => {
-                changeCategory(sort.id);
+                changeCategory(sort.name);
               }}
             >
               <div>{sort.text}</div>

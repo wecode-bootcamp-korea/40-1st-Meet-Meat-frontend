@@ -1,5 +1,6 @@
 import React from 'react';
 import './Mypage.scss';
+import { Link } from 'react-router-dom';
 
 const Mypage = () => {
   return (
@@ -61,15 +62,16 @@ const Mypage = () => {
             <div className="orderNone">
               <span className="orderNoneTitle">주문 내역이 없습니다.</span>
             </div>
-            <button className="orderGoShoppingBtn">
-              {' '}
-              <img
-                className="orderGoShoppingBtnImage"
-                src="/images/myPage/제목_없는_아트워크.png"
-                alt="버튼안화살표"
-              />
-              쇼핑하러가기
-            </button>
+            <Link to="/product-list">
+              <button className="orderGoShoppingBtn">
+                <img
+                  className="orderGoShoppingBtnImage"
+                  src="/images/myPage/제목_없는_아트워크.png"
+                  alt="버튼안화살표"
+                />
+                쇼핑하러가기
+              </button>
+            </Link>
           </div>
         </div>
         <div className="orderBottomSplit" />
