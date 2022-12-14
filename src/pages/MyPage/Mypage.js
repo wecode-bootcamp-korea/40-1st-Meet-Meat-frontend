@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Mypage.scss';
+import UserInfo from './UserInfo';
 import { Link } from 'react-router-dom';
 
 const Mypage = () => {
+  const [userInformation, setUserInformation] = useState({});
+
+  useEffect(() => {
+    fetch('/data/userData.json', {
+      headers: {
+        'Content-type': 'application/json',
+      },
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(result => {
+        setUserInformation(result);
+      });
+  }, []);
+
   return (
     <div className="myPage">
       <div className="myPageContainer">
@@ -13,46 +29,7 @@ const Mypage = () => {
             src="https://cdn-icons-png.flaticon.com/512/2583/2583434.png"
             alt="메달이미지"
           />
-          <div className="userInfoData">
-            <div className="userInfoDataTop">
-              <div className="userInfoDataTopBtn">
-                <p className="userInfoDataTopUserName">
-                  Hello, <span>김윤아</span>님
-                </p>
-
-                <button className="userInfoDataTopLogOutBtn">로그아웃</button>
-              </div>
-              <button className="userInfoDataTopQuestionBtn">
-                내 질문 보기
-              </button>
-            </div>
-
-            <div className="userInfoSplit" />
-            <div>
-              <ul className="userInfoBottom">
-                <li className="userInfoBottomList">
-                  <p className="userInfoBottomListTitle">회원등급</p>
-                  <p className="userInfoBottomListCheck">[웰컴]</p>
-                </li>
-                <li className="userInfoBottomList">
-                  <p className="userInfoBottomListTitle">적립금</p>
-                  <p className="userInfoBottomListCheck">[0원]</p>
-                </li>
-                <li className="userInfoBottomList">
-                  <p className="userInfoBottomListTitle">쿠폰</p>
-                  <p className="userInfoBottomListCheck">[0개]</p>
-                </li>
-                <li className="userInfoBottomList">
-                  <p className="userInfoBottomListTitle">구매</p>
-                  <p className="userInfoBottomListCheck">[0건]</p>
-                </li>
-                <li className="userInfoBottomList">
-                  <p className="userInfoBottomListTitle">회원번호</p>
-                  <p className="userInfoBottomListCheck">[1234-5678-9012]</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <UserInfo userData={userInformation} />
         </div>
         <div className="orderTabContainer">
           <span className="myPageTab">주문내역</span>
