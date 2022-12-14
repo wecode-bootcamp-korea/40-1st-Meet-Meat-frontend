@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Modal from '../../../src/components/Modal/Modal';
 import Plus from '../../assets/OrderPage/plus.png';
 import Sign from '../../assets/OrderPage/sign.png';
 
@@ -8,7 +7,6 @@ import './OrderPage.scss';
 const OrderPage = () => {
   const [userData, setUserData] = useState({});
   const [basketData, setBasketData] = useState([]);
-  const [openAddress, setOpenAddress] = useState(false);
 
   useEffect(() => {
     fetch('data/basket.json', {
@@ -32,11 +30,6 @@ const OrderPage = () => {
       .then(result => setUserData(result));
   }, []);
 
-  const buttonClick = () => {
-    setOpenAddress(true);
-  };
-  console.log(basketData);
-  console.log(userData);
   return (
     <div className="order-page">
       <h1 className="order">주문하기</h1>
@@ -63,12 +56,6 @@ const OrderPage = () => {
         <div className="order-padding" />
         <div className="order-address">
           <h3 className="sender">받으시는 분</h3>
-          <div>
-            <button className="address-button" onClick={buttonClick}>
-              주소선택
-            </button>
-            {openAddress && <Modal setOpenAddress={setOpenAddress} />}
-          </div>
         </div>
         <table className="order-information">
           <thead className="order-border">
