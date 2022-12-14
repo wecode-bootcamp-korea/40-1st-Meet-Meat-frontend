@@ -40,7 +40,8 @@
 
     .amount_box {
       display: flex;
-      margin-right: 110px;
+      margin-left: -35px;
+      margin-right: 150px;
       border: 1px solid gray;
 
       .box {
@@ -60,6 +61,7 @@
     }
 
     .price {
+      margin-left: -70px;
       font-size: 18px;
     }
     .deleteBtn:hover {

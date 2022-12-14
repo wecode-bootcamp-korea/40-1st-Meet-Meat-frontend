@@ -2,19 +2,16 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ReceiptSection.scss';
 
-const ReceiptSection = ({ checkedProduct }) => {
+const ReceiptSection = ({ basketProduct }) => {
   const navigate = useNavigate();
   const moveOrderPage = () => navigate('/order-page');
   const moveProductList = () => navigate('/product-list');
-  // const moveOrderPage = () => {
-  //   navigate('/order-page', { state: { basketid: checkedProduct } });
-  // };
-
+  console.log(basketProduct);
   return (
     <div className="receiptSection">
       <div className="payment-title">
         <div className="payment-name">총 상품 금액</div>
-        <span className="payment-money">0원</span>
+        <span className="payment-money">{basketProduct.total_price}</span>
       </div>
       <div className="payment-expectation">
         <div className="expectation-name">예상결제금액</div>

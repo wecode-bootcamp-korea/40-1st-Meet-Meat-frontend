@@ -2,29 +2,32 @@ import React from 'react';
 import './BasketListCard.scss';
 
 const BasketListCard = ({
+  patchAmount,
   basketProduct,
   productInfo,
   checkedItem,
   handleSingleCheck,
+  onChangeProps,
+  deleteProduct,
 }) => {
-  const { id, name, total_quantity, price, image } = productInfo;
+  const { id, products_id, name, total_quantity, price, image } = productInfo;
 
   // console.log(totalPrice);
   const totalPrice = price * total_quantity;
 
   const plus = () => {
-    onChangeProps(option_products_id, 'quantity', total_quantity + 1);
-    patchAmount(option_products_id, total_quantity + 1);
+    onChangeProps(products_id, 'quantity', total_quantity + 1);
+    patchAmount(products_id, total_quantity + 1);
     patchAmount();
   };
 
   const minus = () => {
     onChangeProps(
-      option_products_id,
+      products_id,
       'quantity',
-      quantity === 1 ? 1 : total_quantity - 1
+      total_quantity === 1 ? 1 : total_quantity - 1
     );
-    patchAmount(option_products_id, total_quantity - 1);
+    patchAmount(products_id, total_quantity - 1);
     patchAmount();
   };
   return (
@@ -57,7 +60,9 @@ const BasketListCard = ({
           </button>
         </div>
         <p className="price">{totalPrice} 원</p>
-        <button className="deleteBtn">x</button>
+        <button className="deleteBtn" onClick={deleteProduct}>
+          x
+        </button>
       </li>
     </div>
   );
