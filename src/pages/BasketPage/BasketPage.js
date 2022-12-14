@@ -5,8 +5,8 @@ import './BasketPage.scss';
 
 const BasketPage = () => {
   const [product, setProduct] = useState([]);
-  const [checkedArr, setCheckedArr] = useState([]);
-  const [countArr, setCountArr] = useState([]);
+  const [checkedProduct, setCheckedProduct] = useState([]);
+  const [countProduct, setCountProduct] = useState([]);
   const [checkedPriceList, setCheckedPriceList] = useState([]);
   const [checkedProductTotal, setCheckedProductTotal] = useState(0);
 
@@ -21,7 +21,7 @@ const BasketPage = () => {
       .then(response => response.json())
       .then(result => {
         setProduct(result);
-        setCheckedArr(
+        setCheckedProduct(
           result.basketList.map(item => {
             return { ...item, checked: true };
           })
@@ -31,11 +31,11 @@ const BasketPage = () => {
 
   useEffect(() => {
     setCheckedPriceList(
-      checkedArr.map(checkedArr => {
-        return checkedArr.price * checkedArr.total_quantity;
+      checkedProduct.map(checkedProduct => {
+        return checkedProduct.price * checkedProduct.total_quantity;
       })
     );
-  }, [checkedArr, countArr]);
+  }, [checkedProduct, countProduct]);
 
   useEffect(() => {
     setCheckedProductTotal(
@@ -47,12 +47,12 @@ const BasketPage = () => {
 
   const singlePriceHandler = (newAmount, idx) => {
     let newProductArray = [...product];
-    let newCheckedArray = [...checkedArr];
+    let newCheckedArray = [...checkedProduct];
     newProductArray[idx].amount = newAmount;
     newCheckedArray[idx].amount = newAmount;
-    setCheckedArr(newCheckedArray);
+    setCheckedProduct(newCheckedArray);
     setProduct(newProductArray);
-    setCountArr(newCheckedArray);
+    setCountProduct(newCheckedArray);
   };
 
   const removeProduct = id => {
@@ -61,8 +61,8 @@ const BasketPage = () => {
         return product.product_id !== id;
       })
     );
-    setCheckedArr(
-      checkedArr.filter(check => {
+    setCheckedProduct(
+      checkedProduct.filter(check => {
         return check.product_id !== id;
       })
     );
@@ -70,9 +70,12 @@ const BasketPage = () => {
 
   const childCheckRemove = (productDetail, checked) => {
     checked
-      ? setCheckedArr([...checkedArr, { ...productDetail, checked: checked }])
-      : setCheckedArr(
-          checkedArr.filter(check => {
+      ? setCheckedProduct([
+          ...checkedProduct,
+          { ...productDetail, checked: checked },
+        ])
+      : setCheckedProduct(
+          checkedProduct.filter(check => {
             return check.product_id !== productDetail.product_id;
           })
         );
@@ -107,7 +110,7 @@ const BasketPage = () => {
           removeCheckedProducts => removeCheckedProducts.product_id !== item
         ))
     );
-    setCheckedArr(removeCheckedProducts);
+    setCheckedProduct(removeCheckedProducts);
   };
   return (
     <div className="basket-page">
@@ -126,12 +129,12 @@ const BasketPage = () => {
                   product={product}
                   setProduct={setProduct}
                   key={product.product_id}
-                  checkedArr={checkedArr}
+                  checkedProduct={checkedProduct}
                   idx={idx}
                   removeProduct={removeProduct}
                   removeChild={removeChild}
                   childCheckRemove={childCheckRemove}
-                  setCheckedArr={setCheckedArr}
+                  setCheckedProduct={setCheckedProduct}
                   singlePriceHandler={singlePriceHandler}
                 />
               ))}

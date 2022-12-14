@@ -11,11 +11,13 @@
       width: 109px;
       margin: 0 5px 0 40px;
     }
+
     .productInstruction {
       display: flex;
       flex-direction: row;
       padding-left: 20px;
     }
+
     .productInfo {
       display: flex;
       justify-content: space-between;
@@ -44,7 +46,6 @@
 
     .amount_box {
       display: flex;
-
       margin-right: 150px;
       border: 1px solid gray;
 
@@ -68,9 +69,11 @@
       margin: 0 0 5px -100px;
       font-size: 18px;
     }
+
     .deleteBtn:hover {
       cursor: pointer;
     }
+
     .deleteBtn {
       position: absolute;
       top: 50%;
