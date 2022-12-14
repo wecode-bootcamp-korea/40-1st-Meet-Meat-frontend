@@ -1,4 +1,4 @@
-import React, { useEffect, useInsertionEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Carosel1 from '../../assets/Carosel/carosel1.jpg';
 import Carosel2 from '../../assets/Carosel/carosel2.jpg';
 import Carosel3 from '../../assets/Carosel/carosel3.jpg';
