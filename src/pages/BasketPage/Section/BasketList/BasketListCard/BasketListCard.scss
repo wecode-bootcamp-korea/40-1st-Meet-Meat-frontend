@@ -62,8 +62,10 @@
     .price {
       font-size: 18px;
     }
-
-    .delete_btn {
+    .deleteBtn:hover {
+      cursor: pointer;
+    }
+    .deleteBtn {
       position: absolute;
       top: 50%;
       right: 0;
@@ -71,10 +73,10 @@
       display: block;
       width: 30px;
       height: 30px;
-
+      margin-left: 20px;
       text-align: center;
       background: #fff;
-      border: 1px solid gray;
+      border: 1px solid lightgray;
 
       i {
         font-size: 16px;

@@ -7,14 +7,26 @@ const BasketListCard = ({
   checkedItem,
   handleSingleCheck,
 }) => {
-  const { id, name, total_quantity, total_price, price, image } = productInfo;
+  const { id, name, total_quantity, price, image } = productInfo;
 
   // console.log(totalPrice);
-  console.log(price * total_quantity);
   const totalPrice = price * total_quantity;
-  const blankPrice = [];
-  const fullPrice = blankPrice.unshift(totalPrice);
-  console.log(fullPrice);
+
+  const plus = () => {
+    onChangeProps(option_products_id, 'quantity', total_quantity + 1);
+    patchAmount(option_products_id, total_quantity + 1);
+    patchAmount();
+  };
+
+  const minus = () => {
+    onChangeProps(
+      option_products_id,
+      'quantity',
+      quantity === 1 ? 1 : total_quantity - 1
+    );
+    patchAmount(option_products_id, total_quantity - 1);
+    patchAmount();
+  };
   return (
     <div className="BasketListCard">
       <li>
@@ -36,15 +48,16 @@ const BasketListCard = ({
           </p>
         </div>
         <div className="amount_box">
-          {/* <button className="box" onClick={minusQuantity}>
+          <button className="box" onClick={minus}>
             <i className="fa-solid fa-minus" /> -
-          </button> */}
+          </button>
           <p className="box">{total_quantity}</p>
-          {/* <button className="box" onClick={plusQuantity}>
+          <button className="box" onClick={plus}>
             <i className="fa-solid fa-plus" />+
-          </button> */}
+          </button>
         </div>
         <p className="price">{totalPrice} 원</p>
+        <button className="deleteBtn">x</button>
       </li>
     </div>
   );
