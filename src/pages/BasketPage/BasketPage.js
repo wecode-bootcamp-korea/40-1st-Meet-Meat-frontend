@@ -1,165 +1,147 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import BasketList from './Section/BasketList/BasketList';
+import BasketListCard from './Section/BasketList/BasketListCard/BasketListCard';
 import ReceiptSection from './Section/ReceiptSection/ReceiptSection';
 import './BasketPage.scss';
 
 const BasketPage = () => {
-  const [basketProduct, setBasketProduct] = useState([]);
-  const [checkedProduct, setCheckedProduct] = useState([]);
+  const [product, setProduct] = useState([]);
+  const [checkedArr, setCheckedArr] = useState([]);
+  const [countArr, setCountArr] = useState([]);
+  const [checkedPriceList, setCheckedPriceList] = useState([]);
+  const [checkedProductTotal, setCheckedProductTotal] = useState(0);
 
-  console.log(basketProduct);
-  console.log(checkedProduct);
-
-  const navigate = useNavigate();
-
-  const moveOrder = () => {
-    navigate('/order-page', { state: { cartId: checkedProduct } });
-  };
-
-  const onChangeProps = (id, key, value) => {
-    setCheckedProduct(prev => {
-      return prev.map(obj => {
-        if (obj.option_products_id === id) {
-          return { ...obj, [key]: value };
-        } else {
-          return { ...obj };
-        }
-      });
-    });
-  };
-
-  const handleSingleCheck = id => {
-    if (checkedProduct.includes(id)) {
-      setCheckedProduct(checkedProduct.filter(el => el !== id));
-    } else {
-      setCheckedProduct(checkedProduct.concat(id));
-    }
-  };
-
-  /*
-  //PATCH
-  const patchAmount = async (optionProductsId, quantity) => {
-    const response = await fetch(
-      `/data/basketList.json`,
-      //patch?optionProductsId=${optionProductsId}&quantity=${quantity},
-      {
-        method: 'PATCH',
-        headers: {
-          Authorization: localStorage.getItem('token'),
-        },
-      }
-    );
-
-    const data = await response.json();
-    const patchedItem = data.getCartbyId
-      .map(obj => {
-        return {
-          id: obj.id,
-          option_products_id: obj.option_products_id,
-          name: obj.name,
-          price: +obj.price,
-          quantity: +obj.quantity,
-          img_url: obj.img_url,
-          thickness: obj.thickness,
-        };
-      })
-      .filter(obj => {
-        return obj.option_products_id === optionProductsId;
-      });
-    setBasketProduct(prev => {
-      return prev.map(obj => {
-        if (obj.option_products_id === optionProductsId) {
-          return patchedItem[0];
-        } else {
-          return obj;
-        }
-      });
-    });
-  };
-};
-
-//Delete
-//DELETE
-const deleteProduct = async () => {
-  const response = await fetch(
-    `/data/basketList.json`,
-    //   '&cartsId='
-    {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        Authorization: localStorage.getItem('token'),
-      },
-    }
-  );
-
-  const data = await response.json();
-
-  if (data) {
-    const response = await fetch(`/data/basketList.json`, {
-      headers: {
-        Authorization: localStorage.getItem('token'),
-      },
-    });
-
-    const data = await response.json();
-    const filteredList = data.getCartbyId
-      .filter(el => {
-        return !checkedProduct.includes(el.id);
-      })
-      .map(obj => {
-        return {
-          id: obj.id,
-          option_products_id: obj.option_products_id,
-          name: obj.name,
-          price: obj.price,
-          quantity: obj.quantity,
-          tumbnail_url: obj.tumbnail_url,
-          standard_unit: obj.standard_unit,
-          thick: obj.thick,
-        };
-      });
-    setBasketProduct(filteredList);
-  }
-
-  */
-
-  //GET
-  const getCartData = () => {
+  useEffect(() => {
     fetch(`/data/basketList.json`, {
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        Authorization: localStorage.getItem('token'),
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('Token'),
       },
     })
       .then(response => response.json())
-      .then(data => setBasketProduct(data.basketList));
-  };
-
-  useEffect(() => {
-    getCartData();
+      .then(result => {
+        setProduct(result);
+        setCheckedArr(
+          result.basketList.map(item => {
+            return { ...item, checked: true };
+          })
+        );
+      });
   }, []);
 
+  useEffect(() => {
+    setCheckedPriceList(
+      checkedArr.map(checkedArr => {
+        return checkedArr.price * checkedArr.total_quantity;
+      })
+    );
+  }, [checkedArr, countArr]);
+
+  useEffect(() => {
+    setCheckedProductTotal(
+      checkedPriceList.reduce((acc, cur) => {
+        return (acc += cur);
+      }, 0)
+    );
+  }, [checkedPriceList]);
+
+  const singlePriceHandler = (newAmount, idx) => {
+    let newProductArray = [...product];
+    let newCheckedArray = [...checkedArr];
+    newProductArray[idx].amount = newAmount;
+    newCheckedArray[idx].amount = newAmount;
+    setCheckedArr(newCheckedArray);
+    setProduct(newProductArray);
+    setCountArr(newCheckedArray);
+  };
+
+  const removeProduct = id => {
+    setProduct(
+      product.basketList.filter(product => {
+        return product.product_id !== id;
+      })
+    );
+    setCheckedArr(
+      checkedArr.filter(check => {
+        return check.product_id !== id;
+      })
+    );
+  };
+
+  const childCheckRemove = (productDetail, checked) => {
+    checked
+      ? setCheckedArr([...checkedArr, { ...productDetail, checked: checked }])
+      : setCheckedArr(
+          checkedArr.filter(check => {
+            return check.product_id !== productDetail.product_id;
+          })
+        );
+  };
+
+  const removeChild = id => {
+    let removeProducts;
+    id.forEach(
+      item =>
+        (removeProducts = product.filter(
+          product => product.product_id !== item
+        ))
+    );
+    id.forEach(
+      item =>
+        (removeProducts = removeProducts.filter(
+          removeProducts => removeProducts.product_id !== item
+        ))
+    );
+    setProduct(removeProducts);
+
+    let removeCheckedProducts;
+    id.forEach(
+      item =>
+        (removeCheckedProducts = product.filter(
+          product => product.product_id !== item
+        ))
+    );
+    id.forEach(
+      item =>
+        (removeCheckedProducts = removeCheckedProducts.filter(
+          removeCheckedProducts => removeCheckedProducts.product_id !== item
+        ))
+    );
+    setCheckedArr(removeCheckedProducts);
+  };
   return (
     <div className="basket-page">
       <div className="basket-name">장바구니</div>
       <div className="basket-flex">
-        <ul>
-          {basketProduct.map(data => (
-            <BasketList
-              key={data.id}
-              productInfo={data}
-              onChangeProps={onChangeProps}
-              basketProduct={basketProduct}
-              setBasketProduct={setBasketProduct}
-              handleSingleCheck={handleSingleCheck}
-              // patchAmount={patchAmount}
-              // deleteProduct={deleteProduct}
-            />
-          ))}
-        </ul>
-        <ReceiptSection basketProduct={basketProduct} />
+        <div className="basket">
+          <div className="basket-table">
+            <div className="basket-info">상품정보</div>
+            <div className="basket-num">수량</div>
+            <div className="basket-price">가격</div>
+          </div>
+          <ul className="basket-item">
+            {product.basketList &&
+              product.basketList.map((product, idx) => (
+                <BasketListCard
+                  product={product}
+                  setProduct={setProduct}
+                  key={product.product_id}
+                  checkedArr={checkedArr}
+                  idx={idx}
+                  removeProduct={removeProduct}
+                  removeChild={removeChild}
+                  childCheckRemove={childCheckRemove}
+                  setCheckedArr={setCheckedArr}
+                  singlePriceHandler={singlePriceHandler}
+                />
+              ))}
+          </ul>
+        </div>
+
+        <ReceiptSection
+          product={product}
+          checkedProductTotal={checkedProductTotal}
+        />
       </div>
     </div>
   );

@@ -45,6 +45,7 @@
       }
       .basket-item {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         padding-top: 40px;
         width: 860px;

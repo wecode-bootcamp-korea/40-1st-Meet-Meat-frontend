@@ -61,7 +61,7 @@
     }
 
     .price {
-      margin-left: -70px;
+      margin: 0 0 5px -80px;
       font-size: 18px;
     }
     .deleteBtn:hover {
@@ -73,11 +73,12 @@
       right: 0;
       transform: translateY(-50%);
       display: block;
-      width: 30px;
+      width: 20px;
       height: 30px;
       margin-left: 20px;
       text-align: center;
       background: #fff;
+      color: gray;
       border: 1px solid lightgray;
 
       i {

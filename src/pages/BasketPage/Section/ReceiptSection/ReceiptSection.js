@@ -2,21 +2,25 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ReceiptSection.scss';
 
-const ReceiptSection = ({ basketProduct }) => {
-  const { total_price } = basketProduct;
+const ReceiptSection = ({ checkedProductTotal }) => {
   const navigate = useNavigate();
   const moveOrderPage = () => navigate('/order-page');
   const moveProductList = () => navigate('/product-list');
-  console.log(basketProduct);
+
   return (
     <div className="receiptSection">
       <div className="payment-title">
         <div className="payment-name">총 상품 금액</div>
-        <span className="payment-money">{total_price}</span>
+        <span className="payment-money">
+          {Number(checkedProductTotal).toLocaleString()}
+        </span>
       </div>
       <div className="payment-expectation">
         <div className="expectation-name">예상결제금액</div>
-        <div className="expectation-money">{total_price}</div>
+        <div className="expectation-money">
+          {' '}
+          {Number(checkedProductTotal).toLocaleString()}
+        </div>
       </div>
       <div className="payment-button">
         <button className="basket-order" onClick={moveOrderPage}>

@@ -7,11 +7,13 @@ const Option = props => {
   const plus = () => {
     setNumber(number => number + 1);
   };
+
   const minus = () => {
     if (number < 2) {
       setNumber(1);
       return;
     }
+
     setNumber(number => number - 1);
   };
 
