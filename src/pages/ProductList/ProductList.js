@@ -37,6 +37,7 @@ const ProductList = () => {
         changeCategory={changeCategory}
         data={products}
       />
+
       <ProductMeatList data={products} />
     </div>
   );
