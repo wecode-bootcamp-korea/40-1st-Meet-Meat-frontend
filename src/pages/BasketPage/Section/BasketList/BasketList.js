@@ -144,7 +144,7 @@ const BasketList = () => {
     }
   }; */
 
-  //GET
+  // GET;
   const getCartData = () => {
     fetch(`/data/basketList.json`, {
       headers: {
