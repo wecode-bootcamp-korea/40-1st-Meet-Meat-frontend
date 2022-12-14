@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './Option.scss';
 
-const Option = ({ data, decreaseCount, increaseCount, productQuantity }) => {
+const Option = ({ productDetail }) => {
+  const { id, name, price, weight, img, size } = productDetail;
+  const [count, setCount] = useState(1);
+
   const navigate = useNavigate();
+
+  const decreaseCount = () => {
+    if (count > 1) {
+      setCount(prev => prev - 1);
+    }
+  };
+
+  const increaseCount = () => {
+    setCount(prev => prev + 1);
+  };
 
   const handleBtn = button => {
     if (button === 'buy') {
@@ -12,7 +25,6 @@ const Option = ({ data, decreaseCount, increaseCount, productQuantity }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8',
-          Accept: 'application/json',
           Authorization: localStorage.getItem('Token'),
         },
       })
@@ -44,17 +56,17 @@ const Option = ({ data, decreaseCount, increaseCount, productQuantity }) => {
 
   return (
     <div className="product-page1">
-      <img className="product-image" src={data.img} alt="고기사진" />
+      <img className="product-image" src={img} alt="고기사진" />
       <div className="product-infor">
-        <div className="product-name">{data.name}</div>
+        <div className="product-name">{name}</div>
         <div className="product-write">100g 당 3,550원</div>
         <div className="product-price">
-          기준가 {data.price}원({data.weight}g)
+          기준가 {price}원({weight}g)
         </div>
         <div className="product-option">
           옵션
           <select className="menu-trigger">
-            {MEAT_OPTION.map(option => {
+            {size?.map(option => {
               return (
                 <option className="option" key={option.id}>
                   {option.option}
@@ -69,7 +81,7 @@ const Option = ({ data, decreaseCount, increaseCount, productQuantity }) => {
             <button className="minus" onClick={decreaseCount}>
               -
             </button>
-            <div className="number">{productQuantity}</div>
+            <div className="number">{count}</div>
             <button className="plus" onClick={increaseCount}>
               +
             </button>
@@ -99,9 +111,3 @@ const Option = ({ data, decreaseCount, increaseCount, productQuantity }) => {
 };
 
 export default Option;
-
-const MEAT_OPTION = [
-  { id: 1, option: '보통' },
-  { id: 2, option: '얇게' },
-  { id: 3, option: '두껍' },
-];

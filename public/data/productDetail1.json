@@ -3,7 +3,7 @@
   "name": "초신선 돼지 삼겹살 구이용",
   "price": "11,000",
   "weight": 600,
-  "img": "./images/ProductDetail/porkRib.png",
+  "img": "/images/ProductDetail/porkRib.png",
   "size": [
     { "id": 1, "option": "보통 (16mm)" },
     { "id": 2, "option": "얇게 (11mm)" },

@@ -16,6 +16,7 @@
 
     .product-subtitle2 {
       color: red;
+      width: 800px;
     }
   }
   .product-image {
@@ -29,15 +30,30 @@
     .product-date-check {
       padding-bottom: 15px;
       text-align: center;
-      padding-top: 200px;
+      padding-top: 100px;
       font-size: 30px;
       font-weight: bold;
     }
 
     .product-date-area {
-      width: 100%;
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
       background-color: black;
       height: 100px;
+      .date-box {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        .product-date-number {
+          background-color: white;
+          text-align: center;
+          width: 150px;
+          margin: 13px 0 0 100px;
+          padding: 10px;
+          font-size: 50px;
+        }
+      }
     }
 
     .product-comment {

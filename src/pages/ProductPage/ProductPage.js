@@ -1,42 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Option from './components/Option';
-import ProductDetail from './components/ProductDetail';
+import Option from './components/Option/Option';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 import './ProductPage.scss';
 
 const ProductPage = () => {
   const [productDetail, setProductDetail] = useState({});
-  const [count, setCount] = useState(1);
-  const [price, setPrice] = useState(1);
-  console.log(productDetail);
-  console.log(productDetail.price);
-  console.log(count);
-  console.log(price);
+  const [productInformation, setProductInformation] = useState({});
 
-  const params = useParams();
-  const productId = params.id;
+  const { productId } = useParams();
 
   const navigate = useNavigate();
   const goToReview = () => navigate('/review-page');
 
-  const decreaseCount = () => {
-    if (count > 1) {
-      setCount(prev => prev - 1);
-      setPrice(Number(productDetail.price) * (count - 1));
-    }
-  };
-
-  const increaseCount = () => {
-    setCount(prev => prev + 1);
-    setPrice(Number(productDetail.price) * (count + 1));
-  };
-
+  // TODO: 상세페이지 api 완성 후, api uri 수정해야함.
   useEffect(() => {
-    fetch(`data/productDetail1.json`, {
+    fetch(`data/product/${productId}`, {
+      method: 'GET',
       headers: {
         'Content-type': 'application/json',
       },
-      method: 'GET',
     })
       .then(response => response.json())
       .then(data => {
@@ -44,21 +27,33 @@ const ProductPage = () => {
       });
   }, [productId]);
 
+  useEffect(() => {
+    fetch('/data/productInformation1.json', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        setProductInformation(data);
+      });
+  }, []);
+
   return (
-    <div class="product-page">
-      <Option
-        data={productDetail}
-        decreaseCount={decreaseCount}
-        increaseCount={increaseCount}
-        productQuantity={count}
-      />
+    <div className="product-page">
+      <Option productDetail={productDetail} />
       <div className="tapSpace">
         <span className="tapWord" onClick={goToReview}>
           상품 리뷰 페이지로 이동
-          <img className="arrowImg" src="images/ProductDetail/arrow.png" />
+          <img
+            className="arrowImg"
+            src="images/ProductDetail/arrow.png"
+            alt="화살표"
+          />
         </span>
       </div>
-      <ProductDetail />
+      <ProductDetail productInformation={productInformation} />
     </div>
   );
 };

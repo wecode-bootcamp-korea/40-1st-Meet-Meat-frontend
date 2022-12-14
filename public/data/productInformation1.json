@@ -1,16 +1,12 @@
 {
-  "productInformationList": [
-    {
-      "id": 1,
-      "name": "초신선 돼지 삼겹살 구이용",
-      "price": "11,000",
-      "weight": 600,
-      "bannerImg": "/images/ProductDetail/detail1.png",
-      "dateMonth": 12,
-      "dateDay": 9,
-      "informationImg1": "./images/ProductDetail/Info1.png",
-      "informationImg2": "./images/ProductDetail/Info2.png",
-      "informationImg3": "./images/ProductDetail/Info3.png"
-    }
-  ]
+  "id": 1,
+  "name": "초신선 돼지 삼겹살 구이용",
+  "price": "11,000",
+  "weight": 600,
+  "bannerImg": "/images/ProductDetail/gotpork.png",
+  "dateMonth": 12,
+  "dateDay": 9,
+  "informationImg1": "/images/ProductDetail/Info1.png",
+  "informationImg2": "/images/ProductDetail/Info2.png",
+  "informationImg3": "/images/ProductDetail/Info3.png"
 }
