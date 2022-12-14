@@ -1,30 +1,24 @@
 import React from 'react';
 import './BasketListCard.scss';
 
-const BasketListCard = ({ productInfo, checkedItem, handleSingleCheck }) => {
+const BasketListCard = ({
+  basketProduct,
+  productInfo,
+  checkedItem,
+  handleSingleCheck,
+}) => {
   const { id, name, total_quantity, total_price, price, image } = productInfo;
-  const sumPrice = { price } * { total_quantity };
-  console.log(sumPrice);
-  // const plusQuantity = () => {
-  //   onChangeProps(products_id, 'quantity', total_quantity + 1);
-  //   patchAmount(products_id, total_quantity + 1);
-  //   patchAmount();
-  // };
 
-  // const minusQuantity = () => {
-  //   onChangeProps(
-  //     products_id,
-  //     'quantity',
-  //     total_quantity === 1 ? 1 : total_quantity - 1
-  //   );
-  //   patchAmount(products_id, total_quantity - 1);
-  //   patchAmount();
-  // };
-
+  // console.log(totalPrice);
+  console.log(price * total_quantity);
+  const totalPrice = price * total_quantity;
+  const blankPrice = [];
+  const fullPrice = blankPrice.unshift(totalPrice);
+  console.log(fullPrice);
   return (
     <div className="BasketListCard">
       <li>
-        <div className="check_area">
+        <div>
           <input
             type="checkbox"
             id={`check${id}`}
@@ -35,10 +29,10 @@ const BasketListCard = ({ productInfo, checkedItem, handleSingleCheck }) => {
           <label htmlFor={`check${id}`} />
         </div>
         <img src={image} alt="sample" />
-        <div className="product_info">
+        <div className="productInfo">
           <p className="name">
             {name}
-            <span className="option">100g</span>
+            <span className="option">200g</span>
           </p>
         </div>
         <div className="amount_box">
@@ -50,7 +44,7 @@ const BasketListCard = ({ productInfo, checkedItem, handleSingleCheck }) => {
             <i className="fa-solid fa-plus" />+
           </button> */}
         </div>
-        <p className="price">{total_price} 원</p>
+        <p className="price">{totalPrice} 원</p>
       </li>
     </div>
   );
