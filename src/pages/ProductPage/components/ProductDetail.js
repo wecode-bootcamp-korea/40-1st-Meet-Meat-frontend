@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Check from '../../../assets/ProductPage/check.png';
 import './ProductDetail.scss';
 
-const ProductDetail = props => {
+const ProductDetail = () => {
   const [productInformation, setProductInformation] = useState([]);
   useEffect(() => {
-    fetch(`data/productInformation1.json`, {
+    fetch('/data/productInformation1.json', {
       headers: {
         'Content-type': 'application/json',
       },
@@ -16,7 +16,8 @@ const ProductDetail = props => {
         setProductInformation(data.productInformationList);
       });
   }, []);
-
+  console.log(productInformation);
+  console.log(productInformation.bannerImg);
   return (
     <div className="product-page2">
       <h1 className="product-topic">왜 고기잇인가요?</h1>
@@ -26,7 +27,11 @@ const ProductDetail = props => {
         </span>
         은 오직 고기잇에서만 맛볼 수 있기 때문입니다.
       </p>
-      <img className="product-image" src={productInformation.bannerImg} />
+      <img
+        // className="product-image"
+        src={productInformation.bannerImg}
+        alt={productInformation.name}
+      />
       <div className="product-date">
         <p className="product-date-check">
           내일 받으실 삼겹살의 도축일을 확인하세요.

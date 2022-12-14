@@ -5,7 +5,7 @@
       "name": "초신선 돼지 삼겹살 구이용",
       "price": "11,000",
       "weight": 600,
-      "bannerImg": "./images/ProductDetail/detail1.png",
+      "bannerImg": "/images/ProductDetail/detail1.png",
       "dateMonth": 12,
       "dateDay": 9,
       "informationImg1": "./images/ProductDetail/Info1.png",
