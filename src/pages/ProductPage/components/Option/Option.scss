@@ -13,6 +13,7 @@
     height: 300px;
     margin-right: 40px;
   }
+
   .product-infor {
     .product-name {
       font-size: 28px;
@@ -27,18 +28,21 @@
       color: #9b9b9b;
       margin-top: 20px;
     }
+
     .product-price {
       font-size: 24px;
       line-height: 33px;
       color: white;
       margin-top: 6px;
     }
+
     .product-option {
       font-size: 18px;
       line-height: 33px;
       color: white;
       margin-top: 9px;
     }
+
     .menu-trigger {
       margin-left: 15px;
       font-size: 18px;
@@ -49,18 +53,22 @@
       background-color: black;
       border: 1px solid white;
       height: 40px;
+
       .option {
         color: white;
       }
     }
+
     .product-result {
       margin-top: 30px;
+
       .product-number {
         display: flex;
         font-size: 18px;
         line-height: 33px;
         color: white;
         margin-top: 9px;
+
         .minus {
           margin-left: 13px;
           color: white;
@@ -68,10 +76,12 @@
           background-color: black;
           font-size: 20px;
         }
+
         .number {
           width: 230px;
           text-align: center;
         }
+
         .plus {
           color: white;
           border: white;
@@ -80,6 +90,7 @@
         }
       }
     }
+
     .product-btn {
       margin-top: 40px;
 
@@ -95,6 +106,7 @@
         margin: 0px 10px 0px 0px;
         color: white;
       }
+
       .product-basket {
         width: 180px;
         height: 60px;

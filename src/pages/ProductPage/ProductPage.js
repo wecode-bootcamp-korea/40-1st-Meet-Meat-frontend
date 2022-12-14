@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Option from './components/Option/Option';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import Arrow from '../../assets/ProductPage/arrow.png';
 import './ProductPage.scss';
 
 const ProductPage = () => {
@@ -46,11 +47,7 @@ const ProductPage = () => {
       <div className="tapSpace">
         <span className="tapWord" onClick={goToReview}>
           상품 리뷰 페이지로 이동
-          <img
-            className="arrowImg"
-            src="images/ProductDetail/arrow.png"
-            alt="화살표"
-          />
+          <img className="arrowImg" src={Arrow} alt="화살표" />
         </span>
       </div>
       <ProductDetail productInformation={productInformation} />
