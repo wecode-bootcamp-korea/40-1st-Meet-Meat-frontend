@@ -11,18 +11,22 @@
       width: 109px;
       margin: 0 5px 0 40px;
     }
-
+    .productInstruction {
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+    }
     .productInfo {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 310px;
-      margin-left: 100px;
+      margin-left: 50px;
 
       .name {
-        margin-right: 10px;
+        margin: 5px 10px;
         line-height: 22px;
-        font-size: 14px;
+        font-size: 18px;
 
         .option {
           display: block;
@@ -40,7 +44,7 @@
 
     .amount_box {
       display: flex;
-      margin-left: -35px;
+
       margin-right: 150px;
       border: 1px solid gray;
 
@@ -61,7 +65,7 @@
     }
 
     .price {
-      margin: 0 0 5px -80px;
+      margin: 0 0 5px -100px;
       font-size: 18px;
     }
     .deleteBtn:hover {
@@ -75,7 +79,6 @@
       display: block;
       width: 20px;
       height: 30px;
-      margin-left: 20px;
       text-align: center;
       background: #fff;
       color: gray;

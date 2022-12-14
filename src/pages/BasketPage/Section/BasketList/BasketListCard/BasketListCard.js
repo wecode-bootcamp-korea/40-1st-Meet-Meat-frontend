@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './BasketListCard.scss';
 
 const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
@@ -60,7 +59,7 @@ const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
   return (
     <div className="BasketListCard">
       <li>
-        <div>
+        <div className="productInstruction">
           <input
             type="checkbox"
             checked={checkBoolean}
@@ -70,14 +69,14 @@ const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
               setCheckBoolean(e.target.checked);
             }}
           />
-          <Link to={`/product-page/${product.product_id}`} />
-        </div>
-        <img src={product.image} alt="sample" />
-        <div className="productInfo">
-          <p className="name">
-            {product.name}
-            <span className="option">200g</span>
-          </p>
+          <img src={product.image} alt="sample" />
+
+          <div className="productInfo">
+            <p className="name">
+              {product.name}
+              <span className="option">200g</span>
+            </p>
+          </div>
         </div>
         <div className="amount_box">
           <button
