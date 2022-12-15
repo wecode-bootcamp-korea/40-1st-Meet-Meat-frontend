@@ -7,7 +7,7 @@ import './ProductList.scss';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  const { categoryId } = useParams();
+  const { categoryId } = useParams(); // 얘야 우리가 한 번이 되어야 집에 가거든?
   const [searchParams, setSearchParams] = useSearchParams();
 
   const changeCategory = pageId => {
@@ -17,7 +17,7 @@ const ProductList = () => {
 
   useEffect(() => {
     // fetch(`http://10.58.52.62:3000/products/${categoryId}/list`) //`name=${name}`
-    fetch(`data/meatInfoList.json`, {
+    fetch(`http://10.58.52.62:8000/products/name/${categoryId}`, {
       headers: {
         'Content-type': 'application/json',
       },
@@ -25,10 +25,13 @@ const ProductList = () => {
     })
       .then(response => response.json())
       .then(data => {
-        setProducts(data.meatList);
+        setProducts(data);
       });
   }, [categoryId]);
-
+  console.log(products);
+  // console.log(categoryId);
+  // console.log(products);
+  // console.log(`http://10.58.52.62:8000/products/name/:${categoryId}`);
   return (
     <div className="productList">
       <Banner />

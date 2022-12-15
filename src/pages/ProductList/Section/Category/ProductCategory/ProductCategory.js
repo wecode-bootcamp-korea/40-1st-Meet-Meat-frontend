@@ -26,6 +26,7 @@ const ProductCategory = ({ categoryId, products }) => {
           );
         })}
       </ul>
+
       <FilterCategory data={products} />
     </>
   );

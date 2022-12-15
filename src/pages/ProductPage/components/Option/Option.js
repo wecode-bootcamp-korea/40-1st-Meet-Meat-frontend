@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Option.scss';
 
 const Option = ({ productDetail }) => {
-  const { id, name, price, weight, img, size } = productDetail;
+  const { name, price, image, products_size_id } = productDetail;
   const [count, setCount] = useState(1);
 
   const navigate = useNavigate();
@@ -18,6 +18,19 @@ const Option = ({ productDetail }) => {
   const increaseCount = () => {
     setCount(prev => prev + 1);
   };
+  // useEffect(() => {
+  //   fetch(`http://10.58.52.62:8000/detail/${productId}`, {
+  //     method: 'GET',
+  //     // headers: {
+  //     //   'Content-type': 'application/json',
+  //     // },
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setProductDetail(data);
+  //     });
+  // }, [productId]);
+  // const detail = productDetail[0];
 
   const handleBtn = button => {
     if (button === 'buy') {
@@ -56,23 +69,27 @@ const Option = ({ productDetail }) => {
 
   return (
     <div className="product-page1">
-      <img className="product-image" src={img} alt="고기사진" />
+      <img
+        className="product-image"
+        src={productDetail[0].image}
+        alt="고기사진"
+      />
       <div className="product-infor">
-        <div className="product-name">{name}</div>
+        <div className="product-name">{productDetail[0].name}</div>
         <div className="product-write">100g 당 3,550원</div>
         <div className="product-price">
-          기준가 {price}원({weight}g)
+          기준가 {Math.floor(productDetail[0].price)}원(600g)
         </div>
         <div className="product-option">
           옵션
           <select className="menu-trigger">
-            {size?.map(option => {
-              return (
-                <option className="option" key={option.id}>
-                  {option.option}
-                </option>
-              );
-            })}
+            {/* {size?.map(option => {
+              return ( */}
+            <option className="option">
+              {productDetail[0].products_size_id}
+            </option>
+            {/* ); */}
+            {/* })} */}
           </select>
         </div>
         <div className="product-result">
