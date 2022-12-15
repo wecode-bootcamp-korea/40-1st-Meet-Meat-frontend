@@ -85,14 +85,6 @@ const BasketListCard = ({
 
   const total = product.price * total_quantity;
 
-  const validBtn = check => {
-    return check ? false : true;
-  };
-
-  const validation = check => {
-    return total_quantity > 1 ? false : true;
-  };
-
   return (
     <div className="BasketListCard">
       <li>
@@ -122,7 +114,7 @@ const BasketListCard = ({
               minusCount();
               minusHandler();
             }}
-            disabled={(validBtn(checkBoolean), validation(total_quantity))}
+            disabled={total_quantity < 2}
           >
             <i className="fa-solid fa-minus" /> -
           </button>
