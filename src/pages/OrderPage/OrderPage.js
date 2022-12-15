@@ -1,10 +1,39 @@
-import React, { useState } from 'react';
-import Modal from '../../../src/components/Modal/Modal';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Plus from '../../assets/OrderPage/plus.png';
 import Sign from '../../assets/OrderPage/sign.png';
 import './OrderPage.scss';
 
 const OrderPage = () => {
+  const [userData, setUserData] = useState({});
+  const [basketData, setBasketData] = useState([]);
+
+  useEffect(() => {
+    fetch('data/basket.json', {
+      headers: {
+        'Content-type': 'application/json;charset=utf-8',
+      },
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(result => setBasketData(result.basketList));
+  }, []);
+
+  useEffect(() => {
+    fetch('data/UserInfo.json', {
+      headers: {
+        'content-type': 'application/json;charset=utf-8',
+      },
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(result => setUserData(result));
+  }, []);
+
+  const paymentButton = () => {
+    alert(`결제가 완료되었습니다. 남은포인트는 ${userData.point}`);
+  };
+
   return (
     <div className="order-page">
       <h1 className="order">주문하기</h1>
@@ -14,42 +43,39 @@ const OrderPage = () => {
           <thead className="order-border">
             <tr>
               <th className="order-border order-color">이름</th>
-              <th className="order-infor">ㄱㅁㄱ</th>
+              <th className="order-infor">{userData.name}</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td className="order-border order-color">전화번호</td>
-              <td className="order-infor">0000</td>
+              <td className="order-infor">{userData.phoneNumber}</td>
             </tr>
             <tr className="order-border">
               <td className="order-border order-color">이메일</td>
-              <td className="order-infor">ㄱㅁㄱ</td>
+              <td className="order-infor">{userData.email}</td>
             </tr>
           </tbody>
         </table>
         <div className="order-padding" />
         <div className="order-address">
           <h3 className="sender">받으시는 분</h3>
-          <div>
-            <button className="address-button">주소선택</button>
-          </div>
         </div>
         <table className="order-information">
           <thead className="order-border">
             <tr>
               <th className="order-border order-color">이름</th>
-              <th className="order-infor">ㄱㅁㄱ</th>
+              <th className="order-infor">{userData.name}</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td className="order-border order-color">전화번호</td>
-              <td className="order-infor">0000</td>
+              <td className="order-infor">{userData.phoneNumber}</td>
             </tr>
             <tr className="order-border">
               <td className="order-border order-color">주소</td>
-              <td className="order-infor">ㄱㅁㄱ</td>
+              <td className="order-infor">{userData.address}</td>
             </tr>
           </tbody>
         </table>
@@ -57,20 +83,16 @@ const OrderPage = () => {
       <div className="order-product-table">
         <h4 className="order-product">주문 상품</h4>
         <div className="order-product-list">
-          <div className="product-list">
-            <p className="order-product-name">초신선 닭볶음탕</p>
-            <p className="order-product-gram">950g기준</p>
-            <p className="order-product-count">0팩</p>
-            <p className="order-product-price">0원</p>
-          </div>
-          <div className="product-list">
-            <p className="order-product-name">
-              [첫구매 무료] 초신선 돼지 삼겹살 구이용
-            </p>
-            <p className="order-product-gram">950g기준</p>
-            <p className="order-product-count">0팩</p>
-            <p className="order-product-price">0원</p>
-          </div>
+          {basketData.map(basket => {
+            return (
+              <div className="product-list" key={basket.id}>
+                <p className="order-product-name">{basket.name}</p>
+                <p className="order-product-gram">300g기준</p>
+                <p className="order-product-count">0팩</p>
+                <p className="order-product-price">{basket.price}원</p>
+              </div>
+            );
+          })}
           <div className="order-product-last">
             <div>
               <p className="all-product-name">총 상품 금액</p>
@@ -91,7 +113,11 @@ const OrderPage = () => {
       </div>
       <div className="order-button">
         <button className="button-befor">이전으로</button>
-        <button className="button-go">주문하기</button>
+        <Link to="./main">
+          <button className="button-go" onClick={paymentButton}>
+            결제하기
+          </button>
+        </Link>
       </div>
     </div>
   );
