@@ -1,4 +1,4 @@
-@import '../../../src/styles/variables.scss';
+@import '../../../src/styles/variables';
 
 .signUpForm {
   margin: 160px auto 180px auto;
@@ -48,22 +48,26 @@
       }
     }
 
-    .signUpFormBackBtn,
-    .signUpFormBtn {
-      width: 390px;
-      height: 60px;
-      border: none;
-      color: $white;
-      font-weight: bold;
-    }
-
-    .signUpFormBackBtn {
-      background-color: #888888;
-      cursor: pointer;
-    }
-
-    .signUpFormBtn {
-      background-color: $black;
+    .signUpFormButton {
+      .signUpFormBackBtn {
+        width: 390px;
+        height: 60px;
+        border: none;
+        background-color: #888888;
+        color: white;
+        font-weight: bold;
+      }
+      .signUpFormBtn {
+        width: 390px;
+        height: 60px;
+        border: none;
+        background-color: black;
+        color: $white;
+        font-weight: bold;
+        &:disabled {
+          background-color: gray;
+        }
+      }
     }
   }
 }

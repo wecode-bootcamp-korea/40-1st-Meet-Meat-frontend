@@ -1,25 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FilterCategory from '../FilterCategory/FilterCategory';
 import { PRODUCTSORTS } from './PRODUCTSORTS';
 import './ProductCategory.scss';
 
-const ProductCategory = ({ categoryId, changeCategory, products }) => {
+const ProductCategory = ({ categoryId, products }) => {
   return (
     <>
       <ul className="productListTab">
         {PRODUCTSORTS.map(sort => {
           return (
-            <li
+            <Link
+              className="productCategoryLink"
+              to={`/product-list/${sort.name}`}
               key={sort.id}
-              className={`productCategory ${
-                sort.id === categoryId && 'productCategoryActive'
-              }`}
-              onClick={() => {
-                changeCategory(sort.id);
-              }}
             >
-              <div>{sort.text}</div>
-            </li>
+              <li
+                className={`productCategory ${
+                  sort.name === categoryId && 'productCategoryActive'
+                }`}
+              >
+                {sort.text}
+              </li>
+            </Link>
           );
         })}
       </ul>

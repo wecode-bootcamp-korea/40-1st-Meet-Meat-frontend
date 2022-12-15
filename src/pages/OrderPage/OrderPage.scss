@@ -1,15 +1,16 @@
 .order-page {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  margin: 70px;
   padding: 30px;
 
   .order {
+    padding: 30px;
     font-size: 30px;
     font-weight: bold;
-    padding: 30px;
   }
 
   .sender-table {
@@ -21,13 +22,13 @@
     }
 
     .order-information {
-      border: 1px solid gray;
       width: 900px;
+      border: 1px solid gray;
 
       .order-border {
-        border: 1px solid gray;
-        padding: 15px;
         width: 200px;
+        padding: 15px;
+        border: 1px solid gray;
       }
 
       .order-infor {
@@ -48,14 +49,14 @@
     justify-content: space-between;
 
     .order {
+      padding: 30px;
       font-size: 30px;
       font-weight: bold;
-      padding: 30px;
     }
 
     .address-button {
-      font-weight: bold;
       height: 35px;
+      font-weight: bold;
     }
   }
 
@@ -68,13 +69,13 @@
     }
 
     .order-information {
-      border: 1px solid gray;
       width: 900px;
+      border: 1px solid gray;
 
       .order-border {
-        border: 1px solid gray;
-        padding: 15px;
         width: 200px;
+        padding: 15px;
+        border: 1px solid gray;
       }
       .order-infor {
         padding-left: 25px;
@@ -90,18 +91,18 @@
     }
 
     .order-product-list {
-      border: 1px solid gray;
       width: 900px;
       padding: 30px;
+      border: 1px solid gray;
 
       .product-list {
-        width: 765px;
         display: flex;
         justify-content: space-around;
-        text-align: left;
-        border-bottom: 1px solid gray;
-        padding-bottom: 10px;
+        width: 765px;
         margin: 40px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid gray;
+        text-align: left;
 
         .order-product-name {
           width: 380px;
@@ -120,21 +121,21 @@
         justify-content: space-around;
         width: 780px;
         height: 100px;
-        background-color: #f7f7f7;
         margin: 40px auto auto 22px;
         padding: 15px;
+        background-color: #f7f7f7;
 
         .all-product-name {
+          color: #9b9b9b;
           font-size: 13px;
           line-height: 43px;
-          color: #9b9b9b;
         }
 
         .all-product-price {
+          margin-top: -20px;
           font-size: 21px;
           font-weight: bold;
           line-height: 43px;
-          margin-top: -20px;
         }
 
         .red {
@@ -158,9 +159,9 @@
       width: 450px;
       height: 60px;
       border: none;
+      background-color: #d0021b;
       color: white;
       font-weight: bold;
-      background-color: #d0021b;
     }
   }
 }
