@@ -26,7 +26,7 @@ const Review = () => {
       <ul>
         {contents.map(reviewList => {
           return (
-            <ReviewListCard key={reviewList.reviewId} reviewList={reviewList} />
+            <ReviewListCard key={reviewList.reviewID} reviewList={reviewList} />
           );
         })}
       </ul>
