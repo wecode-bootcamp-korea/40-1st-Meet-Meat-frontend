@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SignUpForm.scss';
+import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
   const Submit = () => {
@@ -42,17 +43,17 @@ const SignUpForm = () => {
     userInfo.password === userInfo.checkPassword;
 
   return (
-    <div className="signUp">
+    <div className="signUpForm">
       <div>
-        <p className="signUpTitleName">회원가입</p>
+        <p className="signUpFormTitleName">회원가입</p>
       </div>
-      <div className="signUpInputContainer">
+      <div className="signUpFormInputContainer">
         <p>가입정보 입력</p>
-        <div className="signUpInputContainerBox">
-          <div className="signUpInputBox">
-            <p className="signUpInputName">아이디(이메일 주소)</p>
+        <div className="signUpFormInputContainerBox">
+          <div className="signUpFormInputBox">
+            <p className="signUpFormInputName">아이디(이메일 주소)</p>
             <input
-              className="signUpInputText"
+              className="signUpFormInputText"
               type="text"
               onChange={handleLogin}
               name="email"
@@ -60,49 +61,55 @@ const SignUpForm = () => {
               placeholder="email 형식"
             />
           </div>
-          <div className="signUpInputBox">
-            <p className="signUpInputName">비밀번호</p>
+          <div className="signUpFormInputBox">
+            <p className="signUpFormInputName">비밀번호</p>
             <input
-              className="signUpInputText"
+              className="signUpFormInputText"
               type="password"
               name="password"
               onChange={handleLogin}
               placeholder="비밀번호 8자리 이상"
             />
           </div>
-          <div className="signUpInputBox">
-            <p className="signUpInputName">비밀번호 확인</p>
+          <div className="signUpFormInputBox">
+            <p className="signUpFormInputName">비밀번호 확인</p>
             <input
-              className="signUpInputText"
+              className="signUpFormInputText"
               type="password"
               onChange={handleLogin}
               name="checkPassword"
               placeholder="비밀번호 8자리 이상"
             />
           </div>
-          <div className="signUpInputBox">
-            <p className="signUpInputName">주소</p>
+          <div className="signUpFormInputBox">
+            <p className="signUpFormInputName">주소</p>
             <input
-              className="signUpInputText"
+              className="signUpFormInputText"
               type="text"
               name="address"
               onChange={handleLogin}
             />
           </div>
 
-          <div className="signUpInputLastBox">
-            <p className="signUpInputName">이름</p>
+          <div className="signUpFormInputLastBox">
+            <p className="signUpFormInputName">이름</p>
             <input
-              className="signUpInputText"
+              className="signUpFormInputText"
               type="text"
               name="name"
               onChange={handleLogin}
             />
           </div>
         </div>
-        <div className="signUpButton">
-          <button className="signUpBackBtn">이전으로</button>
-          <button className="signUpBtn" disabled={!buttonAble} onClick={Submit}>
+        <div className="signUpFormButton">
+          {/* <Link to="/sign-up"> */}
+          <button className="signUpFormBackBtn">이전으로</button>
+          {/* </Link> */}
+          <button
+            className="signUpFormBtn"
+            disabled={!buttonAble}
+            onClick={Submit}
+          >
             가입하기
           </button>
         </div>
