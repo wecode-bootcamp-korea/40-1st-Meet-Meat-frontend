@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Plus from '../../assets/OrderPage/plus.png';
 import Sign from '../../assets/OrderPage/sign.png';
-
 import './OrderPage.scss';
 
 const OrderPage = () => {
@@ -30,6 +30,10 @@ const OrderPage = () => {
       .then(result => setUserData(result));
   }, []);
 
+  const paymentButton = () => {
+    alert(`결제가 완료되었습니다. 남은포인트는 ${userData.point}`);
+  };
+  console.log(userData);
   return (
     <div className="order-page">
       <h1 className="order">주문하기</h1>
@@ -109,7 +113,11 @@ const OrderPage = () => {
       </div>
       <div className="order-button">
         <button className="button-befor">이전으로</button>
-        <button className="button-go">주문하기</button>
+        <Link to="./main">
+          <button className="button-go" onClick={paymentButton}>
+            결제하기
+          </button>
+        </Link>
       </div>
     </div>
   );
