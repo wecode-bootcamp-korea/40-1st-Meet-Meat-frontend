@@ -1,0 +1,123 @@
+.product-page1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  background-color: black;
+  width: 100%;
+  height: 600px;
+  padding: 50px;
+
+  .product-image {
+    width: 300px;
+    height: 300px;
+    margin-right: 40px;
+  }
+
+  .product-infor {
+    .product-name {
+      font-size: 28px;
+      line-height: 41px;
+      width: 600px;
+      color: white;
+      word-break: keep-all;
+    }
+
+    .product-write {
+      font-size: 16px;
+      color: #9b9b9b;
+      margin-top: 20px;
+    }
+
+    .product-price {
+      font-size: 24px;
+      line-height: 33px;
+      color: white;
+      margin-top: 6px;
+    }
+
+    .product-option {
+      font-size: 18px;
+      line-height: 33px;
+      color: white;
+      margin-top: 9px;
+    }
+
+    .menu-trigger {
+      margin-left: 15px;
+      font-size: 18px;
+      line-height: 33px;
+      color: white;
+      margin-top: 9px;
+      width: 270px;
+      background-color: black;
+      border: 1px solid white;
+      height: 40px;
+
+      .option {
+        color: white;
+      }
+    }
+
+    .product-result {
+      margin-top: 30px;
+
+      .product-number {
+        display: flex;
+        font-size: 18px;
+        line-height: 33px;
+        color: white;
+        margin-top: 9px;
+
+        .minus {
+          margin-left: 13px;
+          color: white;
+          border: white;
+          background-color: black;
+          font-size: 20px;
+        }
+
+        .number {
+          width: 230px;
+          text-align: center;
+        }
+
+        .plus {
+          color: white;
+          border: white;
+          background-color: black;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .product-btn {
+      margin-top: 40px;
+
+      .product-buy {
+        width: 180px;
+        height: 60px;
+        float: left;
+        display: block;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: gray;
+        margin: 0px 10px 0px 0px;
+        color: white;
+      }
+
+      .product-basket {
+        width: 180px;
+        height: 60px;
+        float: left;
+        display: block;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+}

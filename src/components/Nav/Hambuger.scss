@@ -14,27 +14,31 @@
   .hambuger-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 15px;
 
     .hambuger-menu {
-      margin-top: 5px;
       font-size: 24px;
       font-weight: bold;
     }
 
-    .basket {
-      width: 10%;
-      height: 10%;
-      margin-top: 5px;
-      margin-left: 180px;
-      filter: invert(100%);
-      cursor: pointer;
-    }
-    .hambuger-close {
-      border: none;
-      background-color: white;
-      font-size: 25px;
-      cursor: pointer;
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .basket {
+        width: 30px;
+        filter: invert(100%);
+        cursor: pointer;
+      }
+
+      .hambuger-close {
+        border: none;
+        background-color: white;
+        font-size: 25px;
+        cursor: pointer;
+      }
     }
   }
   .main-title {
@@ -79,4 +83,9 @@
     line-height: 50px;
     cursor: pointer;
   }
+}
+
+.hambugerLink {
+  text-decoration: none;
+  color: black;
 }

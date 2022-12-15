@@ -27,14 +27,14 @@ const DeliveryPage = () => {
       <div className="advertisement">
         <div className="delivery-content">
           <div className="content-box">
-            <img className="delivery-image" src={Truck} alt="delivery-image" />
+            <img className="delivery-image" src={Truck} alt="delivery" />
             <span className="content-title">빠른 배송</span>
             <span className="content-subtitle">
               아침에 주문해서 저녁에 받아보실 수 있도록 최대한 빠르게 배송합니다
             </span>
           </div>
           <div className="content-box">
-            <img className="delivery-image" src={Black} alt="delivery-image" />
+            <img className="delivery-image" src={Black} alt="delivery" />
             <span className="content-title">안전하고 신선한 포장</span>
             <span className="content-subtitle">
               수차례 배송테스트를 거친 간소한 포장으로 신선도를 유지하면서도
@@ -42,7 +42,7 @@ const DeliveryPage = () => {
             </span>
           </div>
           <div className="content-box">
-            <img className="delivery-image" src={Map} alt="delivery-image" />
+            <img className="delivery" src={Map} alt="delivery" />
             <span className="content-title">다양한 지역으로의 확장</span>
             <span className="content-subtitle">
               초신선 상품을 더 많은 분들과 함께하기 위해 당일배송,
