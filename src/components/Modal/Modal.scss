@@ -1,27 +1,70 @@
-.address-page {
-  border: 1px solid gray;
+.modal-page {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
   width: 500px;
   height: 400px;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  border: 1px solid gray;
   background-color: white;
-  z-index: 1;
-  position: absolute;
-  top: 300px;
-  right: 700px;
 
-  .address-layout {
+  .modal-layout {
     display: flex;
-    justify-content: space-between;
-    .address-name {
-      position: relative;
-      top: 20px;
-      left: 200px;
-      text-align: center;
-      font-size: 25px;
+    flex-direction: column;
+
+    .modal-top {
+      display: flex;
+      justify-content: flex-end;
+      .modal-close {
+        border: none;
+        background-color: white;
+        font-size: 20px;
+      }
     }
-    .address-close {
-      border: none;
-      background-color: white;
-      font-size: 20px;
+    .modal-main {
+      text-align: center;
+      .modal-name {
+        margin-bottom: 120px;
+      }
+      .modal-count {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        button {
+          margin-top: -10px;
+          border: none;
+          background-color: white;
+          font-size: 25px;
+          font-weight: bold;
+        }
+        .modal-count-box {
+          width: 300px;
+          height: 25px;
+          border: none;
+          font-size: 16px;
+        }
+      }
+      .modal-select {
+        width: 330px;
+        height: 35px;
+      }
+      .modal-price {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 76px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+      }
+      .modal-buy {
+        width: 50%;
+        height: 60px;
+        border: none;
+        background-color: white;
+        font-size: 16px;
+        font-weight: 700;
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ import './ReceiptSection.scss';
 const ReceiptSection = ({ checkedProductTotal }) => {
   const navigate = useNavigate();
   const moveOrderPage = () => navigate('/order-page');
-  const moveProductList = () => navigate('/product-list');
+  const moveProductList = () => navigate('/product-list/전체');
 
   return (
     <div className="receiptSection">

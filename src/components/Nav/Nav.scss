@@ -1,19 +1,19 @@
 .header {
+  position: fixed;
+  z-index: 5;
+  top: 0px;
   width: 100%;
   height: 96px;
   background-color: black;
   color: white;
-  position: fixed;
-  top: 0px;
-  z-index: 1;
 
   .navContainer {
     display: flex;
     justify-content: space-between;
     width: 1184px;
     height: 72px;
-    margin: auto;
     height: 96px;
+    margin: auto;
 
     .navMain {
       display: flex;
@@ -26,6 +26,7 @@
       .navMainName {
         padding-left: 10px;
         font-size: 30px;
+        cursor: pointer;
       }
 
       .navMainMenu {
@@ -35,7 +36,8 @@
       }
 
       .navMainMenuList {
-        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
       }
     }
     .navRight {
@@ -53,6 +55,7 @@
       .navRightSubList {
         margin-left: 15px;
         font-size: 14px;
+        cursor: pointer;
       }
 
       .navRightSubMenuSplit {
@@ -63,12 +66,19 @@
       .navRightCartIcon {
         width: 30px;
         margin-left: 35px;
+        cursor: pointer;
       }
 
       .navRightSideIcon {
         width: 33px;
         margin-left: 20px;
+        cursor: pointer;
       }
     }
   }
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
 }

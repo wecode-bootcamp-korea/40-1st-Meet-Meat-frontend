@@ -21,72 +21,6 @@
         width: 120px;
         object-fit: contain;
       }
-
-      .userInfoData {
-        text-align: right;
-        margin-left: 35px;
-        width: 100%;
-
-        .userInfoDataTop {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          .userInfoDataTopBtn {
-            display: flex;
-            justify-content: space-between;
-
-            .userInfoDataTopUserName {
-              margin-right: 40px;
-              font-size: 25px;
-              font-weight: bold;
-            }
-
-            .userInfoDataTopLogOutBtn {
-              background-color: $white;
-              border: none;
-              text-decoration: underline;
-              color: #cbcbcb;
-              font-weight: bold;
-              font-size: 16px;
-            }
-          }
-
-          .userInfoDataTopQuestionBtn {
-            width: 120px;
-            height: 45px;
-            margin-left: 30px;
-            border: none;
-            color: $white;
-            background-color: $black;
-            font-size: 14px;
-            font-weight: bold;
-          }
-        }
-        .userInfoSplit {
-          margin: 20px auto 20px auto;
-          border: 1px solid $black;
-        }
-
-        .userInfoBottom {
-          display: flex;
-          justify-content: space-between;
-
-          .userInfoBottomList {
-            text-align: center;
-
-            .userInfoBottomListTitle {
-              font-weight: bold;
-              margin-bottom: 10px;
-            }
-
-            .userInfoBottomListCheck {
-              color: #cbcbcb;
-              font-weight: bold;
-            }
-          }
-        }
-      }
     }
 
     .orderTabContainer {
@@ -122,6 +56,7 @@
         position: relative;
         text-align: left;
         padding-left: 30px;
+        cursor: pointer;
       }
 
       .orderGoShoppingBtnImage {

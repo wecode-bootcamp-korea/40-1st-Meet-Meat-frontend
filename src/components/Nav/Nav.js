@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Hambuger from './Hambuger';
 import './Nav.scss';
 
@@ -17,10 +18,16 @@ const Nav = () => {
             src="/images/Nav/MeatIcon.png"
             alt="메인고기아이콘"
           />
-          <p className="navMainName">고기잇</p>
+          <Link to="/" className="navLink">
+            <p className="navMainName">고기잇</p>
+          </Link>
           <ul className="navMainMenu">
-            <li className="navMainMenuList">쇼핑하기</li>
-            <li className="navMainMenuList">배송안내</li>
+            <Link to="/product-list" className="navLink">
+              <li className="navMainMenuList">쇼핑하기</li>
+            </Link>
+            <Link to="/delivery-page" className="navLink">
+              <li className="navMainMenuList">배송안내</li>
+            </Link>
             <li className="navMainMenuList">이벤트</li>
           </ul>
         </div>
@@ -32,17 +39,23 @@ const Nav = () => {
             </ul>
             <span className="navRightSubMenuSplit">|</span>
             <ul className="navRightSubMenuList">
-              <li className="navRightSubList"> 로그인</li>
-              <li className="navRightSubList">회원가입</li>
+              <Link to="/login" className="navLink">
+                <li className="navRightSubList"> 로그인</li>
+              </Link>
+              <Link to="/sign-up" className="navLink">
+                <li className="navRightSubList">회원가입</li>
+              </Link>
             </ul>
           </div>
 
           <div className="navSideIcon">
-            <img
-              className="navRightCartIcon"
-              src="/images/Nav/BasketWhite.png"
-              alt="카트이미지"
-            />
+            <Link to="/basket-page" className="navLink">
+              <img
+                className="navRightCartIcon"
+                src="/images/Nav/BasketWhite.png"
+                alt="카트이미지"
+              />
+            </Link>
             <img
               className="navRightSideIcon"
               src="/images/Nav/MenuBarWhite.png"

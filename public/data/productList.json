@@ -1,164 +1,74 @@
 {
-  "meatList": [
+  "productList": [
     {
-      "돼지": [
-        {
-          "meatId": 1,
-          "meatName": "초신선 돼지 삼겹살 구이용",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 2,
-          "meatName": "초신선 돼지 목살 구이용",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 6,000원/600g"
-        },
-        {
-          "meatId": 3,
-          "meatName": "초신선 돼지 항정살 구이용",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 4,
-          "meatName": "초신선 돼지 삼겹살 수육용",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 5,
-          "meatName": "초신선 돼지 불고기",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 6,
-          "meatName": "초신선 돼지 대패 삼겹살",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": " 기준가 21,300원/600g"
-        }
-      ]
+      "meatId": 1,
+      "meatName": "초신선 돼지 삼겹살 구이용",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "돼지"
     },
     {
-      "소": [
-        {
-          "meatId": 1,
-          "meatName": "초신선 소 안심",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 2,
-          "meatName": "초신선 소 등심",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 6,000원/600g"
-        },
-        {
-          "meatId": 3,
-          "meatName": "초신선 소 안창살",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 4,
-          "meatName": "초신선 소 불고기",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 5,
-          "meatName": "초신선 소 채끝",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 6,
-          "meatName": "초신선 소 치마살",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": " 기준가 21,300원/600g"
-        }
-      ]
+      "meatId": 2,
+      "meatName": "초신선 닭볶음탕",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 6,000원/600g",
+      "meatSort": "닭"
     },
     {
-      "닭": [
-        {
-          "meatId": 1,
-          "meatName": "초신선 닭 볶음탕",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 2,
-          "meatName": "초신선 닭 생닭",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 6,000원/600g"
-        },
-        {
-          "meatId": 3,
-          "meatName": "초신선 닭 목살",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 4,
-          "meatName": "초신선 닭 가슴살",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 5,
-          "meatName": "초신선 닭 다리살",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 6,
-          "meatName": "초신선 닭 닭 닭",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": " 기준가 21,300원/600g"
-        }
-      ]
+      "meatId": 3,
+      "meatName": "초신선 등심 돈까스",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 9,300원/600g",
+      "meatSort": "돼지"
     },
     {
-      "오리": [
-        {
-          "meatId": 1,
-          "meatName": "초신선 오리 구이용",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 2,
-          "meatName": "초신선 오리 로스구이용",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 6,000원/600g"
-        },
-        {
-          "meatId": 3,
-          "meatName": "초신선 오리 베이징덕",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 4,
-          "meatName": "초신선 오리오리오리",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 5,
-          "meatName": "초신선 오리 불고기",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": "기준가 21,300원/600g"
-        },
-        {
-          "meatId": 6,
-          "meatName": "초신선 오리오래오래",
-          "meatImage": "./images/ProductDetail/porkRib.png",
-          "meatPrice": " 기준가 21,300원/600g"
-        }
-      ]
+      "meatId": 4,
+      "meatName": "초신선 오리 주물럭",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "오리"
+    },
+    {
+      "meatId": 5,
+      "meatName": "초신선 닭다리살",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": "기준가 21,300원/600g",
+      "meatSort": "닭"
+    },
+    {
+      "meatId": 6,
+      "meatName": "초신선 한우 우둔 다짐육",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 21,300원/600g",
+      "meatSort": "소"
+    },
+    {
+      "meatId": 7,
+      "meatName": "초신선 한우 안심",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 21,500원/600g",
+      "meatSort": "소"
+    },
+    {
+      "meatId": 8,
+      "meatName": "초신선 한우 등심",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 21,300원/600g",
+      "meatSort": "소"
+    },
+    {
+      "meatId": 9,
+      "meatName": "초신선 돼지 항정살",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 11,300원/600g",
+      "meatSort": "돼지"
+    },
+    {
+      "meatId": 10,
+      "meatName": "초신선 오리 불고기",
+      "meatImage": "./images/ProductDetail/porkRib.png",
+      "meatPrice": " 기준가 15,200원/600g",
+      "meatSort": "오리"
     }
   ]
 }

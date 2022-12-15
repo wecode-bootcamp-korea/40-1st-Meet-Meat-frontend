@@ -19,11 +19,11 @@ const Router = () => {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/product-list" element={<ProductList />} />
+        <Route path="/product-list/:categoryId" element={<ProductList />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/main" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/my-page" element={<MyPage />} />
-        <Route path="/product-page" element={<ProductPage />} />
+        <Route path="/product-page/:productId/" element={<ProductPage />} />
         <Route path="/sign-up-form" element={<SignUpForm />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/delivery-page" element={<DeliveryPage />} />

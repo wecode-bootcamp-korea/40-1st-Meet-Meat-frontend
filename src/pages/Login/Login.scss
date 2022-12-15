@@ -1,7 +1,7 @@
 @import '../../../src/styles/variables.scss';
 
 .login {
-  height: 100vh;
+  height: 770px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,6 +34,15 @@
 
     .login-button {
       background-color: $black;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .login-button-no {
+      background-color: gray;
       color: $white;
       border: none;
       border-radius: 5px;
