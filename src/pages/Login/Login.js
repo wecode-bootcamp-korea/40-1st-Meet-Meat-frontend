@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleLogin = e => {
     e.preventDefault();
-    fetch(`${API.SIGNIN}`, {
+    fetch(`${API.LOGIN}`, {
       method: 'POST',
       headers: { 'content-Type': 'application/json;charset=utf-8' },
       body: JSON.stringify({
@@ -28,7 +28,7 @@ const Login = () => {
           localStorage.setItem('token', data.access_token);
 
           alert('환영합니다!');
-          navigate('/main');
+          navigate('/');
         } else if (data.message === 'INVALID_INPUT_DATA') {
           alert('존재하지 않는 유저입니다.');
           navigate('/sign-up');
