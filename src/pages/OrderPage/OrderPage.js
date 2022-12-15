@@ -5,11 +5,6 @@ import Sign from '../../assets/OrderPage/sign.png';
 import './OrderPage.scss';
 
 const OrderPage = () => {
-  const [openAddress, setOpenAddress] = useState(false);
-
-  const buttonClick = () => {
-    setOpenAddress(true);
-  };
   return (
     <div className="order-page">
       <h1 className="order">주문하기</h1>
@@ -37,10 +32,7 @@ const OrderPage = () => {
         <div className="order-address">
           <h3 className="sender">받으시는 분</h3>
           <div>
-            <button className="address-button" onClick={buttonClick}>
-              주소선택
-            </button>
-            {openAddress && <Modal setOpenAddress={setOpenAddress} />}
+            <button className="address-button">주소선택</button>
           </div>
         </div>
         <table className="order-information">
