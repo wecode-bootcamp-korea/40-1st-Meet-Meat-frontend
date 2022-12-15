@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SignUpForm.scss';
-import { Link } from 'react-router-dom';
 
 const SignUpForm = () => {
-  const Submit = () => {
-    fetch('http://10.58.52.125:8000/users/signup', {
+  const [userInfo, setUserInfo] = useState({
+    name: '',
+    email: '',
+    password: '',
+    checkPassword: '',
+    address: '',
+  });
+
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    fetch('http://10.58.52.62:8000/users/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json;charset=utf-8' },
       body: JSON.stringify({
@@ -15,16 +25,16 @@ const SignUpForm = () => {
       }),
     })
       .then(response => response.json())
-      .then(result => result);
+      .then(result => {
+        if (result.message !== 'SIGNUP_SUCCESS') {
+          alert('입력하신 정보를 다시 확인해주세요.');
+        } else {
+          alert('환영합니다!');
+          navigate('/login');
+        }
+      });
   };
 
-  const [userInfo, setUserInfo] = useState({
-    name: '',
-    email: '',
-    password: '',
-    checkPassword: '',
-    address: '',
-  });
   const handleLogin = e => {
     const { name, value } = e.target;
     setUserInfo({ ...userInfo, [name]: value });
@@ -102,13 +112,18 @@ const SignUpForm = () => {
           </div>
         </div>
         <div className="signUpFormButton">
-          {/* <Link to="/sign-up"> */}
-          <button className="signUpFormBackBtn">이전으로</button>
-          {/* </Link> */}
+          <button
+            className="signUpFormBackBtn"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            이전으로
+          </button>
           <button
             className="signUpFormBtn"
             disabled={!buttonAble}
-            onClick={Submit}
+            onClick={handleSubmit}
           >
             가입하기
           </button>
