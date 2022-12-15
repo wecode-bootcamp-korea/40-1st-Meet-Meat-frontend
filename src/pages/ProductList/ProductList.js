@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import Banner from './Section/Banner/Banner';
 import ProductCategory from './Section/Category/ProductCategory/ProductCategory';
 import ProductMeatList from './Section/ProductMeatList/ProductMeatList';
@@ -7,6 +7,7 @@ import './ProductList.scss';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const { categoryId: cateId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const [categoryId, setCategoryId] = useState(1);
 

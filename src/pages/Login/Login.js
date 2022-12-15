@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { API } from '../../config';
 import './Login.scss';
 
 const Login = () => {
@@ -13,7 +14,7 @@ const Login = () => {
 
   const handleLogin = e => {
     e.preventDefault();
-    fetch('http://10.58.52.125:8000/users/signin', {
+    fetch(`${API.SIGNIN}`, {
       method: 'POST',
       headers: { 'content-Type': 'application/json;charset=utf-8' },
       body: JSON.stringify({
