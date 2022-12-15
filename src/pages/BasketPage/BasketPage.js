@@ -96,6 +96,8 @@ const BasketPage = () => {
               product.basketList.map((product, idx) => (
                 <BasketListCard
                   product={product}
+                  setProduct={setProduct}
+                  setCheckedProduct={setCheckedProduct}
                   key={product.product_id}
                   idx={idx}
                   childCheckRemove={childCheckRemove}

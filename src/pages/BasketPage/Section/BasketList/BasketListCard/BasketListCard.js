@@ -7,13 +7,15 @@ const BasketListCard = ({
   removeProduct,
   childCheckRemove,
   singlePriceHandler,
+  setProduct,
+  setCheckedProduct,
 }) => {
   const [total_quantity, setTotal_quantity] = useState(product.total_quantity);
   const [checkBoolean, setCheckBoolean] = useState(true);
 
-  useEffect(() => {
-    singlePriceHandler(total_quantity, idx);
-  }, [idx, singlePriceHandler, total_quantity]);
+  // useEffect(() => {
+  //   singlePriceHandler(total_quantity, idx);
+  // }, [total_quantity]);
 
   const minusCount = () => {
     setTotal_quantity(amount => amount - 1);
@@ -51,6 +53,7 @@ const BasketListCard = ({
     });
   };
 
+  // TODO: 상품삭제 api 완성 후 기능 확인 후 수정해야함.
   const singleDeleteHandler = () => {
     fetch(`/data/basketList.json`, {
       method: 'DELETE',
@@ -62,6 +65,22 @@ const BasketListCard = ({
         productId: product.product_id,
       }),
     });
+    fetch(`/data/basketList.json`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('Token'),
+      },
+    })
+      .then(response => response.json())
+      .then(result => {
+        setProduct(result);
+        setCheckedProduct(
+          result.basketList.map(item => {
+            return { ...item, checked: true };
+          })
+        );
+      });
   };
 
   const total = product.price * total_quantity;
