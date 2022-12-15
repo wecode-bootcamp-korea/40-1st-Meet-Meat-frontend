@@ -1,0 +1,97 @@
+.BasketListCard {
+  flex-direction: row;
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 30px;
+    border-bottom: 1px solid #eee;
+
+    img {
+      width: 109px;
+      margin: 0 5px 0 40px;
+    }
+
+    .productInstruction {
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+    }
+
+    .productInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 310px;
+      margin-left: 50px;
+
+      .name {
+        margin: 5px 10px;
+        line-height: 22px;
+        font-size: 18px;
+
+        .option {
+          display: block;
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+
+      .standard {
+        line-height: 20px;
+        font-size: 13px;
+        color: #9b9b9b;
+      }
+    }
+
+    .amount_box {
+      display: flex;
+      margin-right: 150px;
+      border: 1px solid gray;
+
+      .box {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: #fff;
+        font-size: 14px;
+
+        i {
+          vertical-align: baseline;
+          font-size: 14px;
+          color: #9b9b9b;
+        }
+      }
+    }
+
+    .price {
+      margin: 0 0 5px -100px;
+      font-size: 18px;
+    }
+
+    .deleteBtn:hover {
+      cursor: pointer;
+    }
+
+    .deleteBtn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 20px;
+      height: 30px;
+      text-align: center;
+      background: #fff;
+      color: gray;
+      border: 1px solid lightgray;
+
+      i {
+        font-size: 16px;
+        line-height: 28px;
+        color: #9b9b9b;
+      }
+    }
+  }
+}
