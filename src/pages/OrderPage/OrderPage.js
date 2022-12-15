@@ -33,7 +33,7 @@ const OrderPage = () => {
   const paymentButton = () => {
     alert(`결제가 완료되었습니다. 남은포인트는 ${userData.point}`);
   };
-  console.log(userData);
+
   return (
     <div className="order-page">
       <h1 className="order">주문하기</h1>
