@@ -29,18 +29,6 @@ const BasketPage = () => {
       });
   }, []);
 
-  const checkedDeleteHandler = () => {
-    checkedProduct.forEach(item => {
-      return fetch('data/basketList.json', {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: localStorage.getItem('Token'),
-        },
-      });
-    });
-  };
-
   useEffect(() => {
     setCheckedPriceList(
       checkedProduct.map(checkedProduct => {
@@ -58,26 +46,13 @@ const BasketPage = () => {
   }, [checkedPriceList]);
 
   const singlePriceHandler = (newAmount, idx) => {
-    let newProductArray = [...product];
-    let newCheckedArray = [...checkedProduct];
-    newProductArray[idx].amount = newAmount;
-    newCheckedArray[idx].amount = newAmount;
-    setCheckedProduct(newCheckedArray);
-    setProduct(newProductArray);
-    setCountProduct(newCheckedArray);
-  };
-
-  const removeProduct = id => {
-    setProduct(
-      product.basketList.filter(product => {
-        return product.products_id !== id;
-      })
-    );
-    setCheckedProduct(
-      checkedProduct.filter(check => {
-        return check.products_id !== id;
-      })
-    );
+    let newBasketProduct = [...product.basketList];
+    let newCheckedProduct = [...checkedProduct];
+    newBasketProduct[idx].total_quantity = newAmount;
+    newCheckedProduct[idx].total_quantity = newAmount;
+    setCheckedProduct(newCheckedProduct);
+    setProduct(newBasketProduct);
+    setCountProduct(newCheckedProduct);
   };
 
   const childCheckRemove = (productDetail, checked) => {
@@ -88,46 +63,10 @@ const BasketPage = () => {
         ])
       : setCheckedProduct(
           checkedProduct.filter(check => {
-            return check.products_id !== productDetail.product_id;
+            return check.product_id !== productDetail.product_id;
           })
         );
   };
-
-  const removeChild = id => {
-    let removeProducts;
-    id.forEach(
-      item =>
-        (removeProducts = product.basketList.filter(
-          product => product.products_id !== item
-        ))
-    );
-    id.forEach(
-      item =>
-        (removeProducts = removeProducts.filter(
-          removeProducts => removeProducts.products_id !== item
-        ))
-    );
-    setProduct(removeProducts);
-
-    let removeCheckedProducts;
-    id.forEach(
-      item =>
-        (removeCheckedProducts = product.basketList.filter(
-          product => product.products_id !== item
-        ))
-    );
-    id.forEach(
-      item =>
-        (removeCheckedProducts = removeCheckedProducts.filter(
-          removeCheckedProducts => removeCheckedProducts.products_id !== item
-        ))
-    );
-    setCheckedProduct(removeCheckedProducts);
-  };
-
-  const checkedId = checkedProduct.map(item => {
-    return item.products_id;
-  });
 
   return (
     <div className="basket-page">
@@ -139,27 +78,14 @@ const BasketPage = () => {
             <div className="basket-num">수량</div>
             <div className="basket-price">가격</div>
           </div>
-          <button
-            onClick={() => {
-              removeChild(checkedId);
-              checkedDeleteHandler();
-            }}
-          >
-            x
-          </button>
           <ul className="basket-item">
             {product.basketList &&
               product.basketList.map((product, idx) => (
                 <BasketListCard
                   product={product}
-                  setProduct={setProduct}
                   key={product.product_id}
-                  checkedProduct={checkedProduct}
                   idx={idx}
-                  removeProduct={removeProduct}
-                  removeChild={removeChild}
                   childCheckRemove={childCheckRemove}
-                  setCheckedProduct={setCheckedProduct}
                   singlePriceHandler={singlePriceHandler}
                 />
               ))}

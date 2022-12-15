@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './BasketListCard.scss';
 
 const BasketListCard = ({
   product,
   idx,
-  key,
   removeProduct,
   childCheckRemove,
   singlePriceHandler,
 }) => {
-  const [total_quantity, setQuantity] = useState(product.total_quantity);
+  const [total_quantity, setTotal_quantity] = useState(product.total_quantity);
   const [checkBoolean, setCheckBoolean] = useState(true);
 
   const minusCount = () => {
-    setQuantity(amount => amount - 1);
+    setTotal_quantity(amount => amount - 1);
   };
 
   const plusCount = () => {
-    setQuantity(amount => amount + 1);
+    setTotal_quantity(amount => amount + 1);
   };
 
   const minusHandler = () => {
@@ -71,6 +70,10 @@ const BasketListCard = ({
     return total_quantity > 1 ? false : true;
   };
 
+  useEffect(() => {
+    singlePriceHandler(total_quantity, idx);
+  }, [total_quantity]);
+
   return (
     <div className="BasketListCard">
       <li>
@@ -120,7 +123,7 @@ const BasketListCard = ({
           className="deleteBtn"
           id={idx}
           onClick={() => {
-            removeProduct(key);
+            removeProduct();
             singleDeleteHandler();
           }}
         >
