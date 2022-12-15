@@ -8,7 +8,7 @@
       "total_quantity": 2,
       "total_price": 42600,
       "weight": 600,
-      "products_id": 8,
+      "product_id": 8,
       "image": "/images/ProductDetail/gotPork.png"
     },
     {
@@ -19,7 +19,7 @@
       "total_quantity": 4,
       "total_price": 24000,
       "weight": 600,
-      "products_id": 7,
+      "product_id": 7,
       "image": "/images/ProductDetail/gotPork.png"
     },
     {
@@ -30,7 +30,7 @@
       "total_quantity": 1,
       "total_price": 11300,
       "weight": 600,
-      "products_id": 1,
+      "product_id": 1,
       "image": "/images/ProductDetail/gotPork.png"
     }
   ]

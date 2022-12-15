@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './BasketListCard.scss';
 
-const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
+const BasketListCard = ({
+  product,
+  idx,
+  key,
+  removeProduct,
+  childCheckRemove,
+  singlePriceHandler,
+}) => {
   const [total_quantity, setQuantity] = useState(product.total_quantity);
   const [checkBoolean, setCheckBoolean] = useState(true);
-
-  const total = product.price * total_quantity;
 
   const minusCount = () => {
     setQuantity(amount => amount - 1);
@@ -56,6 +61,16 @@ const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
     });
   };
 
+  const total = product.price * total_quantity;
+
+  const validBtn = check => {
+    return check ? false : true;
+  };
+
+  const validation = check => {
+    return total_quantity > 1 ? false : true;
+  };
+
   return (
     <div className="BasketListCard">
       <li>
@@ -64,12 +79,12 @@ const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
             type="checkbox"
             checked={checkBoolean}
             title="선택"
-            onChange={e => {
-              childCheckRemove(product, e.target.checked);
-              setCheckBoolean(e.target.checked);
+            onChange={event => {
+              childCheckRemove(product, event.target.checked);
+              setCheckBoolean(event.target.checked);
             }}
           />
-          <img src={product.image} alt="sample" />
+          <img src={product.image} alt="meat_image" />
 
           <div className="productInfo">
             <p className="name">
@@ -85,6 +100,7 @@ const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
               minusCount();
               minusHandler();
             }}
+            disabled={(validBtn(checkBoolean), validation(total_quantity))}
           >
             <i className="fa-solid fa-minus" /> -
           </button>
@@ -104,7 +120,7 @@ const BasketListCard = ({ product, idx, removeProduct, childCheckRemove }) => {
           className="deleteBtn"
           id={idx}
           onClick={() => {
-            removeProduct();
+            removeProduct(key);
             singleDeleteHandler();
           }}
         >

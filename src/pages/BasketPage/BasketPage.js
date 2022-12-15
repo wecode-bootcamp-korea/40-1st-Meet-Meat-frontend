@@ -29,6 +29,18 @@ const BasketPage = () => {
       });
   }, []);
 
+  const checkedDeleteHandler = () => {
+    checkedProduct.forEach(item => {
+      return fetch('data/basketList.json', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: localStorage.getItem('Token'),
+        },
+      });
+    });
+  };
+
   useEffect(() => {
     setCheckedPriceList(
       checkedProduct.map(checkedProduct => {
@@ -58,12 +70,12 @@ const BasketPage = () => {
   const removeProduct = id => {
     setProduct(
       product.basketList.filter(product => {
-        return product.product_id !== id;
+        return product.products_id !== id;
       })
     );
     setCheckedProduct(
       checkedProduct.filter(check => {
-        return check.product_id !== id;
+        return check.products_id !== id;
       })
     );
   };
@@ -76,7 +88,7 @@ const BasketPage = () => {
         ])
       : setCheckedProduct(
           checkedProduct.filter(check => {
-            return check.product_id !== productDetail.product_id;
+            return check.products_id !== productDetail.product_id;
           })
         );
   };
@@ -85,14 +97,14 @@ const BasketPage = () => {
     let removeProducts;
     id.forEach(
       item =>
-        (removeProducts = product.filter(
-          product => product.product_id !== item
+        (removeProducts = product.basketList.filter(
+          product => product.products_id !== item
         ))
     );
     id.forEach(
       item =>
         (removeProducts = removeProducts.filter(
-          removeProducts => removeProducts.product_id !== item
+          removeProducts => removeProducts.products_id !== item
         ))
     );
     setProduct(removeProducts);
@@ -100,18 +112,23 @@ const BasketPage = () => {
     let removeCheckedProducts;
     id.forEach(
       item =>
-        (removeCheckedProducts = product.filter(
-          product => product.product_id !== item
+        (removeCheckedProducts = product.basketList.filter(
+          product => product.products_id !== item
         ))
     );
     id.forEach(
       item =>
         (removeCheckedProducts = removeCheckedProducts.filter(
-          removeCheckedProducts => removeCheckedProducts.product_id !== item
+          removeCheckedProducts => removeCheckedProducts.products_id !== item
         ))
     );
     setCheckedProduct(removeCheckedProducts);
   };
+
+  const checkedId = checkedProduct.map(item => {
+    return item.products_id;
+  });
+
   return (
     <div className="basket-page">
       <div className="basket-name">장바구니</div>
@@ -122,6 +139,14 @@ const BasketPage = () => {
             <div className="basket-num">수량</div>
             <div className="basket-price">가격</div>
           </div>
+          <button
+            onClick={() => {
+              removeChild(checkedId);
+              checkedDeleteHandler();
+            }}
+          >
+            x
+          </button>
           <ul className="basket-item">
             {product.basketList &&
               product.basketList.map((product, idx) => (
