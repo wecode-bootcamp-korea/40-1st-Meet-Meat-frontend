@@ -1,14 +1,17 @@
 .product-page {
   padding-top: 50px;
   width: 100%;
+
   .tapSpace {
     display: flex;
     margin: 20px auto 0px auto;
     width: 600px;
-    :hover {
+
+    &:hover {
       cursor: pointer;
       color: red;
     }
+
     .tapWord {
       margin: 20px auto 0px auto;
       padding-bottom: 30px;
