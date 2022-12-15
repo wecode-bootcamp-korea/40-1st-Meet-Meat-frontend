@@ -11,6 +11,10 @@ const BasketListCard = ({
   const [total_quantity, setTotal_quantity] = useState(product.total_quantity);
   const [checkBoolean, setCheckBoolean] = useState(true);
 
+  useEffect(() => {
+    singlePriceHandler(total_quantity, idx);
+  }, [idx, singlePriceHandler, total_quantity]);
+
   const minusCount = () => {
     setTotal_quantity(amount => amount - 1);
   };
@@ -69,10 +73,6 @@ const BasketListCard = ({
   const validation = check => {
     return total_quantity > 1 ? false : true;
   };
-
-  useEffect(() => {
-    singlePriceHandler(total_quantity, idx);
-  }, [total_quantity]);
 
   return (
     <div className="BasketListCard">

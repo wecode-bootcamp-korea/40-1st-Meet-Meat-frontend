@@ -55,6 +55,19 @@ const BasketPage = () => {
     setCountProduct(newCheckedProduct);
   };
 
+  const removeProduct = id => {
+    setProduct(
+      product.basketList.filter(product => {
+        return product.product_id !== id;
+      })
+    );
+    setCheckedProduct(
+      checkedProduct.filter(check => {
+        return check.product_id !== id;
+      })
+    );
+  };
+
   const childCheckRemove = (productDetail, checked) => {
     checked
       ? setCheckedProduct([
@@ -86,6 +99,7 @@ const BasketPage = () => {
                   key={product.product_id}
                   idx={idx}
                   childCheckRemove={childCheckRemove}
+                  removeProduct={removeProduct}
                   singlePriceHandler={singlePriceHandler}
                 />
               ))}
