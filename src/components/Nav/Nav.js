@@ -22,7 +22,7 @@ const Nav = () => {
             <p className="navMainName">고기잇</p>
           </Link>
           <ul className="navMainMenu">
-            <Link to="/product-list" className="navLink">
+            <Link to="/product-list/all" className="navLink">
               <li className="navMainMenuList">쇼핑하기</li>
             </Link>
             <Link to="/delivery-page" className="navLink">
