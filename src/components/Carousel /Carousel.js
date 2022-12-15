@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Carousel1 from '../../assets/Carosel/carosel1.jpg';
-import Carousel2 from '../../assets/Carosel/carosel2.jpg';
-import Carousel3 from '../../assets/Carosel/carosel3.jpg';
-import Left from '../../assets/Carosel/left.png';
-import Right from '../../assets/Carosel/right.png';
+import Carousel1 from '../../assets/Carosel/Carousel1.png';
+import Carousel2 from '../../assets/Carosel/Carousel2.png';
+import Carousel3 from '../../assets/Carosel/Carousel3.png';
+import Left from '../../assets/Carosel/left 2.png';
+import Right from '../../assets/Carosel/right 2.png';
 import './Carousel.scss';
 
 const Carousel = props => {
