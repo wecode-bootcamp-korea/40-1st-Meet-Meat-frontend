@@ -7,14 +7,12 @@ import './ProductList.scss';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  const { categoryId: cateId } = useParams();
+  const { categoryId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [categoryId, setCategoryId] = useState(1);
 
   const changeCategory = pageId => {
     searchParams.set('categories', pageId);
     setSearchParams(searchParams);
-    setCategoryId(pageId);
   };
 
   useEffect(() => {
