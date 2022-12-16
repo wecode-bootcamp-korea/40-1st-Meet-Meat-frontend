@@ -1,8 +1,11 @@
 .bestProductItem {
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: rgb(244, 244, 244);
   width: 400px;
   height: 350px;
+  &:hover {
+    cursor: pointer;
+  }
 
   .productImage {
     display: flex;
@@ -10,7 +13,12 @@
     align-items: center;
     margin: auto;
     padding-top: 20px;
-    width: 250px;
+    width: 270px;
+    &:hover {
+      transform: scale(1.2);
+      overflow: hidden;
+      transition-duration: 1s;
+    }
   }
 }
 
@@ -18,10 +26,18 @@
   margin-top: 10px;
   text-align: left;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
+  &:hover {
+    cursor: pointer;
+  }
 
   .productPriceInformation {
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 20px;
     color: gray;
+    &:hover {
+      transition: all 0.7s;
+      cursor: pointer;
+    }
   }
 }

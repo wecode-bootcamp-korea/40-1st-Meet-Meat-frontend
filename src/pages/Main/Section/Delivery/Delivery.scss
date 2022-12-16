@@ -11,15 +11,27 @@
       margin-top: 70px;
       font-size: 100px;
       font-weight: bold;
+      &:hover {
+        color: rgb(166, 37, 37);
+        border-bottom: 7px rgb(166, 37, 37) solid;
+        padding-bottom: 10px;
+        transition-duration: 1s;
+      }
     }
 
     .deliveryPhrase {
       margin-top: 30px;
+      color: gray;
     }
   }
 
   .deliveryIcon {
     width: 400px;
-    margin-left: 60px;
+    margin-left: -500px;
+    &:hover {
+      transform: translate(700px, 0);
+      transition-duration: 5s;
+      border-bottom: 2px black;
+    }
   }
 }

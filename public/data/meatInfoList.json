@@ -18,28 +18,28 @@
       "meatId": 3,
       "meatName": "초신선 스테이크",
       "meatImage": "./images/ProductDetail/Beef.png",
-      "meatPrice": 21300,
+      "meatPrice": 11300,
       "meatSort": "돼지"
     },
     {
       "meatId": 4,
       "meatName": "초신선 항정살",
       "meatImage": "./images/ProductDetail/porkHang.png",
-      "meatPrice": 21300,
+      "meatPrice": 14300,
       "meatSort": "돼지"
     },
     {
       "meatId": 5,
       "meatName": "초신선 오리고기",
       "meatImage": "./images/ProductDetail/Duck.png",
-      "meatPrice": 21300,
+      "meatPrice": 9300,
       "meatSort": "오리"
     },
     {
       "meatId": 6,
       "meatName": "초신선 한우 우둔 다짐육",
-      "meatImage": "./images/ProductDetail/porkRib.png",
-      "meatPrice": 21300,
+      "meatImage": "./images/ProductDetail/Chop.png",
+      "meatPrice": 21200,
       "meatSort": "돼지"
     }
   ]

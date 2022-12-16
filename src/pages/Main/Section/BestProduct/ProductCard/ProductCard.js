@@ -10,7 +10,7 @@ const ProductCard = ({ meatList }) => {
       </div>
       <div className="productInformation">
         {meatName}
-        <div className="productPriceInformation">{meatPrice}</div>
+        <div className="productPriceInformation">{meatPrice} 원</div>
       </div>
     </li>
   );

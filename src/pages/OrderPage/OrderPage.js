@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Plus from '../../assets/OrderPage/plus.png';
 import Sign from '../../assets/OrderPage/sign.png';
 import './OrderPage.scss';
@@ -7,6 +7,9 @@ import './OrderPage.scss';
 const OrderPage = () => {
   const [userData, setUserData] = useState({});
   const [basketData, setBasketData] = useState([]);
+
+  const navigate = useNavigate();
+  const moveToMain = () => navigate('/');
 
   useEffect(() => {
     fetch('data/basket.json', {
@@ -31,7 +34,9 @@ const OrderPage = () => {
   }, []);
 
   const paymentButton = () => {
-    alert(`결제가 완료되었습니다. 남은포인트는 ${userData.point}`);
+    alert(
+      `결제가 완료되었습니다. 남은 포인트는 ${userData.point} 포인트 입니다.`
+    );
   };
 
   return (
@@ -88,7 +93,7 @@ const OrderPage = () => {
               <div className="product-list" key={basket.id}>
                 <p className="order-product-name">{basket.name}</p>
                 <p className="order-product-gram">300g기준</p>
-                <p className="order-product-count">0팩</p>
+                <p className="order-product-count">{basket.total_quantity}팩</p>
                 <p className="order-product-price">{basket.price}원</p>
               </div>
             );
@@ -96,28 +101,33 @@ const OrderPage = () => {
           <div className="order-product-last">
             <div>
               <p className="all-product-name">총 상품 금액</p>
-              <p className="all-product-price">0000원</p>
+              <p className="all-product-price">77,900원</p>
             </div>
             <img src={Plus} alt="더하기" />
             <div>
               <p className="all-product-name">배송비</p>
-              <p className="all-product-price">0000원</p>
+              <p className="all-product-price">3,000원</p>
             </div>
             <img src={Sign} alt="부등호" />
             <div>
               <p className="all-product-name">예상 결제 금액</p>
-              <p className="all-product-price red">0000원</p>
+              <p className="all-product-price red">80,900원</p>
             </div>
           </div>
         </div>
       </div>
       <div className="order-button">
         <button className="button-befor">이전으로</button>
-        <Link to="./main">
-          <button className="button-go" onClick={paymentButton}>
-            결제하기
-          </button>
-        </Link>
+
+        <button
+          className="button-go"
+          onClick={() => {
+            paymentButton();
+            moveToMain();
+          }}
+        >
+          결제하기
+        </button>
       </div>
     </div>
   );
