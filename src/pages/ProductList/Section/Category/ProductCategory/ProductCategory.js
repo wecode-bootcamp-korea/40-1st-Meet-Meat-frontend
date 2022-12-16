@@ -4,7 +4,7 @@ import FilterCategory from '../FilterCategory/FilterCategory';
 import { PRODUCTSORTS } from './PRODUCTSORTS';
 import './ProductCategory.scss';
 
-const ProductCategory = ({ categoryId, products }) => {
+const ProductCategory = ({ categoryId, products, data }) => {
   return (
     <>
       <ul className="productListTab">

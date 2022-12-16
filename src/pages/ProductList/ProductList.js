@@ -6,6 +6,7 @@ import ProductMeatList from './Section/ProductMeatList/ProductMeatList';
 import './ProductList.scss';
 
 const ProductList = () => {
+  const [productAll, setProductAll] = useState([]);
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,8 +17,7 @@ const ProductList = () => {
   };
 
   useEffect(() => {
-    // fetch(`http://10.58.52.62:3000/products/${categoryId}/list`) //`name=${name}`
-    fetch(`data/meatInfoList.json`, {
+    fetch(`http://10.58.52.55:8000/products/name/${categoryId}`, {
       headers: {
         'Content-type': 'application/json',
       },
@@ -25,10 +25,22 @@ const ProductList = () => {
     })
       .then(response => response.json())
       .then(data => {
-        setProducts(data.meatList);
+        setProducts(data);
       });
   }, [categoryId]);
 
+  useEffect(() => {
+    fetch(`http://10.58.52.55:8000/products`, {
+      headers: {
+        'Content-type': 'application/json',
+      },
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(data => {
+        setProductsall(data);
+      });
+  }, []);
   return (
     <div className="productList">
       <Banner />

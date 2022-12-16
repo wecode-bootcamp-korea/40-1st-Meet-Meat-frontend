@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import Modal from '../../../../../components/Modal/Modal';
 import './ProductListCard.scss';
 
-const ProductListCard = ({ meat }) => {
-  const { meatId, meatName, meatImage, meatPrice } = meat;
+const ProductListCard = ({ data }) => {
+  const { meatId, meatName, meatImage, meatPrice } = data;
   const [openModal, setOpenModal] = useState(false);
 
   const ModalClick = () => {
     setOpenModal(true);
   };
-
+  console.log(data);
   return (
     <li className="productListCard">
       <Link to={`/product-page/${meatId}`}>
