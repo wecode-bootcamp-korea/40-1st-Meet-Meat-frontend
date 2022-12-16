@@ -14,7 +14,7 @@ const SignUpForm = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    fetch('http://10.58.52.62:8000/users/signup', {
+    fetch('http://10.58.52.55:8000/users/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json;charset=utf-8' },
       body: JSON.stringify({

@@ -7,6 +7,7 @@ import './OrderPage.scss';
 const OrderPage = () => {
   const [userData, setUserData] = useState({});
   const [basketData, setBasketData] = useState([]);
+  const [userData1, setUserData1] = useState([]);
 
   useEffect(() => {
     fetch('data/basket.json', {
@@ -34,6 +35,17 @@ const OrderPage = () => {
     alert(`결제가 완료되었습니다. 남은포인트는 ${userData.point}`);
   };
 
+  useEffect(() => {
+    fetch('data/UserInfo.json', {
+      headers: {
+        'content-type': 'application/json;charset=utf-8',
+      },
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(result => setUserData1(result));
+  }, []);
+
   return (
     <div className="order-page">
       <h1 className="order">주문하기</h1>
@@ -43,7 +55,7 @@ const OrderPage = () => {
           <thead className="order-border">
             <tr>
               <th className="order-border order-color">이름</th>
-              <th className="order-infor">{userData.name}</th>
+              <th className="order-infor">{userData1.name}</th>
             </tr>
           </thead>
           <tbody>

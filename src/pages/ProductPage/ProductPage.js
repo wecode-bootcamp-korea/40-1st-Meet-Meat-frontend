@@ -16,7 +16,7 @@ const ProductPage = () => {
 
   // TODO: 상세페이지 api 완성 후, api uri 수정해야함.
   useEffect(() => {
-    fetch(`http://10.58.52.62:8000/products/${productId}`, {
+    fetch(`http://10.58.52.55:8000/products/${productId}`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',

@@ -1,0 +1,21 @@
+[
+  {
+    "id": 37,
+    "name": "위코드",
+    "email": "rbsdffert1@independent.co.uk",
+    "address_default": "444 sdfdsfttt",
+    "point": "700000.00"
+  },
+  {
+    "customers_id": 37,
+    "products_id": 1,
+    "total_price": "30000.00",
+    "total_quantity": 2
+  },
+  {
+    "customers_id": 37,
+    "products_id": 2,
+    "total_price": "20000.00",
+    "total_quantity": 3
+  }
+]

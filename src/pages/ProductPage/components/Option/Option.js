@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Option.scss';
 
 const Option = ({ productDetail }) => {
-  const { name, price, image, products_type_id } = productDetail;
+  // const { name, price, image, products_type_id } = productDetail;
   const [count, setCount] = useState(1);
 
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const Option = ({ productDetail }) => {
       setCount(prev => prev - 1);
     }
   };
-
+  console.log(productDetail[0].name);
   const increaseCount = () => {
     setCount(prev => prev + 1);
   };
