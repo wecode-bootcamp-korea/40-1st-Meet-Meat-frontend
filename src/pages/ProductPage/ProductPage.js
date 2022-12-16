@@ -6,6 +6,7 @@ import Arrow from '../../assets/ProductPage/arrow.png';
 import './ProductPage.scss';
 
 const ProductPage = () => {
+  const [isloading, setIsLoading] = useState(true);
   const [productDetail, setProductDetail] = useState({});
   const [productInformation, setProductInformation] = useState({});
 
@@ -25,6 +26,7 @@ const ProductPage = () => {
       .then(response => response.json())
       .then(data => {
         setProductDetail(data);
+        setIsLoading(false);
       });
   }, [productId]);
 
@@ -40,6 +42,8 @@ const ProductPage = () => {
         setProductInformation(data);
       });
   }, []);
+
+  if (isloading) return null;
 
   return (
     <div className="product-page">

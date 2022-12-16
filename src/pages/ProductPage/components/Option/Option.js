@@ -14,11 +14,10 @@ const Option = ({ productDetail }) => {
       setCount(prev => prev - 1);
     }
   };
-  console.log(productDetail[0].name);
   const increaseCount = () => {
     setCount(prev => prev + 1);
   };
-
+  console.log(productDetail[0]);
   const handleBtn = button => {
     if (button === 'buy') {
       fetch(`/data/basketList.json/`, {
@@ -63,16 +62,16 @@ const Option = ({ productDetail }) => {
       />
       <div className="product-infor">
         <div className="product-name">{productDetail[0].name}</div>
-        <div className="product-write">100g 당 3,550원</div>
+        <div className="product-write">100g 당 4,800원</div>
         <div className="product-price">
-          기준가 {productDetail[0].price}원(600g)
+          기준가 {Math.floor(productDetail[0].price)}원(200g)
         </div>
         <div className="product-option">
           옵션
           <select className="menu-trigger">
-            <option className="option">
-              {productDetail[0].products_type_id}
-            </option>
+            <option className="option">얇게(11mm)</option>
+            <option className="option">보통(16mm)</option>
+            <option className="option">두껍게(21mm)</option>
           </select>
         </div>
         <div className="product-result">
