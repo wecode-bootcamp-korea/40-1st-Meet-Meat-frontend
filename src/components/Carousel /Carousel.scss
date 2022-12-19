@@ -4,6 +4,7 @@
   height: 30%;
   overflow: hidden;
   margin-top: 96px;
+  max-width: 100%;
 
   .carousel-img {
     display: flex;
@@ -12,6 +13,10 @@
       flex: none;
       width: 100%;
       height: 30%;
+
+      &:hover {
+        border: darkred 10px solid;
+      }
     }
   }
   .button-left {
@@ -19,11 +24,17 @@
     top: 50%;
     left: 0;
     width: 70px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .button-right {
     position: absolute;
     top: 50%;
     right: 0;
     width: 70px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

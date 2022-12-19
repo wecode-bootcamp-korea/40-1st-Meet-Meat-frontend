@@ -69,7 +69,7 @@ const Login = () => {
         </form>
         <div className="sign-up-link">
           <Link to="/sign-up">
-            정육각이 처음이신가요?
+            고기잇이 처음이신가요?
             <span className="signup-link"> 회원가입하기</span>
           </Link>
         </div>

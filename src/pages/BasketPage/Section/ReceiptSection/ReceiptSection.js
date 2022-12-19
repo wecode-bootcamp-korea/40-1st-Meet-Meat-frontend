@@ -5,6 +5,7 @@ import './ReceiptSection.scss';
 const ReceiptSection = ({ checkedProductTotal }) => {
   const navigate = useNavigate();
   const moveOrderPage = () => navigate('/order-page');
+  const alertMovePage = () => alert('결제 페이지로 이동합니다!');
   const moveProductList = () => navigate('/product-list/전체');
 
   return (
@@ -23,7 +24,13 @@ const ReceiptSection = ({ checkedProductTotal }) => {
         </div>
       </div>
       <div className="payment-button">
-        <button className="basket-order" onClick={moveOrderPage}>
+        <button
+          className="basket-order"
+          onClick={() => {
+            moveOrderPage();
+            alertMovePage();
+          }}
+        >
           전체상품 주문하기
         </button>
         <button className="basket-out" onClick={moveProductList}>

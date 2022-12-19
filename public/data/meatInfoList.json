@@ -2,45 +2,45 @@
   "meatList": [
     {
       "meatId": 1,
-      "meatName": "초신선 돼지 삼겹살 구이용",
-      "meatImage": "./images/ProductDetail/bacon.png",
-      "meatPrice": "21300원",
-      "meatSort": "돼지"
+      "meatName": "초신선 스테이크 구이용",
+      "meatImage": "./images/ProductDetail/Bacon.png",
+      "meatPrice": 21300,
+      "meatSort": "소"
     },
     {
       "meatId": 2,
-      "meatName": "초신선 닭볶음탕",
-      "meatImage": "./images/ProductDetail/chickenSoup.png",
-      "meatPrice": "6000원",
+      "meatName": "초신선 닭다리살",
+      "meatImage": "./images/ProductDetail/Chicken.png",
+      "meatPrice": 6000,
       "meatSort": "돼지"
     },
     {
       "meatId": 3,
-      "meatName": "초신선 등심 스테이크",
-      "meatImage": "./images/ProductDetail/beef.png",
-      "meatPrice": "21300원",
-      "meatSort": "소"
+      "meatName": "초신선 스테이크",
+      "meatImage": "./images/ProductDetail/Beef.png",
+      "meatPrice": 11300,
+      "meatSort": "돼지"
     },
     {
       "meatId": 4,
-      "meatName": "초신선 돼지 항정살",
+      "meatName": "초신선 항정살",
       "meatImage": "./images/ProductDetail/porkHang.png",
-      "meatPrice": "9300원",
+      "meatPrice": 14300,
       "meatSort": "돼지"
     },
     {
       "meatId": 5,
-      "meatName": "초신선 오리 주물럭",
-      "meatImage": "./images/ProductDetail/duckRib.png",
-      "meatPrice": "14300원",
+      "meatName": "초신선 오리고기",
+      "meatImage": "./images/ProductDetail/Duck.png",
+      "meatPrice": 9300,
       "meatSort": "오리"
     },
     {
       "meatId": 6,
       "meatName": "초신선 한우 우둔 다짐육",
-      "meatImage": "./images/ProductDetail/chopBeef.png",
-      "meatPrice": 21300,
-      "meatSort": "소"
+      "meatImage": "./images/ProductDetail/Chop.png",
+      "meatPrice": 21200,
+      "meatSort": "돼지"
     }
   ]
 }

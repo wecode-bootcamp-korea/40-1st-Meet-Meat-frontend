@@ -4,6 +4,7 @@ import Modal from '../../../../../components/Modal/Modal';
 import './ProductListCard.scss';
 
 const ProductListCard = ({ meat }) => {
+  console.log(meat);
   const { meatId, meatName, meatImage, meatPrice } = meat;
   const [openModal, setOpenModal] = useState(false);
 
@@ -13,13 +14,13 @@ const ProductListCard = ({ meat }) => {
 
   return (
     <li className="productListCard">
-      <Link to={`/product-page/${meatId}`}>
+      <Link to={`/product-page/${meat.id}`}>
         <div className="productListItem">
-          <img src={meatImage} alt={meatName} className="productListImage" />
+          <img src={meat.image} alt={meat.name} className="productListImage" />
         </div>
         <div className="productListInformation">
-          {meatName}
-          <div className="productListPriceInformation">{meatPrice}</div>
+          {meat.name}
+          <div className="productListPriceInformation">{meat.price}</div>
         </div>
       </Link>
       <div className="cartIconWrapper">

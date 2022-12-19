@@ -6,7 +6,7 @@ import Arrow from '../../assets/ProductPage/arrow.png';
 import './ProductPage.scss';
 
 const ProductPage = () => {
-  const [productDetail, setProductDetail] = useState({});
+  const [productDetail, setProductDetail] = useState([]);
   const [productInformation, setProductInformation] = useState({});
 
   const { productId } = useParams();
@@ -16,18 +16,18 @@ const ProductPage = () => {
 
   // TODO: 상세페이지 api 완성 후, api uri 수정해야함.
   useEffect(() => {
-    fetch(`data/product/${productId}`, {
-      method: 'GET',
+    fetch(`http://10.58.52.62:8000/products/${productId}`, {
       headers: {
         'Content-type': 'application/json',
       },
+      method: 'GET',
     })
       .then(response => response.json())
       .then(data => {
         setProductDetail(data);
       });
   }, [productId]);
-
+  console.log(productDetail);
   useEffect(() => {
     fetch('/data/productInformation1.json', {
       method: 'GET',
