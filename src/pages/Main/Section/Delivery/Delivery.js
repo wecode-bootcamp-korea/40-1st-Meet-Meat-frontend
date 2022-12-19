@@ -10,12 +10,8 @@ const Delivery = () => {
           고기잇의 초신선함을 식탁까지 온전하게
         </div>
       </div>
-      <div>
-        <img
-          src="images/Main/delivery-256.png"
-          alt="배달이미지"
-          className="deliveryIcon"
-        ></img>{' '}
+      <div className="deliveryIcon">
+        <img src="images/Main/delivery-256.png" alt="배달이미지" />
       </div>
     </div>
   );
