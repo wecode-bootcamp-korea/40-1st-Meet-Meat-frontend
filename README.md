@@ -1,6 +1,7 @@
 # 고기잇 🍗 README.MD
 
 ---
+![3005216901](https://user-images.githubusercontent.com/96870855/208634355-105ada2b-ee9d-46e1-b97b-281e75eb1b98.gif)
 
 - 프로젝트 사이트 → 정육각
 - 정육각은 고기를 전문으로 파는 이커머스로 초신선한 제품을 합리적인 가격에 제공하는 사이트이다.
@@ -83,16 +84,16 @@
 
 ---
 
-| g | 페이지 및 기능 구현 | 설명 | 담당 개발자 |
-| --- | --- | --- | --- |
-| Sign up |  | 회원가입 레이아웃 <br/> 회원가입 유효성 검사 | frontEnd :  김윤아, 김민기<br/>backEnd : 정재헌   |
-| Sign in |  | 로그인 레이아웃 <br/> 로그인 유효성 검사 | frontEnd :  김윤아, 김민기<br/>backEnd : 정재헌  |
-| main |  | 메인페이지 레이아웃 <br/> 메인페이지 캐러셀 구현 | frontEnd : 곽민경, 김민기<br/>backEnd : 전형진 |
-| product list |  | 상품리스트 레이아웃 <br/> 상품리스트 모달창 구현<br/>상품리스트 카테고리별 필터 구현 (path) | frontEnd :  곽민경, 김민기<br/>backEnd : 정재헌 |
-| product detail |  | 상세페이지 레이아웃 <br/> 상세페이지 옵션 <br/> 수량변경 기능 | frontEnd :  곽민경, 김민기<br/>backEnd : 정재헌 |
-| order page |  | 오더페이지 레이아웃 | frontEnd :  김민기<br/>backEnd : 전형진 |
-| my page |  | 마이페이지 레이아웃 | frontEnd :  김윤아<br/>backEnd : 전형진 |
-| navigation |  | 네비게이션 레이아웃 <br/> 네비게이선 햄버거바 구현 | frontEnd : 김윤아, 김민기<br/>backEnd : 정재헌 |
-| basket |  | 장바구니 레이아웃<br/>장바구니 수량변경<br/> 합계 게산 기능 구현 | frontEnd : 김민기, 곽민경<br/>backEnd : 전형진 |
-| review page |  | 리뷰페이지 레이아웃 | frontEnd : 김윤아 |
-| Routing |  |  페이지 연결 | frontEnd : 김윤아 |
+|  | 페이지 및 기능 구현 | 담당 개발자 |
+| --- | --- | --- |
+| Sign up  | 회원가입 레이아웃 <br/> 회원가입 유효성 검사 | frontEnd :  김윤아, 김민기<br/>backEnd : 정재헌   |
+| Sign in  | 로그인 레이아웃 <br/> 로그인 유효성 검사 | frontEnd :  김윤아, 김민기<br/>backEnd : 정재헌  |
+| main  | 메인페이지 레이아웃 <br/> 메인페이지 캐러셀 구현 | frontEnd : 곽민경, 김민기<br/>backEnd : 전형진 |
+| product list  | 상품리스트 레이아웃 <br/> 상품리스트 모달창 구현<br/>상품리스트 카테고리별 필터 구현 (path) | frontEnd :  곽민경, 김민기<br/>backEnd : 정재헌 |
+| product detail  | 상세페이지 레이아웃 <br/> 상세페이지 옵션 <br/> 수량변경 기능 | frontEnd :  곽민경, 김민기<br/>backEnd : 정재헌 |
+| order page  | 오더페이지 레이아웃 | frontEnd :  김민기<br/>backEnd : 전형진 |
+| my page  | 마이페이지 레이아웃 | frontEnd :  김윤아<br/>backEnd : 전형진 |
+| navigation  | 네비게이션 레이아웃 <br/> 네비게이선 햄버거바 구현 | frontEnd : 김윤아, 김민기<br/>backEnd : 정재헌 |
+| basket  | 장바구니 레이아웃<br/>장바구니 수량변경<br/> 합계 게산 기능 구현 | frontEnd : 김민기, 곽민경<br/>backEnd : 전형진 |
+| review page  | 리뷰페이지 레이아웃 | frontEnd : 김윤아 |
+| Routing  |  페이지 연결 | frontEnd : 김윤아 |
